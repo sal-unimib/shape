@@ -1,0 +1,799 @@
+{
+    "id": "9",
+    "name": "P09",
+    "title": "COPD Exacerbation Management",
+    "description": "The patient undergoes respiratory observation and SpO\u2082 monitoring. If abnormal findings are detected, the practitioner is alerted as soon as possible. Bronchodilator medication is administered. The patient receives education on correct inhaler use and daily self-management strategies.",
+    "fhir_actions": [
+        {
+            "id": "A1",
+            "label": "The patient undergoes respiratory observation and SpO\u2082 monitoring",
+            "temporal_constraint": null,
+            "condition": null,
+            "activity_definition": {
+                "resourceType": "ActivityDefinition",
+                "id": "1058",
+                "version": "1.0.0",
+                "name": "ad_request_observation",
+                "title": "Request Clinical Observation",
+                "subtitle": "order observation, request measurement, continuous observation, diagnostic test, vital signs check or tracking",
+                "status": "draft",
+                "description": "Request the measurement, evaluation, or recording of clinical data such as vital signs, laboratory tests, or diagnostic observations.",
+                "kind": "ServiceRequest",
+                "dynamicValue": [
+                    {
+                        "path": "code.concept",
+                        "expression": {
+                            "description": "The clinical observation to be acquired",
+                            "language": "text/fhirpath",
+                            "expression": "%observation_concept"
+                        }
+                    }
+                ]
+            },
+            "candidates": [
+                {
+                    "activity_definition": {
+                        "resourceType": "ActivityDefinition",
+                        "id": "1058",
+                        "version": "1.0.0",
+                        "name": "ad_request_observation",
+                        "title": "Request Clinical Observation",
+                        "subtitle": "order observation, request measurement, continuous observation, diagnostic test, vital signs check or tracking",
+                        "status": "draft",
+                        "description": "Request the measurement, evaluation, or recording of clinical data such as vital signs, laboratory tests, or diagnostic observations.",
+                        "kind": "ServiceRequest",
+                        "dynamicValue": [
+                            {
+                                "path": "code.concept",
+                                "expression": {
+                                    "description": "The clinical observation to be acquired",
+                                    "language": "text/fhirpath",
+                                    "expression": "%observation_concept"
+                                }
+                            }
+                        ]
+                    },
+                    "similarity_score": 0.7086239,
+                    "retrieval_rank": 1
+                },
+                {
+                    "activity_definition": {
+                        "resourceType": "ActivityDefinition",
+                        "id": "1002",
+                        "version": "1.0.0",
+                        "name": "ad_complete_questionnaire",
+                        "title": "Complete Clinical Questionnaire",
+                        "subtitle": "fill questionnaire, patient survey, PROM collection, symptom questionnaire, anamnesis form",
+                        "status": "draft",
+                        "description": "Collect structured information from the patient through a questionnaire, including anamnesis, follow-up assessments, or patient-reported outcomes.",
+                        "kind": "ServiceRequest",
+                        "dynamicValue": [
+                            {
+                                "path": "supportingInfo[0].reference",
+                                "expression": {
+                                    "description": "The reference to the FHIR Resource Questionnaire that represents the questionnaire to be compiled",
+                                    "language": "text/fhirpath",
+                                    "expression": "%questionnaire"
+                                }
+                            }
+                        ]
+                    },
+                    "similarity_score": 0.6054351,
+                    "retrieval_rank": 2
+                },
+                {
+                    "activity_definition": {
+                        "resourceType": "ActivityDefinition",
+                        "id": "1059",
+                        "version": "1.0.0",
+                        "name": "ad_specialist_visit",
+                        "title": "Attend Scheduled Specialist Visit",
+                        "subtitle": "attend appointment, specialist consultation visit, medical visit attendance, go to appointment",
+                        "status": "draft",
+                        "description": "Attend and complete a previously scheduled specialist medical visit. The appointment details are defined within or referenced by this request, and the patient is expected to attend at the specified time and location.",
+                        "kind": "ServiceRequest",
+                        "dynamicValue": [
+                            {
+                                "path": "code.concept",
+                                "expression": {
+                                    "description": "The type of specialist visit to be attended or the specialist that has to perform the visit",
+                                    "language": "text/fhirpath",
+                                    "expression": "%visit_concept"
+                                }
+                            }
+                        ]
+                    },
+                    "similarity_score": 0.59979993,
+                    "retrieval_rank": 3
+                }
+            ],
+            "confidence": "HIGH",
+            "reason": "The action involves a clinical observation and monitoring, which aligns with Candidate ID 1058's description of requesting measurement or recording of clinical data.",
+            "parameters": [
+                {
+                    "path": "code.concept",
+                    "label": "respiratory observation and SpO\u2082 monitoring"
+                }
+            ],
+            "fhir_parameters": [
+                {
+                    "path": "code.concept",
+                    "category": "ontology",
+                    "label": "respiratory observation and SpO\u2082 monitoring",
+                    "value": {
+                        "coding": [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "151126005",
+                                "display": "Respiratory monitoring"
+                            }
+                        ],
+                        "text": "respiratory observation and SpO\u2082 monitoring"
+                    },
+                    "candidates": [
+                        {
+                            "ontology_concept": {
+                                "concept_id": "53617003",
+                                "label": "Monitoring of respiratory status",
+                                "label_type": "acceptable",
+                                "semantic_tag": "regime/therapy",
+                                "fsn": "Monitoring of respiration (regime/therapy)",
+                                "preferred_terms": [
+                                    "Monitoring of respiration (regime/therapy)",
+                                    "Monitoring of respiration"
+                                ],
+                                "acceptable_terms": [
+                                    "Respiratory tract monitoring",
+                                    "Respiration monitoring",
+                                    "Respiratory monitoring",
+                                    "Monitoring of respiratory status"
+                                ]
+                            },
+                            "similarity_score": 0.79928446,
+                            "retrieval_rank": 1
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "372145000",
+                                "label": "Monitoring of respiratory status",
+                                "label_type": "acceptable",
+                                "semantic_tag": "regime/therapy",
+                                "fsn": "Respiratory tract monitoring (regime/therapy)",
+                                "preferred_terms": [
+                                    "Respiratory tract monitoring",
+                                    "Respiratory tract monitoring (regime/therapy)"
+                                ],
+                                "acceptable_terms": [
+                                    "Monitoring of respiratory status"
+                                ]
+                            },
+                            "similarity_score": 0.79928446,
+                            "retrieval_rank": 2
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "370834006",
+                                "label": "Monitoring of changes in respiratory status",
+                                "label_type": "preferred",
+                                "semantic_tag": "regime/therapy",
+                                "fsn": "Monitoring of changes in respiratory status (regime/therapy)",
+                                "preferred_terms": [
+                                    "Monitoring of changes in respiratory status (regime/therapy)",
+                                    "Monitoring of changes in respiratory status"
+                                ],
+                                "acceptable_terms": [
+                                    "Monitors changes in respiratory status"
+                                ]
+                            },
+                            "similarity_score": 0.79089767,
+                            "retrieval_rank": 3
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "370834006",
+                                "label": "Monitoring of changes in respiratory status",
+                                "label_type": "label",
+                                "semantic_tag": "regime/therapy",
+                                "fsn": "Monitoring of changes in respiratory status (regime/therapy)",
+                                "preferred_terms": [
+                                    "Monitoring of changes in respiratory status (regime/therapy)",
+                                    "Monitoring of changes in respiratory status"
+                                ],
+                                "acceptable_terms": [
+                                    "Monitors changes in respiratory status"
+                                ]
+                            },
+                            "similarity_score": 0.79089767,
+                            "retrieval_rank": 4
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "182799008",
+                                "label": "Respiratory monitoring (regime/therapy)",
+                                "label_type": "preferred",
+                                "semantic_tag": "regime/therapy",
+                                "fsn": "Respiratory monitoring (regime/therapy)",
+                                "preferred_terms": [
+                                    "Respiratory monitoring (regime/therapy)",
+                                    "Respiratory monitoring"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.78449625,
+                            "retrieval_rank": 5
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "151125009",
+                                "label": "Respiratory monitoring (regime/therapy)",
+                                "label_type": "preferred",
+                                "semantic_tag": "regime/therapy",
+                                "fsn": "Respiratory monitoring (regime/therapy)",
+                                "preferred_terms": [
+                                    "Respiratory monitoring (regime/therapy)",
+                                    "Respiratory monitoring"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.7844961,
+                            "retrieval_rank": 6
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "151126005",
+                                "label": "Respiratory monitoring (regime/therapy)",
+                                "label_type": "preferred",
+                                "semantic_tag": "regime/therapy",
+                                "fsn": "Respiratory monitoring (regime/therapy)",
+                                "preferred_terms": [
+                                    "Respiratory monitoring (regime/therapy)",
+                                    "Respiratory monitoring"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.7844961,
+                            "retrieval_rank": 7
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "370834006",
+                                "label": "Monitors changes in respiratory status",
+                                "label_type": "acceptable",
+                                "semantic_tag": "regime/therapy",
+                                "fsn": "Monitoring of changes in respiratory status (regime/therapy)",
+                                "preferred_terms": [
+                                    "Monitoring of changes in respiratory status (regime/therapy)",
+                                    "Monitoring of changes in respiratory status"
+                                ],
+                                "acceptable_terms": [
+                                    "Monitors changes in respiratory status"
+                                ]
+                            },
+                            "similarity_score": 0.783389,
+                            "retrieval_rank": 8
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "151126005",
+                                "label": "Respiratory monitoring",
+                                "label_type": "label",
+                                "semantic_tag": "regime/therapy",
+                                "fsn": "Respiratory monitoring (regime/therapy)",
+                                "preferred_terms": [
+                                    "Respiratory monitoring (regime/therapy)",
+                                    "Respiratory monitoring"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.7820085,
+                            "retrieval_rank": 9
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "151126005",
+                                "label": "Respiratory monitoring",
+                                "label_type": "preferred",
+                                "semantic_tag": "regime/therapy",
+                                "fsn": "Respiratory monitoring (regime/therapy)",
+                                "preferred_terms": [
+                                    "Respiratory monitoring (regime/therapy)",
+                                    "Respiratory monitoring"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.7820085,
+                            "retrieval_rank": 10
+                        }
+                    ],
+                    "confidence": "HIGH",
+                    "reason": null
+                }
+            ],
+            "fhir_temporal_constraint": null
+        },
+        {
+            "id": "A2",
+            "label": "Bronchodilator medication is administered",
+            "temporal_constraint": null,
+            "condition": {
+                "label": "abnormal findings are detected",
+                "computability": "SEMICOMPUTABLE"
+            },
+            "activity_definition": {
+                "resourceType": "ActivityDefinition",
+                "id": "1000",
+                "version": "1.0.0",
+                "name": "ad_take_medication",
+                "title": "Administer medication",
+                "subtitle": "Administer a drug, Give a medication, Provide a medication, Deliver a medication, Dispense a medication, Apply a treatment, Supply a drug, Issue a medication",
+                "status": "draft",
+                "description": "An action that involves providing or delivering a substance intended to produce a specific effect, typically following a defined instruction or schedule.",
+                "kind": "MedicationRequest",
+                "dynamicValue": [
+                    {
+                        "path": "medication.concept",
+                        "expression": {
+                            "description": "The medication to be taken",
+                            "language": "text/fhirpath",
+                            "expression": "%medication"
+                        }
+                    },
+                    {
+                        "path": "dosageInstruction[0].doseAndRate[0]",
+                        "expression": {
+                            "description": "The dose of the medication to be taken",
+                            "language": "text/fhirpath",
+                            "expression": "%dosage_dose_and_rate"
+                        }
+                    }
+                ]
+            },
+            "candidates": [
+                {
+                    "activity_definition": {
+                        "resourceType": "ActivityDefinition",
+                        "id": "1000",
+                        "version": "1.0.0",
+                        "name": "ad_take_medication",
+                        "title": "Administer medication",
+                        "subtitle": "Administer a drug, Give a medication, Provide a medication, Deliver a medication, Dispense a medication, Apply a treatment, Supply a drug, Issue a medication",
+                        "status": "draft",
+                        "description": "An action that involves providing or delivering a substance intended to produce a specific effect, typically following a defined instruction or schedule.",
+                        "kind": "MedicationRequest",
+                        "dynamicValue": [
+                            {
+                                "path": "medication.concept",
+                                "expression": {
+                                    "description": "The medication to be taken",
+                                    "language": "text/fhirpath",
+                                    "expression": "%medication"
+                                }
+                            },
+                            {
+                                "path": "dosageInstruction[0].doseAndRate[0]",
+                                "expression": {
+                                    "description": "The dose of the medication to be taken",
+                                    "language": "text/fhirpath",
+                                    "expression": "%dosage_dose_and_rate"
+                                }
+                            }
+                        ]
+                    },
+                    "similarity_score": 0.7292321,
+                    "retrieval_rank": 1
+                },
+                {
+                    "activity_definition": {
+                        "resourceType": "ActivityDefinition",
+                        "id": "1054",
+                        "version": "1.0.0",
+                        "name": "ad_diet_indication",
+                        "title": "Prescribe Dietary Plan",
+                        "subtitle": "diet prescription, nutrition plan, dietary recommendation, food regimen",
+                        "status": "draft",
+                        "description": "Definition of a dietary regimen tailored to the patient's clinical condition, including restrictions, recommendations, and nutritional goals.",
+                        "kind": "NutritionOrder",
+                        "dynamicValue": [
+                            {
+                                "path": "oralDiet.instruction",
+                                "expression": {
+                                    "description": "Diet given orally in contrast to enteral (tube) feeding.",
+                                    "language": "text/fhirpath",
+                                    "expression": "%oral_diet"
+                                }
+                            },
+                            {
+                                "path": "supplement[0].instruction",
+                                "expression": {
+                                    "description": "Oral nutritional products given in order to add further nutritional value to the patient's diet.",
+                                    "language": "text/fhirpath",
+                                    "expression": "%supplement"
+                                }
+                            },
+                            {
+                                "path": "enteralFormula.administrationInstruction",
+                                "expression": {
+                                    "description": "Feeding provided through the gastrointestinal tract via a tube, catheter, or stoma that delivers nutrition distal to the oral cavity.",
+                                    "language": "text/fhirpath",
+                                    "expression": "%enteral_formula"
+                                }
+                            }
+                        ]
+                    },
+                    "similarity_score": 0.6575766,
+                    "retrieval_rank": 2
+                },
+                {
+                    "activity_definition": {
+                        "resourceType": "ActivityDefinition",
+                        "id": "1057",
+                        "version": "1.0.0",
+                        "name": "ad_provide_therapy",
+                        "title": "Provide Therapeutic Intervention",
+                        "subtitle": "therapy session, treatment, rehabilitation therapy, non-pharmacological treatment",
+                        "status": "draft",
+                        "description": "Delivery of a therapeutic intervention excluding medications, such as physiotherapy, psychotherapy, or other rehabilitative treatments.",
+                        "kind": "ServiceRequest",
+                        "dynamicValue": [
+                            {
+                                "path": "code.concept",
+                                "expression": {
+                                    "description": "Therapy type: The type of therapeutic intervention to be provided",
+                                    "language": "text/fhirpath",
+                                    "expression": "%therapy_concept"
+                                }
+                            },
+                            {
+                                "path": "bodySite.concept",
+                                "expression": {
+                                    "description": "Anatomic location where the therapy should be performed. This is the target site.",
+                                    "language": "text/fhirpath",
+                                    "expression": "%body_site_concept"
+                                }
+                            }
+                        ]
+                    },
+                    "similarity_score": 0.624977,
+                    "retrieval_rank": 3
+                }
+            ],
+            "confidence": "HIGH",
+            "reason": "The action clearly involves administering a medication, which matches the description and synonyms of candidate ID 1000.",
+            "parameters": [
+                {
+                    "path": "medication.concept",
+                    "label": "Bronchodilator"
+                }
+            ],
+            "fhir_parameters": [
+                {
+                    "path": "medication.concept",
+                    "category": "ontology",
+                    "label": "Bronchodilator",
+                    "value": {
+                        "coding": [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "372580007",
+                                "display": "Bronchodilator (substance)"
+                            }
+                        ],
+                        "text": "Bronchodilator"
+                    },
+                    "candidates": [
+                        {
+                            "ontology_concept": {
+                                "concept_id": "372580007",
+                                "label": "Bronchodilator",
+                                "label_type": "preferred",
+                                "semantic_tag": "substance",
+                                "fsn": "Bronchodilator (substance)",
+                                "preferred_terms": [
+                                    "Bronchodilator (substance)",
+                                    "Bronchodilator"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.99999994,
+                            "retrieval_rank": 1
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "372580007",
+                                "label": "Bronchodilator",
+                                "label_type": "label",
+                                "semantic_tag": "substance",
+                                "fsn": "Bronchodilator (substance)",
+                                "preferred_terms": [
+                                    "Bronchodilator (substance)",
+                                    "Bronchodilator"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.99999994,
+                            "retrieval_rank": 2
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "116091006",
+                                "label": "Bronchodilator",
+                                "label_type": "label",
+                                "semantic_tag": "product",
+                                "fsn": "Bronchodilator (product)",
+                                "preferred_terms": [
+                                    "Bronchodilator (product)",
+                                    "Bronchodilator"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.99999994,
+                            "retrieval_rank": 3
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "116091006",
+                                "label": "Bronchodilator",
+                                "label_type": "preferred",
+                                "semantic_tag": "product",
+                                "fsn": "Bronchodilator (product)",
+                                "preferred_terms": [
+                                    "Bronchodilator (product)",
+                                    "Bronchodilator"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.99999994,
+                            "retrieval_rank": 4
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "300900000",
+                                "label": "Bronchodilator",
+                                "label_type": "label",
+                                "semantic_tag": "substance",
+                                "fsn": "Bronchodilator (substance)",
+                                "preferred_terms": [
+                                    "Bronchodilator (substance)",
+                                    "Bronchodilator"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.9999998,
+                            "retrieval_rank": 5
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "300900000",
+                                "label": "Bronchodilator",
+                                "label_type": "preferred",
+                                "semantic_tag": "substance",
+                                "fsn": "Bronchodilator (substance)",
+                                "preferred_terms": [
+                                    "Bronchodilator (substance)",
+                                    "Bronchodilator"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.9999998,
+                            "retrieval_rank": 6
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "116091006",
+                                "label": "Bronchodilator (product)",
+                                "label_type": "preferred",
+                                "semantic_tag": "product",
+                                "fsn": "Bronchodilator (product)",
+                                "preferred_terms": [
+                                    "Bronchodilator (product)",
+                                    "Bronchodilator"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.98723507,
+                            "retrieval_rank": 7
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "300900000",
+                                "label": "Bronchodilator (substance)",
+                                "label_type": "preferred",
+                                "semantic_tag": "substance",
+                                "fsn": "Bronchodilator (substance)",
+                                "preferred_terms": [
+                                    "Bronchodilator (substance)",
+                                    "Bronchodilator"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.9868167,
+                            "retrieval_rank": 8
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "372580007",
+                                "label": "Bronchodilator (substance)",
+                                "label_type": "preferred",
+                                "semantic_tag": "substance",
+                                "fsn": "Bronchodilator (substance)",
+                                "preferred_terms": [
+                                    "Bronchodilator (substance)",
+                                    "Bronchodilator"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.9868167,
+                            "retrieval_rank": 9
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "373241008",
+                                "label": "Bronchodilator agents",
+                                "label_type": "preferred",
+                                "semantic_tag": "substance",
+                                "fsn": "Bronchodilator agents (substance)",
+                                "preferred_terms": [
+                                    "Bronchodilator agents",
+                                    "Bronchodilator agents (substance)"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.98325276,
+                            "retrieval_rank": 10
+                        }
+                    ],
+                    "confidence": "HIGH",
+                    "reason": null
+                }
+            ],
+            "fhir_temporal_constraint": null
+        },
+        {
+            "id": "A3",
+            "label": "The patient receives education on correct inhaler use and daily self-management strategies",
+            "temporal_constraint": null,
+            "condition": null,
+            "activity_definition": {
+                "resourceType": "ActivityDefinition",
+                "id": "1055",
+                "version": "1.0.0",
+                "name": "ad_educate_patient",
+                "title": "Provide Patient Education",
+                "subtitle": "patient instruction, counseling, education session, training, self-care guidance",
+                "status": "draft",
+                "description": "Provide the patient with information, documentation, or training necessary to understand and correctly perform a clinical activity such as an examination, therapy, or visit.",
+                "kind": "ServiceRequest",
+                "dynamicValue": [
+                    {
+                        "path": "patientInstruction[0].instructionReference",
+                        "expression": {
+                            "description": "Patient instruction: The information or guidance to be provided to the patient regarding the clinical activity, including details on how to perform the activity, expected outcomes, and any necessary precautions.",
+                            "language": "text/fhirpath",
+                            "expression": "%patient_instruction"
+                        }
+                    }
+                ]
+            },
+            "candidates": [
+                {
+                    "activity_definition": {
+                        "resourceType": "ActivityDefinition",
+                        "id": "1055",
+                        "version": "1.0.0",
+                        "name": "ad_educate_patient",
+                        "title": "Provide Patient Education",
+                        "subtitle": "patient instruction, counseling, education session, training, self-care guidance",
+                        "status": "draft",
+                        "description": "Provide the patient with information, documentation, or training necessary to understand and correctly perform a clinical activity such as an examination, therapy, or visit.",
+                        "kind": "ServiceRequest",
+                        "dynamicValue": [
+                            {
+                                "path": "patientInstruction[0].instructionReference",
+                                "expression": {
+                                    "description": "Patient instruction: The information or guidance to be provided to the patient regarding the clinical activity, including details on how to perform the activity, expected outcomes, and any necessary precautions.",
+                                    "language": "text/fhirpath",
+                                    "expression": "%patient_instruction"
+                                }
+                            }
+                        ]
+                    },
+                    "similarity_score": 0.70731646,
+                    "retrieval_rank": 1
+                },
+                {
+                    "activity_definition": {
+                        "resourceType": "ActivityDefinition",
+                        "id": "1054",
+                        "version": "1.0.0",
+                        "name": "ad_diet_indication",
+                        "title": "Prescribe Dietary Plan",
+                        "subtitle": "diet prescription, nutrition plan, dietary recommendation, food regimen",
+                        "status": "draft",
+                        "description": "Definition of a dietary regimen tailored to the patient's clinical condition, including restrictions, recommendations, and nutritional goals.",
+                        "kind": "NutritionOrder",
+                        "dynamicValue": [
+                            {
+                                "path": "oralDiet.instruction",
+                                "expression": {
+                                    "description": "Diet given orally in contrast to enteral (tube) feeding.",
+                                    "language": "text/fhirpath",
+                                    "expression": "%oral_diet"
+                                }
+                            },
+                            {
+                                "path": "supplement[0].instruction",
+                                "expression": {
+                                    "description": "Oral nutritional products given in order to add further nutritional value to the patient's diet.",
+                                    "language": "text/fhirpath",
+                                    "expression": "%supplement"
+                                }
+                            },
+                            {
+                                "path": "enteralFormula.administrationInstruction",
+                                "expression": {
+                                    "description": "Feeding provided through the gastrointestinal tract via a tube, catheter, or stoma that delivers nutrition distal to the oral cavity.",
+                                    "language": "text/fhirpath",
+                                    "expression": "%enteral_formula"
+                                }
+                            }
+                        ]
+                    },
+                    "similarity_score": 0.6089536,
+                    "retrieval_rank": 2
+                },
+                {
+                    "activity_definition": {
+                        "resourceType": "ActivityDefinition",
+                        "id": "1002",
+                        "version": "1.0.0",
+                        "name": "ad_complete_questionnaire",
+                        "title": "Complete Clinical Questionnaire",
+                        "subtitle": "fill questionnaire, patient survey, PROM collection, symptom questionnaire, anamnesis form",
+                        "status": "draft",
+                        "description": "Collect structured information from the patient through a questionnaire, including anamnesis, follow-up assessments, or patient-reported outcomes.",
+                        "kind": "ServiceRequest",
+                        "dynamicValue": [
+                            {
+                                "path": "supportingInfo[0].reference",
+                                "expression": {
+                                    "description": "The reference to the FHIR Resource Questionnaire that represents the questionnaire to be compiled",
+                                    "language": "text/fhirpath",
+                                    "expression": "%questionnaire"
+                                }
+                            }
+                        ]
+                    },
+                    "similarity_score": 0.5675404,
+                    "retrieval_rank": 3
+                }
+            ],
+            "confidence": "HIGH",
+            "reason": "The clinical activity is education and counseling, which matches the description of Candidate ID 1055.",
+            "parameters": [
+                {
+                    "path": "patientInstruction[0].instructionReference",
+                    "label": "education on correct inhaler use and daily self-management strategies"
+                }
+            ],
+            "fhir_parameters": [
+                {
+                    "path": "patientInstruction[0].instructionReference",
+                    "category": "reference",
+                    "label": "education on correct inhaler use and daily self-management strategies",
+                    "value": "education on correct inhaler use and daily self-management strategies"
+                }
+            ],
+            "fhir_temporal_constraint": null
+        }
+    ],
+    "relationships": [
+        {
+            "from_action": "A1",
+            "to_action": "A2"
+        },
+        {
+            "from_action": "A2",
+            "to_action": "A3"
+        }
+    ]
+}

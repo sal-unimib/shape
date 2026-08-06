@@ -1,0 +1,92 @@
+llm,pid,gen_id,gen_tc_label,gen_tc_type,gt_id,gt_tc_label,gt_tc_type
+mistral,P01,A6,daily for four weeks,REPEAT,A5,daily for four weeks,REPEAT
+mistral,P02,A2,for ten days,DURATION,A2,for ten days,DURATION
+mistral,P20,A4,every 8 hours for 7 days,REPEAT,A5,every 8 hours for 7 days,REPEAT
+mistral,P20,A7,while takes amoxicillin 1 g every 8 hours for 7 days,OFFSET,,,
+mistral,P20,A8,with strict glycemic control,OFFSET,A6,after four weeks,OFFSET
+mixtral_8x7,P08,A3,once a week,REPEAT,A3,once daily,REPEAT
+mixtral_8x7,P08,A4,once daily,REPEAT,A4,once a month,REPEAT
+mixtral_8x7,P11,A6,every six months,REPEAT,A6,Every six months,REPEAT
+mixtral_8x7,P14,A1,every day,REPEAT,A1,every day,REPEAT
+mixtral_8x7,P14,A2,for 30 minutes,DURATION,A2,for 30 minutes,DURATION
+mixtral_8x7,P20,A5,for 7 days,DURATION,A5,every 8 hours for 7 days,REPEAT
+mixtral_8x7,P20,A7,after 4 weeks,OFFSET,,,
+mixtral_8x22,P01,A2,One week later,OFFSET,A2,One week later,OFFSET
+mixtral_8x22,P01,A4,for four weeks,DURATION,A5,daily for four weeks,REPEAT
+mixtral_8x22,P03,A1,every morning,REPEAT,A1,every morning,REPEAT
+mixtral_8x22,P03,A3,30-minute,DURATION,A3,30-minute,DURATION
+mixtral_8x22,P04,A1,every morning,REPEAT,A1,Every morning,REPEAT
+mixtral_8x22,P04,A2,every morning,REPEAT,A2,Every morning,REPEAT
+mixtral_8x22,P06,A2,three times per day,REPEAT,A2,three times per day,REPEAT
+mixtral_8x22,P08,A2,once a week,REPEAT,A2,once a week,REPEAT
+mixtral_8x22,P08,A3,once daily,REPEAT,A3,once daily,REPEAT
+mixtral_8x22,P08,A4,once a month,REPEAT,A4,once a month,REPEAT
+mixtral_8x22,P08,A5,after that,OFFSET,A5,,
+mixtral_8x22,P11,A1,twice a day,REPEAT,A1,Twice a day,REPEAT
+mixtral_8x22,P11,A5,once daily,REPEAT,A5,once daily,REPEAT
+mixtral_8x22,P11,A6,every six months,REPEAT,A6,Every six months,REPEAT
+mixtral_8x22,P12,A2,followed by,OFFSET,A2,,
+mixtral_8x22,P13,A2,monthly,REPEAT,A2,,
+mixtral_8x22,P13,A3,monthly,REPEAT,A3,,
+mixtral_8x22,P14,A1,every day,REPEAT,A1,every day,REPEAT
+mixtral_8x22,P14,A2,for 30 minutes,DURATION,A2,for 30 minutes,DURATION
+mixtral_8x22,P16,A2,three times per week,REPEAT,A2,three times per week,REPEAT
+mixtral_8x22,P17,A1,twice daily,REPEAT,A1,twice daily,REPEAT
+mixtral_8x22,P17,A2,every month,REPEAT,A2,every month,REPEAT
+mixtral_8x22,P19,A4,for 30 minutes,DURATION,A4,For 30 minutes,DURATION
+mixtral_8x22,P20,A4,while,DURATION,A4,,
+mixtral_8x22,P20,A5,every 8 hours,REPEAT,A5,every 8 hours for 7 days,REPEAT
+mixtral_8x22,P20,A6,after four weeks,OFFSET,A6,after four weeks,OFFSET
+llama,P01,A2,One week later,OFFSET,A2,One week later,OFFSET
+llama,P01,A5,daily for four weeks,REPEAT,A5,daily for four weeks,REPEAT
+llama,P02,A2,for ten days,DURATION,A2,for ten days,DURATION
+llama,P03,A1,every morning,REPEAT,A1,every morning,REPEAT
+llama,P03,A3,for 30 minutes,DURATION,A3,30-minute,DURATION
+llama,P04,A1,every morning,REPEAT,A1,Every morning,REPEAT
+llama,P04,A2,every morning,REPEAT,A2,Every morning,REPEAT
+llama,P05,A1,every three months,REPEAT,A1,Every 3 months,REPEAT
+llama,P06,A2,three times per day,REPEAT,A2,three times per day,REPEAT
+llama,P07,A3,while chemotherapy is administered,DURATION,A3,,
+llama,P07,A5,after the practitioner is alerted,OFFSET,A5,,
+llama,P08,A2,once a week,REPEAT,A2,once a week,REPEAT
+llama,P08,A3,once daily,REPEAT,A3,once daily,REPEAT
+llama,P08,A4,once a month,REPEAT,A4,once a month,REPEAT
+llama,P09,A2,as soon as possible,OFFSET,A3,,
+llama,P11,A1,twice a day,REPEAT,A1,Twice a day,REPEAT
+llama,P11,A5,once daily,REPEAT,A5,once daily,REPEAT
+llama,P11,A6,every six months,OFFSET,A6,Every six months,REPEAT
+llama,P13,A1,monthly,REPEAT,A1,monthly,REPEAT
+llama,P14,A1,every day,REPEAT,A1,every day,REPEAT
+llama,P14,A2,for 30 minutes,DURATION,A2,for 30 minutes,DURATION
+llama,P16,A2,three times per week,REPEAT,A2,three times per week,REPEAT
+llama,P17,A1,twice daily,REPEAT,A1,twice daily,REPEAT
+llama,P17,A2,every month,REPEAT,A2,every month,REPEAT
+llama,P18,A3,subsequently,OFFSET,A4,,
+llama,P19,A4,for 30 minutes,DURATION,A4,For 30 minutes,DURATION
+llama,P20,A5,every 8 hours for 7 days,REPEAT,A5,every 8 hours for 7 days,REPEAT
+llama,P20,A6,after four weeks,OFFSET,A6,after four weeks,OFFSET
+phi4,P01,A2,One week later,OFFSET,A2,One week later,OFFSET
+phi4,P01,A5,daily,REPEAT,A5,daily for four weeks,REPEAT
+phi4,P02,A2,for ten days,DURATION,A2,for ten days,DURATION
+phi4,P03,A1,every morning,REPEAT,A1,every morning,REPEAT
+phi4,P03,A3,for 30 minutes,DURATION,A3,30-minute,DURATION
+phi4,P04,A1,every morning,REPEAT,A1,Every morning,REPEAT
+phi4,P04,A2,every morning,REPEAT,A2,Every morning,REPEAT
+phi4,P05,A1,every three months,REPEAT,A1,Every 3 months,REPEAT
+phi4,P06,A2,three times per day,REPEAT,A2,three times per day,REPEAT
+phi4,P08,A2,once a week,REPEAT,A2,once a week,REPEAT
+phi4,P08,A3,once daily,REPEAT,A3,once daily,REPEAT
+phi4,P08,A4,once a month,REPEAT,A4,once a month,REPEAT
+phi4,P11,A1,twice a day,REPEAT,A1,Twice a day,REPEAT
+phi4,P11,A5,once daily,REPEAT,A5,once daily,REPEAT
+phi4,P11,A6,every six months,REPEAT,A6,Every six months,REPEAT
+phi4,P12,A2,followed by,OFFSET,A2,,
+phi4,P13,A1,monthly,REPEAT,A1,monthly,REPEAT
+phi4,P14,A1,every day,REPEAT,A1,every day,REPEAT
+phi4,P14,A2,for 30 minutes,DURATION,A2,for 30 minutes,DURATION
+phi4,P16,A2,three times per week,REPEAT,A2,three times per week,REPEAT
+phi4,P17,A1,twice daily,REPEAT,A1,twice daily,REPEAT
+phi4,P17,A2,every month,REPEAT,A2,every month,REPEAT
+phi4,P19,A4,for 30 minutes,DURATION,A4,For 30 minutes,DURATION
+phi4,P20,A5,every 8 hours,REPEAT,A5,every 8 hours for 7 days,REPEAT
+phi4,P20,A6,after four weeks,OFFSET,A6,after four weeks,OFFSET

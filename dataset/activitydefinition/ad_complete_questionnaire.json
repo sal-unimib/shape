@@ -1,0 +1,21 @@
+{
+    "resourceType": "ActivityDefinition",
+    "id": "1002",
+    "version": "1.0.0",
+    "name": "ad_complete_questionnaire",
+    "title": "Complete Clinical Questionnaire",
+    "subtitle": "fill questionnaire, patient survey, PROM collection, symptom questionnaire, anamnesis form",
+    "status": "draft",
+    "description": "Collect structured information from the patient through a questionnaire, including anamnesis, follow-up assessments, or patient-reported outcomes.",
+    "kind": "ServiceRequest",
+    "dynamicValue": [
+        {
+            "path": "supportingInfo[0].reference",
+            "expression": {
+                "description": "The reference to the FHIR Resource Questionnaire that represents the questionnaire to be compiled",
+                "language": "text/fhirpath",
+                "expression": "%questionnaire"
+            }
+        }
+    ]
+}

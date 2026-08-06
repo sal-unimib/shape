@@ -1,0 +1,21 @@
+{
+    "resourceType": "ActivityDefinition",
+    "id": "1055",
+    "version": "1.0.0",
+    "name": "ad_educate_patient",
+    "title": "Provide Patient Education",
+    "subtitle": "patient instruction, counseling, education session, training, self-care guidance",
+    "status": "draft",
+    "description": "Provide the patient with information, documentation, or training necessary to understand and correctly perform a clinical activity such as an examination, therapy, or visit.",
+    "kind": "ServiceRequest",
+    "dynamicValue": [
+        {
+            "path": "patientInstruction[0].instructionReference",
+            "expression": {
+                "description": "Patient instruction: The information or guidance to be provided to the patient regarding the clinical activity, including details on how to perform the activity, expected outcomes, and any necessary precautions.",
+                "language": "text/fhirpath",
+                "expression": "%patient_instruction"
+            }
+        }
+    ]
+}

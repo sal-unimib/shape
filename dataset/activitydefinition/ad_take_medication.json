@@ -1,0 +1,29 @@
+{
+    "resourceType": "ActivityDefinition",
+    "id": "1000",
+    "version": "1.0.0",
+    "name": "ad_take_medication",
+    "title": "Administer medication",
+    "subtitle": "Administer a drug, Give a medication, Provide a medication, Deliver a medication, Dispense a medication, Apply a treatment, Supply a drug, Issue a medication",
+    "status": "draft",
+    "description": "An action that involves providing or delivering a substance intended to produce a specific effect, typically following a defined instruction or schedule.",
+    "kind": "MedicationRequest",
+    "dynamicValue": [
+        {
+            "path": "medication.concept",
+            "expression": {
+                "description": "The medication to be taken",
+                "language": "text/fhirpath",
+                "expression": "%medication"
+            }
+        },
+        {
+            "path": "dosageInstruction[0].doseAndRate[0]",
+            "expression": {
+                "description": "The dose of the medication to be taken",
+                "language": "text/fhirpath",
+                "expression": "%dosage_dose_and_rate"
+            }
+        }
+    ]
+}

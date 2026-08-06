@@ -1,0 +1,21 @@
+{
+    "resourceType": "ActivityDefinition",
+    "id": "1001",
+    "version": "1.0.0",
+    "name": "ad_perform_exercise",
+    "title": "Perform exercise",
+    "subtitle": "Perform an exercise, Do a physical exercise, Carry out an exercise, Execute a physical activity, Engage in physical exercise, Complete an exercise, Practice a physical exercise, Undertake a physical activity",
+    "status": "draft",
+    "description": "An action that involves carrying out a planned physical activity or movement, typically intended to be executed according to specific instructions or goals.",
+    "kind": "ServiceRequest",
+    "dynamicValue": [
+        {
+            "path": "code.concept",
+            "expression": {
+                "description": "Exercise type: The type of exercise to be executed",
+                "language": "text/fhirpath",
+                "expression": "%exercise_concept"
+            }
+        }
+    ]
+}

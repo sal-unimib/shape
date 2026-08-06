@@ -1,0 +1,6 @@
+llm,possible_paramaters_count,correct,not_correct
+mistral,7,6,1
+mixtral_8x7,5,5,0
+mixtral_8x22,8,8,0
+llama,9,9,0
+phi4,9,9,0

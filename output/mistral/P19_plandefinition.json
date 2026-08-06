@@ -1,0 +1,68 @@
+{
+    "resourceType": "PlanDefinition",
+    "id": "19",
+    "name": "P19",
+    "title": "Frailty Assessment Pathway",
+    "status": "draft",
+    "description": "The patient completes a general health questionnaire and subsequently attends a geriatric specialist visit. Following the clinical assessment, the patient receives education on the prescribed care plan. Thereafter, the patient performs the prescribed exercises for 30 minutes and follows a protein-rich Mediterranean diet with adequate hydration and soft-textured foods.",
+    "action": [
+        {
+            "linkId": "A1",
+            "title": "The patient completes a general health questionnaire"
+        },
+        {
+            "linkId": "A2",
+            "title": "The patient attends a geriatric specialist visit"
+        },
+        {
+            "linkId": "A3",
+            "title": "Following the clinical assessment, the patient receives education on the prescribed care plan",
+            "relatedAction": [
+                {
+                    "targetId": "A2",
+                    "relationship": "after-end"
+                }
+            ]
+        },
+        {
+            "linkId": "A4",
+            "title": "The patient performs the prescribed exercises for 30 minutes",
+            "relatedAction": [
+                {
+                    "targetId": "A3",
+                    "relationship": "after-end"
+                }
+            ],
+            "dynamicValue": [
+                {
+                    "path": "code.concept",
+                    "expression": {
+                        "description": "prescribed exercises",
+                        "language": "text/fhirpath",
+                        "expression": "{\"coding\": [{\"system\": \"http://snomed.info/sct\", \"code\": \"151260006\", \"display\": \"Exercise on prescription (procedure)\"}], \"text\": \"prescribed exercises\"}"
+                    }
+                }
+            ]
+        },
+        {
+            "linkId": "A5",
+            "title": "The patient follows a protein-rich Mediterranean diet with adequate hydration and soft-textured foods",
+            "relatedAction": [
+                {
+                    "targetId": "A3",
+                    "relationship": "after-end"
+                }
+            ],
+            "dynamicValue": [
+                {
+                    "path": "oralDiet.instruction",
+                    "expression": {
+                        "description": "protein-rich Mediterranean diet",
+                        "language": "text/fhirpath",
+                        "expression": "protein-rich Mediterranean diet"
+                    }
+                }
+            ]
+        }
+    ]
+}

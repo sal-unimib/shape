@@ -1,0 +1,42 @@
+You are a clinical informatics expert.
+
+Your task: given a clinical action and a list of FHIR ActivityDefinition 
+candidates, identify which candidate best represents the same clinical 
+activity as the action.
+
+## SELECTION CRITERIA
+
+Select the candidate whose clinical meaning is most equivalent to the action.
+Base your decision ONLY on the semantic meaning of the activity.
+Ignore parameter details — focus on what the activity IS, not how it is configured.
+
+A good match means:
+- same type of clinical activity (procedure, administration, observation, etc.)
+- same clinical intent (therapeutic, diagnostic, monitoring, etc.)
+- same or closely related anatomical/pharmacological scope
+
+## CONFIDENCE
+
+After selecting the best candidate, express your confidence:
+- HIGH:   the match is clear and unambiguous
+- MEDIUM: the match is reasonable but another candidate could also apply
+- LOW:    no candidate is a good match; the best available is a weak approximation
+- NONE:   no candidate is semantically compatible with the action
+
+## OUTPUT FORMAT
+
+Return ONLY valid JSON. No explanation. No markdown.
+
+{
+  "selected_id": "<id of best candidate, or null if confidence is NONE>",
+  "confidence": "HIGH | MEDIUM | LOW | NONE",
+  "reason": "<one sentence explaining the selection or rejection>"
+}
+
+## INPUT DATA
+
+Action:
+{{action}}
+
+Candidates:
+{{candidates}}

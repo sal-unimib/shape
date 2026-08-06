@@ -1,0 +1,116 @@
+{
+    "resourceType": "PlanDefinition",
+    "id": "20",
+    "name": "P20",
+    "title": "Chronic Wound Management Pathway",
+    "status": "draft",
+    "description": "The patient completes a wound assessment survey and undergoes specimen collection. If infection is suspected, therapeutic intervention is initiated. Subsequently, the patient follows a high-protein, micronutrient-dense diet rich in vitamin C and zinc, with optimal hydration and strict glycemic control, while takes amoxicillin 1 g every 8 hours for 7 days, and attends a follow-up visit after four weeks.",
+    "action": [
+        {
+            "linkId": "A1",
+            "title": "The patient completes a wound assessment survey"
+        },
+        {
+            "linkId": "A2",
+            "title": "undergoes specimen collection"
+        },
+        {
+            "linkId": "A3",
+            "title": "therapeutic intervention is initiated",
+            "condition": [
+                {
+                    "kind": "applicability",
+                    "expression": {
+                        "description": "If infection is suspected",
+                        "language": "text/fhirpath",
+                        "expression": "TODO"
+                    }
+                }
+            ]
+        },
+        {
+            "linkId": "A4",
+            "title": "the patient takes amoxicillin 1 g",
+            "relatedAction": [
+                {
+                    "targetId": "A3",
+                    "relationship": "after-end"
+                }
+            ],
+            "dynamicValue": [
+                {
+                    "path": "oralDiet.instruction",
+                    "expression": {
+                        "description": "orally",
+                        "language": "text/fhirpath",
+                        "expression": "orally"
+                    }
+                }
+            ]
+        },
+        {
+            "linkId": "A5",
+            "title": "follows a high-protein, micronutrient-dense diet rich in vitamin C and zinc",
+            "relatedAction": [
+                {
+                    "targetId": "A4",
+                    "relationship": "after-end"
+                },
+                {
+                    "targetId": "A8",
+                    "relationship": "after-end"
+                }
+            ],
+            "dynamicValue": [
+                {
+                    "path": "supplement[0].instruction",
+                    "expression": {
+                        "description": "high-protein, micronutrient-dense diet",
+                        "language": "text/fhirpath",
+                        "expression": "high-protein, micronutrient-dense diet"
+                    }
+                },
+                {
+                    "path": "oralDiet.instruction",
+                    "expression": {
+                        "description": "orally",
+                        "language": "text/fhirpath",
+                        "expression": "orally"
+                    }
+                }
+            ]
+        },
+        {
+            "linkId": "A6",
+            "title": "with optimal hydration and strict glycemic control",
+            "relatedAction": [
+                {
+                    "targetId": "A4",
+                    "relationship": "after-end"
+                },
+                {
+                    "targetId": "A8",
+                    "relationship": "after-end"
+                }
+            ]
+        },
+        {
+            "linkId": "A7",
+            "title": "the patient takes zinc",
+            "relatedAction": [
+                {
+                    "targetId": "A4",
+                    "relationship": "after-end"
+                },
+                {
+                    "targetId": "A8",
+                    "relationship": "after-end"
+                }
+            ]
+        },
+        {
+            "linkId": "A8",
+            "title": "the patient attends a follow-up visit after four weeks"
+        }
+    ]
+}

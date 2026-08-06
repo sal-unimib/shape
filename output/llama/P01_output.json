@@ -1,0 +1,1329 @@
+{
+    "id": "1",
+    "name": "P01",
+    "title": "Postoperative Rehabilitation Initiation",
+    "description": "The patient undergoes surgery procedure. One week later, a specialist follow-up visit is performed. Subsequently, the patient completes a clinical questionnaire and receives education on generic home rehabilitation program. The patient then performs the rehabilitation exercises daily for four weeks.",
+    "fhir_actions": [
+        {
+            "id": "A1",
+            "label": "The patient undergoes surgery procedure.",
+            "temporal_constraint": null,
+            "condition": null,
+            "activity_definition": {
+                "resourceType": "ActivityDefinition",
+                "id": "1052",
+                "version": "1.0.0",
+                "name": "ad_clinical_procedure",
+                "title": "Perform Clinical Procedure",
+                "subtitle": "medical procedure, surgical intervention, clinical intervention, treatment procedure",
+                "status": "draft",
+                "description": "Execution of a clinical or surgical procedure performed by qualified healthcare personnel for diagnostic or therapeutic purposes.",
+                "kind": "ServiceRequest",
+                "dynamicValue": [
+                    {
+                        "path": "code.concept",
+                        "expression": {
+                            "description": "Clinical procedure type: The type of clinical procedure to be executed",
+                            "language": "text/fhirpath",
+                            "expression": "%clinical_procedure_concept"
+                        }
+                    },
+                    {
+                        "path": "bodySite.concept",
+                        "expression": {
+                            "description": "Anatomic location where the procedure should be performed. This is the target site.",
+                            "language": "text/fhirpath",
+                            "expression": "%body_site_concept"
+                        }
+                    }
+                ]
+            },
+            "candidates": [
+                {
+                    "activity_definition": {
+                        "resourceType": "ActivityDefinition",
+                        "id": "1052",
+                        "version": "1.0.0",
+                        "name": "ad_clinical_procedure",
+                        "title": "Perform Clinical Procedure",
+                        "subtitle": "medical procedure, surgical intervention, clinical intervention, treatment procedure",
+                        "status": "draft",
+                        "description": "Execution of a clinical or surgical procedure performed by qualified healthcare personnel for diagnostic or therapeutic purposes.",
+                        "kind": "ServiceRequest",
+                        "dynamicValue": [
+                            {
+                                "path": "code.concept",
+                                "expression": {
+                                    "description": "Clinical procedure type: The type of clinical procedure to be executed",
+                                    "language": "text/fhirpath",
+                                    "expression": "%clinical_procedure_concept"
+                                }
+                            },
+                            {
+                                "path": "bodySite.concept",
+                                "expression": {
+                                    "description": "Anatomic location where the procedure should be performed. This is the target site.",
+                                    "language": "text/fhirpath",
+                                    "expression": "%body_site_concept"
+                                }
+                            }
+                        ]
+                    },
+                    "similarity_score": 0.7802771,
+                    "retrieval_rank": 1
+                },
+                {
+                    "activity_definition": {
+                        "resourceType": "ActivityDefinition",
+                        "id": "1059",
+                        "version": "1.0.0",
+                        "name": "ad_specialist_visit",
+                        "title": "Attend Scheduled Specialist Visit",
+                        "subtitle": "attend appointment, specialist consultation visit, medical visit attendance, go to appointment",
+                        "status": "draft",
+                        "description": "Attend and complete a previously scheduled specialist medical visit. The appointment details are defined within or referenced by this request, and the patient is expected to attend at the specified time and location.",
+                        "kind": "ServiceRequest",
+                        "dynamicValue": [
+                            {
+                                "path": "code.concept",
+                                "expression": {
+                                    "description": "The type of specialist visit to be attended or the specialist that has to perform the visit",
+                                    "language": "text/fhirpath",
+                                    "expression": "%visit_concept"
+                                }
+                            }
+                        ]
+                    },
+                    "similarity_score": 0.72522503,
+                    "retrieval_rank": 2
+                },
+                {
+                    "activity_definition": {
+                        "resourceType": "ActivityDefinition",
+                        "id": "1055",
+                        "version": "1.0.0",
+                        "name": "ad_educate_patient",
+                        "title": "Provide Patient Education",
+                        "subtitle": "patient instruction, counseling, education session, training, self-care guidance",
+                        "status": "draft",
+                        "description": "Provide the patient with information, documentation, or training necessary to understand and correctly perform a clinical activity such as an examination, therapy, or visit.",
+                        "kind": "ServiceRequest",
+                        "dynamicValue": [
+                            {
+                                "path": "patientInstruction[0].instructionReference",
+                                "expression": {
+                                    "description": "Patient instruction: The information or guidance to be provided to the patient regarding the clinical activity, including details on how to perform the activity, expected outcomes, and any necessary precautions.",
+                                    "language": "text/fhirpath",
+                                    "expression": "%patient_instruction"
+                                }
+                            }
+                        ]
+                    },
+                    "similarity_score": 0.6917783,
+                    "retrieval_rank": 3
+                }
+            ],
+            "confidence": "HIGH",
+            "reason": "The action involves a surgery procedure, which matches the description of performing a clinical or surgical procedure.",
+            "parameters": [
+                {
+                    "path": "code.concept",
+                    "label": "surgery procedure"
+                }
+            ],
+            "fhir_parameters": [
+                {
+                    "path": "code.concept",
+                    "category": "ontology",
+                    "label": "surgery procedure",
+                    "value": {
+                        "coding": [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "387713003",
+                                "display": "Surgical procedure"
+                            }
+                        ],
+                        "text": "surgery procedure"
+                    },
+                    "candidates": [
+                        {
+                            "ontology_concept": {
+                                "concept_id": "387713003",
+                                "label": "Surgical procedure",
+                                "label_type": "label",
+                                "semantic_tag": "procedure",
+                                "fsn": "Surgical procedure (procedure)",
+                                "preferred_terms": [
+                                    "Surgical procedure (procedure)",
+                                    "Surgical procedure"
+                                ],
+                                "acceptable_terms": [
+                                    "Operation",
+                                    "Operative procedure",
+                                    "Surgery"
+                                ]
+                            },
+                            "similarity_score": 0.9720977,
+                            "retrieval_rank": 1
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "387713003",
+                                "label": "Surgical procedure",
+                                "label_type": "preferred",
+                                "semantic_tag": "procedure",
+                                "fsn": "Surgical procedure (procedure)",
+                                "preferred_terms": [
+                                    "Surgical procedure (procedure)",
+                                    "Surgical procedure"
+                                ],
+                                "acceptable_terms": [
+                                    "Operation",
+                                    "Operative procedure",
+                                    "Surgery"
+                                ]
+                            },
+                            "similarity_score": 0.9720977,
+                            "retrieval_rank": 2
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "387713003",
+                                "label": "Surgery",
+                                "label_type": "acceptable",
+                                "semantic_tag": "procedure",
+                                "fsn": "Surgical procedure (procedure)",
+                                "preferred_terms": [
+                                    "Surgical procedure (procedure)",
+                                    "Surgical procedure"
+                                ],
+                                "acceptable_terms": [
+                                    "Operation",
+                                    "Operative procedure",
+                                    "Surgery"
+                                ]
+                            },
+                            "similarity_score": 0.96592075,
+                            "retrieval_rank": 3
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "257556004",
+                                "label": "Surgery",
+                                "label_type": "label",
+                                "semantic_tag": "qualifier value",
+                                "fsn": "Surgery (qualifier value)",
+                                "preferred_terms": [
+                                    "Surgery (qualifier value)",
+                                    "Surgery"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.96592075,
+                            "retrieval_rank": 4
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "257556004",
+                                "label": "Surgery",
+                                "label_type": "preferred",
+                                "semantic_tag": "qualifier value",
+                                "fsn": "Surgery (qualifier value)",
+                                "preferred_terms": [
+                                    "Surgery (qualifier value)",
+                                    "Surgery"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.96592075,
+                            "retrieval_rank": 5
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "257556004",
+                                "label": "Surgery (qualifier value)",
+                                "label_type": "preferred",
+                                "semantic_tag": "qualifier value",
+                                "fsn": "Surgery (qualifier value)",
+                                "preferred_terms": [
+                                    "Surgery (qualifier value)",
+                                    "Surgery"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.961501,
+                            "retrieval_rank": 6
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "387713003",
+                                "label": "Surgical procedure (procedure)",
+                                "label_type": "preferred",
+                                "semantic_tag": "procedure",
+                                "fsn": "Surgical procedure (procedure)",
+                                "preferred_terms": [
+                                    "Surgical procedure (procedure)",
+                                    "Surgical procedure"
+                                ],
+                                "acceptable_terms": [
+                                    "Operation",
+                                    "Operative procedure",
+                                    "Surgery"
+                                ]
+                            },
+                            "similarity_score": 0.9604509,
+                            "retrieval_rank": 7
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "281608003",
+                                "label": "Surgical action (qualifier value)",
+                                "label_type": "preferred",
+                                "semantic_tag": "qualifier value",
+                                "fsn": "Surgical action (qualifier value)",
+                                "preferred_terms": [
+                                    "Surgical action",
+                                    "Surgical action (qualifier value)"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.91513556,
+                            "retrieval_rank": 8
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "129284003",
+                                "label": "Surgical action (qualifier value)",
+                                "label_type": "preferred",
+                                "semantic_tag": "qualifier value",
+                                "fsn": "Surgical action (qualifier value)",
+                                "preferred_terms": [
+                                    "Surgical action",
+                                    "Surgical action (qualifier value)"
+                                ],
+                                "acceptable_terms": [
+                                    "Surgical action values",
+                                    "Surgical procedure atom"
+                                ]
+                            },
+                            "similarity_score": 0.91513556,
+                            "retrieval_rank": 9
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "281608003",
+                                "label": "Surgical action",
+                                "label_type": "label",
+                                "semantic_tag": "qualifier value",
+                                "fsn": "Surgical action (qualifier value)",
+                                "preferred_terms": [
+                                    "Surgical action",
+                                    "Surgical action (qualifier value)"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.91504127,
+                            "retrieval_rank": 10
+                        }
+                    ],
+                    "confidence": "HIGH",
+                    "reason": null
+                }
+            ],
+            "fhir_temporal_constraint": null
+        },
+        {
+            "id": "A2",
+            "label": "a specialist follow-up visit is performed",
+            "temporal_constraint": {
+                "type": "OFFSET",
+                "label": "One week later"
+            },
+            "condition": null,
+            "activity_definition": {
+                "resourceType": "ActivityDefinition",
+                "id": "1059",
+                "version": "1.0.0",
+                "name": "ad_specialist_visit",
+                "title": "Attend Scheduled Specialist Visit",
+                "subtitle": "attend appointment, specialist consultation visit, medical visit attendance, go to appointment",
+                "status": "draft",
+                "description": "Attend and complete a previously scheduled specialist medical visit. The appointment details are defined within or referenced by this request, and the patient is expected to attend at the specified time and location.",
+                "kind": "ServiceRequest",
+                "dynamicValue": [
+                    {
+                        "path": "code.concept",
+                        "expression": {
+                            "description": "The type of specialist visit to be attended or the specialist that has to perform the visit",
+                            "language": "text/fhirpath",
+                            "expression": "%visit_concept"
+                        }
+                    }
+                ]
+            },
+            "candidates": [
+                {
+                    "activity_definition": {
+                        "resourceType": "ActivityDefinition",
+                        "id": "1059",
+                        "version": "1.0.0",
+                        "name": "ad_specialist_visit",
+                        "title": "Attend Scheduled Specialist Visit",
+                        "subtitle": "attend appointment, specialist consultation visit, medical visit attendance, go to appointment",
+                        "status": "draft",
+                        "description": "Attend and complete a previously scheduled specialist medical visit. The appointment details are defined within or referenced by this request, and the patient is expected to attend at the specified time and location.",
+                        "kind": "ServiceRequest",
+                        "dynamicValue": [
+                            {
+                                "path": "code.concept",
+                                "expression": {
+                                    "description": "The type of specialist visit to be attended or the specialist that has to perform the visit",
+                                    "language": "text/fhirpath",
+                                    "expression": "%visit_concept"
+                                }
+                            }
+                        ]
+                    },
+                    "similarity_score": 0.800052,
+                    "retrieval_rank": 1
+                },
+                {
+                    "activity_definition": {
+                        "resourceType": "ActivityDefinition",
+                        "id": "1056",
+                        "version": "1.0.0",
+                        "name": "ad_perform_imaging",
+                        "title": "Perform Diagnostic Imaging Study",
+                        "subtitle": "radiology exam, imaging procedure, MRI, CT scan, ultrasound, X-ray",
+                        "status": "draft",
+                        "description": "Execute a diagnostic imaging procedure to visualize internal anatomical structures for diagnostic or monitoring purposes.",
+                        "kind": "ServiceRequest",
+                        "dynamicValue": [
+                            {
+                                "path": "code.concept",
+                                "expression": {
+                                    "description": "Imaging modality: The type of diagnostic imaging procedure to be performed",
+                                    "language": "text/fhirpath",
+                                    "expression": "%imaging_modality_concept"
+                                }
+                            },
+                            {
+                                "path": "bodySite.concept",
+                                "expression": {
+                                    "description": "Anatomic location where the imaging study should be performed. This is the target site.",
+                                    "language": "text/fhirpath",
+                                    "expression": "%body_site_concept"
+                                }
+                            }
+                        ]
+                    },
+                    "similarity_score": 0.6067583,
+                    "retrieval_rank": 2
+                },
+                {
+                    "activity_definition": {
+                        "resourceType": "ActivityDefinition",
+                        "id": "1052",
+                        "version": "1.0.0",
+                        "name": "ad_clinical_procedure",
+                        "title": "Perform Clinical Procedure",
+                        "subtitle": "medical procedure, surgical intervention, clinical intervention, treatment procedure",
+                        "status": "draft",
+                        "description": "Execution of a clinical or surgical procedure performed by qualified healthcare personnel for diagnostic or therapeutic purposes.",
+                        "kind": "ServiceRequest",
+                        "dynamicValue": [
+                            {
+                                "path": "code.concept",
+                                "expression": {
+                                    "description": "Clinical procedure type: The type of clinical procedure to be executed",
+                                    "language": "text/fhirpath",
+                                    "expression": "%clinical_procedure_concept"
+                                }
+                            },
+                            {
+                                "path": "bodySite.concept",
+                                "expression": {
+                                    "description": "Anatomic location where the procedure should be performed. This is the target site.",
+                                    "language": "text/fhirpath",
+                                    "expression": "%body_site_concept"
+                                }
+                            }
+                        ]
+                    },
+                    "similarity_score": 0.60581475,
+                    "retrieval_rank": 3
+                }
+            ],
+            "confidence": "HIGH",
+            "reason": "The action and candidate both describe a specialist follow-up visit.",
+            "parameters": [
+                {
+                    "path": "code.concept",
+                    "label": "specialist follow-up"
+                }
+            ],
+            "fhir_parameters": [
+                {
+                    "path": "code.concept",
+                    "category": "ontology",
+                    "label": "specialist follow-up",
+                    "value": {
+                        "coding": [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "281036007",
+                                "display": "Follow-up consultation"
+                            }
+                        ],
+                        "text": "specialist follow-up"
+                    },
+                    "candidates": [
+                        {
+                            "ontology_concept": {
+                                "concept_id": "281036007",
+                                "label": "Follow-up consultation",
+                                "label_type": "preferred",
+                                "semantic_tag": "procedure",
+                                "fsn": "Follow-up consultation (procedure)",
+                                "preferred_terms": [
+                                    "Follow-up consultation (procedure)",
+                                    "Follow-up consultation"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.77474654,
+                            "retrieval_rank": 1
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "281036007",
+                                "label": "Follow-up consultation",
+                                "label_type": "label",
+                                "semantic_tag": "procedure",
+                                "fsn": "Follow-up consultation (procedure)",
+                                "preferred_terms": [
+                                    "Follow-up consultation (procedure)",
+                                    "Follow-up consultation"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.77474654,
+                            "retrieval_rank": 2
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "281036007",
+                                "label": "Follow-up consultation (procedure)",
+                                "label_type": "preferred",
+                                "semantic_tag": "procedure",
+                                "fsn": "Follow-up consultation (procedure)",
+                                "preferred_terms": [
+                                    "Follow-up consultation (procedure)",
+                                    "Follow-up consultation"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.7599776,
+                            "retrieval_rank": 3
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "389961009",
+                                "label": "Follow-up encounter",
+                                "label_type": "preferred",
+                                "semantic_tag": "procedure",
+                                "fsn": "Follow-up encounter (procedure)",
+                                "preferred_terms": [
+                                    "Follow-up encounter",
+                                    "Follow-up encounter (procedure)"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.74709296,
+                            "retrieval_rank": 4
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "390695003",
+                                "label": "Follow-up encounter",
+                                "label_type": "preferred",
+                                "semantic_tag": "procedure",
+                                "fsn": "Follow-up encounter (procedure)",
+                                "preferred_terms": [
+                                    "Follow-up encounter",
+                                    "Follow-up encounter (procedure)"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.74709296,
+                            "retrieval_rank": 5
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "389961009",
+                                "label": "Follow-up encounter",
+                                "label_type": "label",
+                                "semantic_tag": "procedure",
+                                "fsn": "Follow-up encounter (procedure)",
+                                "preferred_terms": [
+                                    "Follow-up encounter",
+                                    "Follow-up encounter (procedure)"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.74709296,
+                            "retrieval_rank": 6
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "390906007",
+                                "label": "Follow-up encounter",
+                                "label_type": "preferred",
+                                "semantic_tag": "procedure",
+                                "fsn": "Follow-up encounter (procedure)",
+                                "preferred_terms": [
+                                    "Follow-up encounter",
+                                    "Follow-up encounter (procedure)"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.74709284,
+                            "retrieval_rank": 7
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "390695003",
+                                "label": "Follow-up encounter",
+                                "label_type": "label",
+                                "semantic_tag": "procedure",
+                                "fsn": "Follow-up encounter (procedure)",
+                                "preferred_terms": [
+                                    "Follow-up encounter",
+                                    "Follow-up encounter (procedure)"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.74709284,
+                            "retrieval_rank": 8
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "390906007",
+                                "label": "Follow-up encounter",
+                                "label_type": "label",
+                                "semantic_tag": "procedure",
+                                "fsn": "Follow-up encounter (procedure)",
+                                "preferred_terms": [
+                                    "Follow-up encounter",
+                                    "Follow-up encounter (procedure)"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.74709284,
+                            "retrieval_rank": 9
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "393461006",
+                                "label": "Follow up",
+                                "label_type": "label",
+                                "semantic_tag": "finding",
+                                "fsn": "Follow up (finding)",
+                                "preferred_terms": [
+                                    "Follow up",
+                                    "Follow up (finding)"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.7446302,
+                            "retrieval_rank": 10
+                        }
+                    ],
+                    "confidence": "HIGH",
+                    "reason": null
+                }
+            ],
+            "fhir_temporal_constraint": {
+                "type": "OFFSET",
+                "value": {
+                    "value": 1,
+                    "system": "http://unitsofmeasure.org",
+                    "unit": "wk"
+                }
+            }
+        },
+        {
+            "id": "A3",
+            "label": "the patient completes a clinical questionnaire",
+            "temporal_constraint": null,
+            "condition": null,
+            "activity_definition": {
+                "resourceType": "ActivityDefinition",
+                "id": "1002",
+                "version": "1.0.0",
+                "name": "ad_complete_questionnaire",
+                "title": "Complete Clinical Questionnaire",
+                "subtitle": "fill questionnaire, patient survey, PROM collection, symptom questionnaire, anamnesis form",
+                "status": "draft",
+                "description": "Collect structured information from the patient through a questionnaire, including anamnesis, follow-up assessments, or patient-reported outcomes.",
+                "kind": "ServiceRequest",
+                "dynamicValue": [
+                    {
+                        "path": "supportingInfo[0].reference",
+                        "expression": {
+                            "description": "The reference to the FHIR Resource Questionnaire that represents the questionnaire to be compiled",
+                            "language": "text/fhirpath",
+                            "expression": "%questionnaire"
+                        }
+                    }
+                ]
+            },
+            "candidates": [
+                {
+                    "activity_definition": {
+                        "resourceType": "ActivityDefinition",
+                        "id": "1002",
+                        "version": "1.0.0",
+                        "name": "ad_complete_questionnaire",
+                        "title": "Complete Clinical Questionnaire",
+                        "subtitle": "fill questionnaire, patient survey, PROM collection, symptom questionnaire, anamnesis form",
+                        "status": "draft",
+                        "description": "Collect structured information from the patient through a questionnaire, including anamnesis, follow-up assessments, or patient-reported outcomes.",
+                        "kind": "ServiceRequest",
+                        "dynamicValue": [
+                            {
+                                "path": "supportingInfo[0].reference",
+                                "expression": {
+                                    "description": "The reference to the FHIR Resource Questionnaire that represents the questionnaire to be compiled",
+                                    "language": "text/fhirpath",
+                                    "expression": "%questionnaire"
+                                }
+                            }
+                        ]
+                    },
+                    "similarity_score": 0.78046846,
+                    "retrieval_rank": 1
+                },
+                {
+                    "activity_definition": {
+                        "resourceType": "ActivityDefinition",
+                        "id": "1058",
+                        "version": "1.0.0",
+                        "name": "ad_request_observation",
+                        "title": "Request Clinical Observation",
+                        "subtitle": "order observation, request measurement, continuous observation, diagnostic test, vital signs check or tracking",
+                        "status": "draft",
+                        "description": "Request the measurement, evaluation, or recording of clinical data such as vital signs, laboratory tests, or diagnostic observations.",
+                        "kind": "ServiceRequest",
+                        "dynamicValue": [
+                            {
+                                "path": "code.concept",
+                                "expression": {
+                                    "description": "The clinical observation to be acquired",
+                                    "language": "text/fhirpath",
+                                    "expression": "%observation_concept"
+                                }
+                            }
+                        ]
+                    },
+                    "similarity_score": 0.6538759,
+                    "retrieval_rank": 2
+                },
+                {
+                    "activity_definition": {
+                        "resourceType": "ActivityDefinition",
+                        "id": "1051",
+                        "version": "1.0.0",
+                        "name": "ad_alert_practitioner",
+                        "title": "Alert Healthcare Practitioner",
+                        "subtitle": "send alert, notify clinician, trigger notification, clinical alert",
+                        "status": "draft",
+                        "description": "Send a notification or alert to a healthcare professional in response to clinical events, thresholds, or workflow triggers.",
+                        "kind": "CommunicationRequest",
+                        "dynamicValue": [
+                            {
+                                "path": "priority",
+                                "expression": {
+                                    "description": "Characterizes how quickly the proposed act must be initiated. Accepted values are: routine, urgent, asap, stat.",
+                                    "language": "text/fhirpath",
+                                    "expression": "%priority"
+                                }
+                            },
+                            {
+                                "path": "payload[0].contentAttachment",
+                                "expression": {
+                                    "description": "The content to be communicated to the recipient.",
+                                    "language": "text/fhirpath",
+                                    "expression": "%payload"
+                                }
+                            },
+                            {
+                                "path": "requester",
+                                "expression": {
+                                    "description": "The device, individual, or organization who asks for the information to be shared.",
+                                    "language": "text/fhirpath",
+                                    "expression": "%requester"
+                                }
+                            },
+                            {
+                                "path": "recipient[]",
+                                "expression": {
+                                    "description": "The list of entities (e.g. person, organization, clinical information system, device, group, or care team) which is the intended target of the communication.",
+                                    "language": "text/fhirpath",
+                                    "expression": "%recipient"
+                                }
+                            },
+                            {
+                                "path": "informationProvider[]",
+                                "expression": {
+                                    "description": "The list of entities (e.g. person, organization, clinical information system, or device) which is to be the source of the communication.",
+                                    "language": "text/fhirpath",
+                                    "expression": "%information_provider"
+                                }
+                            }
+                        ]
+                    },
+                    "similarity_score": 0.6483768,
+                    "retrieval_rank": 3
+                }
+            ],
+            "confidence": "HIGH",
+            "reason": "The candidate directly matches the action of completing a clinical questionnaire.",
+            "parameters": [
+                {
+                    "path": "supportingInfo[0].reference",
+                    "label": "clinical questionnaire"
+                }
+            ],
+            "fhir_parameters": [
+                {
+                    "path": "supportingInfo[0].reference",
+                    "category": "reference",
+                    "label": "clinical questionnaire",
+                    "value": "clinical questionnaire"
+                }
+            ],
+            "fhir_temporal_constraint": null
+        },
+        {
+            "id": "A4",
+            "label": "receives education on generic home rehabilitation program",
+            "temporal_constraint": null,
+            "condition": null,
+            "activity_definition": {
+                "resourceType": "ActivityDefinition",
+                "id": "1055",
+                "version": "1.0.0",
+                "name": "ad_educate_patient",
+                "title": "Provide Patient Education",
+                "subtitle": "patient instruction, counseling, education session, training, self-care guidance",
+                "status": "draft",
+                "description": "Provide the patient with information, documentation, or training necessary to understand and correctly perform a clinical activity such as an examination, therapy, or visit.",
+                "kind": "ServiceRequest",
+                "dynamicValue": [
+                    {
+                        "path": "patientInstruction[0].instructionReference",
+                        "expression": {
+                            "description": "Patient instruction: The information or guidance to be provided to the patient regarding the clinical activity, including details on how to perform the activity, expected outcomes, and any necessary precautions.",
+                            "language": "text/fhirpath",
+                            "expression": "%patient_instruction"
+                        }
+                    }
+                ]
+            },
+            "candidates": [
+                {
+                    "activity_definition": {
+                        "resourceType": "ActivityDefinition",
+                        "id": "1055",
+                        "version": "1.0.0",
+                        "name": "ad_educate_patient",
+                        "title": "Provide Patient Education",
+                        "subtitle": "patient instruction, counseling, education session, training, self-care guidance",
+                        "status": "draft",
+                        "description": "Provide the patient with information, documentation, or training necessary to understand and correctly perform a clinical activity such as an examination, therapy, or visit.",
+                        "kind": "ServiceRequest",
+                        "dynamicValue": [
+                            {
+                                "path": "patientInstruction[0].instructionReference",
+                                "expression": {
+                                    "description": "Patient instruction: The information or guidance to be provided to the patient regarding the clinical activity, including details on how to perform the activity, expected outcomes, and any necessary precautions.",
+                                    "language": "text/fhirpath",
+                                    "expression": "%patient_instruction"
+                                }
+                            }
+                        ]
+                    },
+                    "similarity_score": 0.56774247,
+                    "retrieval_rank": 1
+                },
+                {
+                    "activity_definition": {
+                        "resourceType": "ActivityDefinition",
+                        "id": "1057",
+                        "version": "1.0.0",
+                        "name": "ad_provide_therapy",
+                        "title": "Provide Therapeutic Intervention",
+                        "subtitle": "therapy session, treatment, rehabilitation therapy, non-pharmacological treatment",
+                        "status": "draft",
+                        "description": "Delivery of a therapeutic intervention excluding medications, such as physiotherapy, psychotherapy, or other rehabilitative treatments.",
+                        "kind": "ServiceRequest",
+                        "dynamicValue": [
+                            {
+                                "path": "code.concept",
+                                "expression": {
+                                    "description": "Therapy type: The type of therapeutic intervention to be provided",
+                                    "language": "text/fhirpath",
+                                    "expression": "%therapy_concept"
+                                }
+                            },
+                            {
+                                "path": "bodySite.concept",
+                                "expression": {
+                                    "description": "Anatomic location where the therapy should be performed. This is the target site.",
+                                    "language": "text/fhirpath",
+                                    "expression": "%body_site_concept"
+                                }
+                            }
+                        ]
+                    },
+                    "similarity_score": 0.5596827,
+                    "retrieval_rank": 2
+                },
+                {
+                    "activity_definition": {
+                        "resourceType": "ActivityDefinition",
+                        "id": "1054",
+                        "version": "1.0.0",
+                        "name": "ad_diet_indication",
+                        "title": "Prescribe Dietary Plan",
+                        "subtitle": "diet prescription, nutrition plan, dietary recommendation, food regimen",
+                        "status": "draft",
+                        "description": "Definition of a dietary regimen tailored to the patient's clinical condition, including restrictions, recommendations, and nutritional goals.",
+                        "kind": "NutritionOrder",
+                        "dynamicValue": [
+                            {
+                                "path": "oralDiet.instruction",
+                                "expression": {
+                                    "description": "Diet given orally in contrast to enteral (tube) feeding.",
+                                    "language": "text/fhirpath",
+                                    "expression": "%oral_diet"
+                                }
+                            },
+                            {
+                                "path": "supplement[0].instruction",
+                                "expression": {
+                                    "description": "Oral nutritional products given in order to add further nutritional value to the patient's diet.",
+                                    "language": "text/fhirpath",
+                                    "expression": "%supplement"
+                                }
+                            },
+                            {
+                                "path": "enteralFormula.administrationInstruction",
+                                "expression": {
+                                    "description": "Feeding provided through the gastrointestinal tract via a tube, catheter, or stoma that delivers nutrition distal to the oral cavity.",
+                                    "language": "text/fhirpath",
+                                    "expression": "%enteral_formula"
+                                }
+                            }
+                        ]
+                    },
+                    "similarity_score": 0.5110801,
+                    "retrieval_rank": 3
+                }
+            ],
+            "confidence": "HIGH",
+            "reason": "The action of receiving education on a generic home rehabilitation program is semantically equivalent to providing patient education.",
+            "parameters": [
+                {
+                    "path": "patientInstruction[0].instructionReference",
+                    "label": "education on generic home rehabilitation program"
+                }
+            ],
+            "fhir_parameters": [
+                {
+                    "path": "patientInstruction[0].instructionReference",
+                    "category": "reference",
+                    "label": "education on generic home rehabilitation program",
+                    "value": "education on generic home rehabilitation program"
+                }
+            ],
+            "fhir_temporal_constraint": null
+        },
+        {
+            "id": "A5",
+            "label": "the patient performs the rehabilitation exercises daily",
+            "temporal_constraint": {
+                "type": "REPEAT",
+                "label": "daily for four weeks"
+            },
+            "condition": null,
+            "activity_definition": {
+                "resourceType": "ActivityDefinition",
+                "id": "1057",
+                "version": "1.0.0",
+                "name": "ad_provide_therapy",
+                "title": "Provide Therapeutic Intervention",
+                "subtitle": "therapy session, treatment, rehabilitation therapy, non-pharmacological treatment",
+                "status": "draft",
+                "description": "Delivery of a therapeutic intervention excluding medications, such as physiotherapy, psychotherapy, or other rehabilitative treatments.",
+                "kind": "ServiceRequest",
+                "dynamicValue": [
+                    {
+                        "path": "code.concept",
+                        "expression": {
+                            "description": "Therapy type: The type of therapeutic intervention to be provided",
+                            "language": "text/fhirpath",
+                            "expression": "%therapy_concept"
+                        }
+                    },
+                    {
+                        "path": "bodySite.concept",
+                        "expression": {
+                            "description": "Anatomic location where the therapy should be performed. This is the target site.",
+                            "language": "text/fhirpath",
+                            "expression": "%body_site_concept"
+                        }
+                    }
+                ]
+            },
+            "candidates": [
+                {
+                    "activity_definition": {
+                        "resourceType": "ActivityDefinition",
+                        "id": "1057",
+                        "version": "1.0.0",
+                        "name": "ad_provide_therapy",
+                        "title": "Provide Therapeutic Intervention",
+                        "subtitle": "therapy session, treatment, rehabilitation therapy, non-pharmacological treatment",
+                        "status": "draft",
+                        "description": "Delivery of a therapeutic intervention excluding medications, such as physiotherapy, psychotherapy, or other rehabilitative treatments.",
+                        "kind": "ServiceRequest",
+                        "dynamicValue": [
+                            {
+                                "path": "code.concept",
+                                "expression": {
+                                    "description": "Therapy type: The type of therapeutic intervention to be provided",
+                                    "language": "text/fhirpath",
+                                    "expression": "%therapy_concept"
+                                }
+                            },
+                            {
+                                "path": "bodySite.concept",
+                                "expression": {
+                                    "description": "Anatomic location where the therapy should be performed. This is the target site.",
+                                    "language": "text/fhirpath",
+                                    "expression": "%body_site_concept"
+                                }
+                            }
+                        ]
+                    },
+                    "similarity_score": 0.6802939,
+                    "retrieval_rank": 1
+                },
+                {
+                    "activity_definition": {
+                        "resourceType": "ActivityDefinition",
+                        "id": "1055",
+                        "version": "1.0.0",
+                        "name": "ad_educate_patient",
+                        "title": "Provide Patient Education",
+                        "subtitle": "patient instruction, counseling, education session, training, self-care guidance",
+                        "status": "draft",
+                        "description": "Provide the patient with information, documentation, or training necessary to understand and correctly perform a clinical activity such as an examination, therapy, or visit.",
+                        "kind": "ServiceRequest",
+                        "dynamicValue": [
+                            {
+                                "path": "patientInstruction[0].instructionReference",
+                                "expression": {
+                                    "description": "Patient instruction: The information or guidance to be provided to the patient regarding the clinical activity, including details on how to perform the activity, expected outcomes, and any necessary precautions.",
+                                    "language": "text/fhirpath",
+                                    "expression": "%patient_instruction"
+                                }
+                            }
+                        ]
+                    },
+                    "similarity_score": 0.65147984,
+                    "retrieval_rank": 2
+                },
+                {
+                    "activity_definition": {
+                        "resourceType": "ActivityDefinition",
+                        "id": "1052",
+                        "version": "1.0.0",
+                        "name": "ad_clinical_procedure",
+                        "title": "Perform Clinical Procedure",
+                        "subtitle": "medical procedure, surgical intervention, clinical intervention, treatment procedure",
+                        "status": "draft",
+                        "description": "Execution of a clinical or surgical procedure performed by qualified healthcare personnel for diagnostic or therapeutic purposes.",
+                        "kind": "ServiceRequest",
+                        "dynamicValue": [
+                            {
+                                "path": "code.concept",
+                                "expression": {
+                                    "description": "Clinical procedure type: The type of clinical procedure to be executed",
+                                    "language": "text/fhirpath",
+                                    "expression": "%clinical_procedure_concept"
+                                }
+                            },
+                            {
+                                "path": "bodySite.concept",
+                                "expression": {
+                                    "description": "Anatomic location where the procedure should be performed. This is the target site.",
+                                    "language": "text/fhirpath",
+                                    "expression": "%body_site_concept"
+                                }
+                            }
+                        ]
+                    },
+                    "similarity_score": 0.6008536,
+                    "retrieval_rank": 3
+                }
+            ],
+            "confidence": "HIGH",
+            "reason": "The action involves rehabilitation exercises, which aligns with the therapeutic intervention described in Candidate ID 1057.",
+            "parameters": [
+                {
+                    "path": "code.concept",
+                    "label": "rehabilitation exercises"
+                }
+            ],
+            "fhir_parameters": [
+                {
+                    "path": "code.concept",
+                    "category": "ontology",
+                    "label": "rehabilitation exercises",
+                    "value": {
+                        "coding": [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "229065009",
+                                "display": "Exercises treatments and procedures"
+                            }
+                        ],
+                        "text": "rehabilitation exercises"
+                    },
+                    "candidates": [
+                        {
+                            "ontology_concept": {
+                                "concept_id": "108305003",
+                                "label": "Rehabilitation exercise care",
+                                "label_type": "acceptable",
+                                "semantic_tag": "regime/therapy",
+                                "fsn": "Physical rehabilitation therapy procedure (regime/therapy)",
+                                "preferred_terms": [
+                                    "Physical rehabilitation therapy procedure (regime/therapy)",
+                                    "Physical rehabilitation therapy procedure"
+                                ],
+                                "acceptable_terms": [
+                                    "Rehabilitation exercise care"
+                                ]
+                            },
+                            "similarity_score": 0.89492166,
+                            "retrieval_rank": 1
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "52052004",
+                                "label": "Rehabilitation therapy",
+                                "label_type": "label",
+                                "semantic_tag": "regime/therapy",
+                                "fsn": "Rehabilitation therapy (regime/therapy)",
+                                "preferred_terms": [
+                                    "Rehabilitation therapy",
+                                    "Rehabilitation therapy (regime/therapy)"
+                                ],
+                                "acceptable_terms": [
+                                    "Rehabilitation care",
+                                    "Rehabilitation",
+                                    "Rehabilitation treatments and procedures"
+                                ]
+                            },
+                            "similarity_score": 0.86135375,
+                            "retrieval_rank": 2
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "52052004",
+                                "label": "Rehabilitation therapy",
+                                "label_type": "preferred",
+                                "semantic_tag": "regime/therapy",
+                                "fsn": "Rehabilitation therapy (regime/therapy)",
+                                "preferred_terms": [
+                                    "Rehabilitation therapy",
+                                    "Rehabilitation therapy (regime/therapy)"
+                                ],
+                                "acceptable_terms": [
+                                    "Rehabilitation care",
+                                    "Rehabilitation",
+                                    "Rehabilitation treatments and procedures"
+                                ]
+                            },
+                            "similarity_score": 0.86135375,
+                            "retrieval_rank": 3
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "52052004",
+                                "label": "Rehabilitation therapy (regime/therapy)",
+                                "label_type": "preferred",
+                                "semantic_tag": "regime/therapy",
+                                "fsn": "Rehabilitation therapy (regime/therapy)",
+                                "preferred_terms": [
+                                    "Rehabilitation therapy",
+                                    "Rehabilitation therapy (regime/therapy)"
+                                ],
+                                "acceptable_terms": [
+                                    "Rehabilitation care",
+                                    "Rehabilitation",
+                                    "Rehabilitation treatments and procedures"
+                                ]
+                            },
+                            "similarity_score": 0.8579774,
+                            "retrieval_rank": 4
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "52052004",
+                                "label": "Rehabilitation",
+                                "label_type": "acceptable",
+                                "semantic_tag": "regime/therapy",
+                                "fsn": "Rehabilitation therapy (regime/therapy)",
+                                "preferred_terms": [
+                                    "Rehabilitation therapy",
+                                    "Rehabilitation therapy (regime/therapy)"
+                                ],
+                                "acceptable_terms": [
+                                    "Rehabilitation care",
+                                    "Rehabilitation",
+                                    "Rehabilitation treatments and procedures"
+                                ]
+                            },
+                            "similarity_score": 0.8376906,
+                            "retrieval_rank": 5
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "229065009",
+                                "label": "Exercises treatments and procedures",
+                                "label_type": "acceptable",
+                                "semantic_tag": "regime/therapy",
+                                "fsn": "Exercise therapy (regime/therapy)",
+                                "preferred_terms": [
+                                    "Exercise therapy (regime/therapy)",
+                                    "Exercise therapy"
+                                ],
+                                "acceptable_terms": [
+                                    "Exercises treatments and procedures"
+                                ]
+                            },
+                            "similarity_score": 0.8300105,
+                            "retrieval_rank": 6
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "410088003",
+                                "label": "Teach rehabilitation exercise",
+                                "label_type": "acceptable",
+                                "semantic_tag": "procedure",
+                                "fsn": "Physical rehabilitation therapy education (procedure)",
+                                "preferred_terms": [
+                                    "Physical rehabilitation therapy education",
+                                    "Physical rehabilitation therapy education (procedure)"
+                                ],
+                                "acceptable_terms": [
+                                    "Teach rehabilitation exercise"
+                                ]
+                            },
+                            "similarity_score": 0.8299829,
+                            "retrieval_rank": 7
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "151526000",
+                                "label": "Therapeutic exercise",
+                                "label_type": "preferred",
+                                "semantic_tag": "regime/therapy",
+                                "fsn": "Therapeutic exercise (regime/therapy)",
+                                "preferred_terms": [
+                                    "Therapeutic exercise (regime/therapy)",
+                                    "Therapeutic exercise"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.8273571,
+                            "retrieval_rank": 8
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "51998003",
+                                "label": "Therapeutic exercise",
+                                "label_type": "preferred",
+                                "semantic_tag": "regime/therapy",
+                                "fsn": "Therapeutic exercise (regime/therapy)",
+                                "preferred_terms": [
+                                    "Therapeutic exercise (regime/therapy)",
+                                    "Therapeutic exercise"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.8273571,
+                            "retrieval_rank": 9
+                        },
+                        {
+                            "ontology_concept": {
+                                "concept_id": "151526000",
+                                "label": "Therapeutic exercise",
+                                "label_type": "label",
+                                "semantic_tag": "regime/therapy",
+                                "fsn": "Therapeutic exercise (regime/therapy)",
+                                "preferred_terms": [
+                                    "Therapeutic exercise (regime/therapy)",
+                                    "Therapeutic exercise"
+                                ],
+                                "acceptable_terms": []
+                            },
+                            "similarity_score": 0.8273571,
+                            "retrieval_rank": 10
+                        }
+                    ],
+                    "confidence": "HIGH",
+                    "reason": null
+                }
+            ],
+            "fhir_temporal_constraint": {
+                "type": "REPEAT",
+                "value": {
+                    "repeat": {
+                        "frequency": 1,
+                        "period": 4,
+                        "periodUnit": "wk"
+                    }
+                }
+            }
+        }
+    ],
+    "relationships": [
+        {
+            "from_action": "A1",
+            "to_action": "A2"
+        },
+        {
+            "from_action": "A2",
+            "to_action": "A3"
+        },
+        {
+            "from_action": "A2",
+            "to_action": "A4"
+        },
+        {
+            "from_action": "A3",
+            "to_action": "A5"
+        },
+        {
+            "from_action": "A4",
+            "to_action": "A5"
+        }
+    ]
+}

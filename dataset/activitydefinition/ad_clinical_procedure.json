@@ -1,0 +1,29 @@
+{
+    "resourceType": "ActivityDefinition",
+    "id": "1052",
+    "version": "1.0.0",
+    "name": "ad_clinical_procedure",
+    "title": "Perform Clinical Procedure",
+    "subtitle": "medical procedure, surgical intervention, clinical intervention, treatment procedure",
+    "status": "draft",
+    "description": "Execution of a clinical or surgical procedure performed by qualified healthcare personnel for diagnostic or therapeutic purposes.",
+    "kind": "ServiceRequest",
+    "dynamicValue": [
+        {
+            "path": "code.concept",
+            "expression": {
+                "description": "Clinical procedure type: The type of clinical procedure to be executed",
+                "language": "text/fhirpath",
+                "expression": "%clinical_procedure_concept"
+            }
+        },
+        {
+            "path": "bodySite.concept",
+            "expression": {
+                "description": "Anatomic location where the procedure should be performed. This is the target site.",
+                "language": "text/fhirpath",
+                "expression": "%body_site_concept"
+            }
+        }
+    ]
+}

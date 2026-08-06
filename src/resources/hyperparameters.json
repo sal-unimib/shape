@@ -1,0 +1,66 @@
+{
+    "stage1": {
+        "action_identification_and_relationship_modeling": {
+            "temperature": 0.0,
+            "top_p": 0.9,
+            "top_k": 10,
+            "seed": 4321,
+            "repeat_penalty": 1.1,
+            "num_ctx": 8192
+        }
+    },
+    "stage2": {
+        "clinical_activity_grounding": {
+            "temperature": 0.0,
+            "top_p": 0.9,
+            "top_k": 10,
+            "seed": 1234,
+            "repeat_penalty": 1.1,
+            "num_ctx": 4096
+        }
+    },
+    "stage3": {
+        "clinical_parameter_resolution": {
+            "temperature": 0.0,
+            "top_p": 0.9,
+            "top_k": 10,
+            "seed": 1234,
+            "repeat_penalty": 1.1,
+            "num_ctx": 4096
+        }
+    },
+    "stage4": {
+        "ontology_grounding": {
+            "temperature": 0.0,
+            "top_p": 0.9,
+            "top_k": 10,
+            "seed": 1234,
+            "repeat_penalty": 1.1,
+            "num_ctx": 8192
+        },
+        "fhir_valueset_grounding": {
+            "temperature": 0.0,
+            "top_p": 0.9,
+            "top_k": 10,
+            "seed": 1234,
+            "repeat_penalty": 1.1,
+            "num_ctx": 4096
+        },
+        "fhir_parameter_generation": {
+            "temperature": 0.05,
+            "top_p": 0.4,
+            "top_k": 20,
+            "seed": 1234,
+            "repeat_penalty": 1.05,
+            "num_ctx": 8192
+        },
+        "fhir_temporal_constraint_generation": {
+            "temperature": 0.0,
+            "top_p": 0.9,
+            "top_k": 10,
+            "seed": 1234,
+            "repeat_penalty": 1.1,
+            "num_ctx": 4096
+        }
+    }
+}

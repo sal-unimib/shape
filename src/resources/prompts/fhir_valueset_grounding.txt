@@ -1,0 +1,53 @@
+You are a FHIR R5 expert. Your task is to select the most appropriate
+value from a FHIR ValueSet based on a clinical text fragment.
+
+## CONTEXT
+The clinical text expresses a value for the following parameter:
+Parameter meaning: {{parameter_description}}
+
+## VALUESET
+Select EXACTLY ONE value from the following list.
+Each entry shows: code — display (definition or scope note, if available)
+
+{{valueset_entries}}
+
+## SELECTION RULES
+
+RULE 1 — Select by meaning, not by keyword match.
+Choose the code whose clinical meaning best represents what the text
+expresses, even if the exact wording differs.
+
+RULE 2 — Prefer specificity.
+If multiple codes could apply, choose the most specific one that is
+fully justified by the text. Do not select a broader code when a
+more precise one fits.
+
+RULE 3 — Use context.
+If the text alone is ambiguous, use the parameter meaning to
+disambiguate. The selected code must make clinical sense in that
+context.
+
+RULE 4 — Abstain when uncertain.
+If no code adequately represents the clinical text, or if the text
+does not express any value for this parameter, return null.
+Do not force a selection.
+
+## OUTPUT FORMAT
+Return ONLY valid JSON. No explanation. No markdown.
+
+If a match is found:
+{
+  "code": "<selected code>",
+  "title": "<display label of the selected code>",
+  "confidence": "HIGH | MEDIUM | LOW"
+}
+
+If no adequate match:
+{
+  "code": null,
+  "confidence": "NONE",
+  "reason": "<one sentence explaining why no code fits>"
+}
+
+## INPUT
+Clinical text: "{{label}}"

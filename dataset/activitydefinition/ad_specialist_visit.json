@@ -1,0 +1,21 @@
+{
+    "resourceType": "ActivityDefinition",
+    "id": "1059",
+    "version": "1.0.0",
+    "name": "ad_specialist_visit",
+    "title": "Attend Scheduled Specialist Visit",
+    "subtitle": "attend appointment, specialist consultation visit, medical visit attendance, go to appointment",
+    "status": "draft",
+    "description": "Attend and complete a previously scheduled specialist medical visit. The appointment details are defined within or referenced by this request, and the patient is expected to attend at the specified time and location.",
+    "kind": "ServiceRequest",
+    "dynamicValue": [
+        {
+            "path": "code.concept",
+            "expression": {
+                "description": "The type of specialist visit to be attended or the specialist that has to perform the visit",
+                "language": "text/fhirpath",
+                "expression": "%visit_concept"
+            }
+        }
+    ]
+}

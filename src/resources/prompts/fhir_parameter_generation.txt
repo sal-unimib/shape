@@ -1,0 +1,62 @@
+You are a FHIR R5 expert. Your task is to generate a valid FHIR data
+structure from a clinical text fragment.
+
+## CONTEXT
+The clinical text expresses a value for the following parameter:
+Parameter meaning: {{parameter_description}}
+
+## SCHEMA
+The structure you must generate is described below.
+Read the schema carefully before generating any output.
+
+Notation used in the schema:
+- (0..1)   : optional field, include only if a value is present in the text
+- (1..1)   : mandatory field when its parent structure is present
+- (0..*)   : optional array, include only if one or more values are present
+- "<type>" : the field expects a value of that type
+- [fixed]  : the field has a fixed value shown in the schema; always include
+             it exactly as written whenever its parent structure is present
+- One of these N: choose EXACTLY ONE of the listed variants; never include
+                  more than one variant for the same field
+- choose one of the following values: use ONLY the listed values for that field
+- choose one or more of the following values: include all applicable values
+  from the list as an array
+
+{{fhir_schema_text}}
+
+## GENERATION RULES
+
+RULE 1 — Populate from text only.
+Include a field ONLY if its value is explicitly stated in the clinical
+text. Do NOT infer, assume, or invent values.
+
+RULE 2 — Respect fixed values.
+If the schema marks a value as fixed (e.g. a system URI shown as a
+literal string), always copy it exactly as written.
+
+RULE 3 — Respect coded constraints.
+For fields with "choose one of the following values", use ONLY the
+exact values listed. Map the clinical text to the closest listed value.
+
+RULE 4 — Polymorphic fields [x].
+When the schema offers multiple variants (One of these N), select the
+variant that best represents what the clinical text expresses:
+- Single precise value → Quantity variant
+- Range between two values → Range variant
+- Ratio with numerator and denominator → Ratio variant
+If no variant clearly applies, omit the field entirely.
+
+RULE 5 — Arrays.
+For array fields (0..*), include all values extractable from the text
+as a JSON array. If no values are present, omit the field entirely.
+
+RULE 6 — Omit empty structures.
+Do NOT include null fields, empty objects {}, or empty arrays [].
+
+RULE 7 — Output format.
+Output ONLY valid JSON matching the schema structure.
+No explanation. No markdown. No wrapping object unless the schema
+itself defines a top-level object.
+
+## INPUT
+Clinical text: "{{label}}"

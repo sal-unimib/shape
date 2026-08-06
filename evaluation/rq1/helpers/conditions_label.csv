@@ -1,0 +1,75 @@
+llm,pid,gen_id,gen_cond_label,gt_id,gt_cond_label,sim
+mistral,P15,A2,an ulcer is detected,A2,If an ulcer is detected,100.0
+mistral,P15,A3,signs of infection worsen,A3,If signs of infection worsen,100.0
+mistral,P20,A3,If infection is suspected,A3,If infection is suspected,100.0
+mixtral_8x7,P09,A3,abnormal findings are detected,A3,If abnormal findings are detected,100.0
+mixtral_8x7,P11,A3,blood pressure is between the defined low and high thresholds,A3,If blood pressure is between the defined low and high thresholds,100.0
+mixtral_8x7,P11,A4,blood pressure exceeds the high threshold,A4,if blood pressure exceeds the high threshold,100.0
+mixtral_8x7,P14,A1,,A1,,
+mixtral_8x7,P14,A3,abnormal respiratory parameters are detected,A3,If abnormal respiratory parameters are detected,100.0
+mixtral_8x7,P14,A4,abnormal respiratory parameters are not detected,A4,Otherwise,17.54385964912281
+mixtral_8x7,P15,A2,an ulcer is detected,A2,If an ulcer is detected,100.0
+mixtral_8x7,P15,A3,signs of infection worsen,A3,If signs of infection worsen,100.0
+mixtral_8x7,P18,A3,If the results require further investigation,A3,If the results require further investigation,100.0
+mixtral_8x7,P18,A4,If indicated by the specialist,A4,If indicated by the specialist,100.0
+mixtral_8x7,P20,A3,if infection is suspected,A3,If infection is suspected,96.0
+mixtral_8x22,P02,A2,abnormal values are detected,A2,,
+mixtral_8x22,P03,A2,the blood glucose level exceeds the prescribed threshold,A2,If the blood glucose level exceeds the prescribed threshold,100.0
+mixtral_8x22,P04,A3,body temperature exceeds 38°C,A3,If body temperature exceeds 38°C,100.0
+mixtral_8x22,P04,A4,body temperature exceeds 38°C,A4,,
+mixtral_8x22,P05,A2,Following the results,A2,,
+mixtral_8x22,P07,A2,laboratory results are normal,,,
+mixtral_8x22,P07,A4,laboratory results are not normal,A4,Otherwise,14.285714285714292
+mixtral_8x22,P09,A2,abnormal findings are detected,A4,,
+mixtral_8x22,P11,A2,blood pressure is between the defined low and high thresholds,A2,,
+mixtral_8x22,P11,A3,blood pressure exceeds the high threshold,A3,If blood pressure is between the defined low and high thresholds,74.28571428571428
+mixtral_8x22,P11,A4,blood pressure exceeds the high threshold,A4,if blood pressure exceeds the high threshold,100.0
+mixtral_8x22,P14,A3,abnormal respiratory parameters are detected,A3,If abnormal respiratory parameters are detected,100.0
+mixtral_8x22,P14,A4,Otherwise,A4,Otherwise,100.0
+mixtral_8x22,P15,A2,an ulcer is detected,A2,If an ulcer is detected,100.0
+mixtral_8x22,P15,A3,signs of infection worsen,A3,If signs of infection worsen,100.0
+mixtral_8x22,P17,A3,abnormal results are detected,A3,If abnormal results are detected,100.0
+mixtral_8x22,P18,A3,the results require further investigation,A3,If the results require further investigation,100.0
+mixtral_8x22,P18,A4,indicated by the specialist,A4,If indicated by the specialist,100.0
+mixtral_8x22,P20,A3,infection is suspected,A3,If infection is suspected,100.0
+llama,P02,A3,abnormal values are detected,A3,if abnormal values are detected,100.0
+llama,P03,A2,blood glucose level exceeds the prescribed threshold,A2,If the blood glucose level exceeds the prescribed threshold,100.0
+llama,P03,A3,otherwise,A3,Otherwise,88.88888888888889
+llama,P04,A3,body temperature exceeds 38°C,A3,If body temperature exceeds 38°C,100.0
+llama,P07,A2,laboratory results are normal,A2,if laboratory results are normal,100.0
+llama,P07,A4,laboratory results are not normal,A4,Otherwise,14.285714285714292
+llama,P09,A2,abnormal findings are detected,A3,If abnormal findings are detected,100.0
+llama,P11,A3,blood pressure is between the defined low and high thresholds,A3,If blood pressure is between the defined low and high thresholds,100.0
+llama,P11,A4,blood pressure exceeds the high threshold,A4,if blood pressure exceeds the high threshold,100.0
+llama,P14,A3,abnormal respiratory parameters are detected,A3,If abnormal respiratory parameters are detected,100.0
+llama,P14,A4,otherwise,A4,Otherwise,88.88888888888889
+llama,P15,A2,an ulcer is detected,A2,If an ulcer is detected,100.0
+llama,P15,A3,signs of infection worsen,A3,If signs of infection worsen,100.0
+llama,P16,A4,oxygen saturation falls below the prescribed threshold,A4,If oxygen saturation falls below the prescribed threshold,100.0
+llama,P17,A3,abnormal results are detected,A3,If abnormal results are detected,100.0
+llama,P18,A2,the results require further investigation,A3,If the results require further investigation,100.0
+llama,P18,A3,indicated by the specialist,A4,If indicated by the specialist,100.0
+llama,P20,A3,infection is suspected,A3,If infection is suspected,100.0
+phi4,P02,A2,if abnormal values are detected,A2,,
+phi4,P02,A3,if abnormal values are detected,A3,if abnormal values are detected,100.0
+phi4,P03,A2,if the blood glucose level exceeds the prescribed threshold,A2,If the blood glucose level exceeds the prescribed threshold,98.18181818181819
+phi4,P03,A3,otherwise,A3,Otherwise,88.88888888888889
+phi4,P04,A3,body temperature exceeds 38°C,A3,If body temperature exceeds 38°C,100.0
+phi4,P05,A2,Following the results,A2,,
+phi4,P07,A3,laboratory results are normal,A2,if laboratory results are normal,100.0
+phi4,P07,A4,laboratory results are normal,A3,if laboratory results are normal,100.0
+phi4,P07,A5,laboratory results are not normal,A4,Otherwise,14.285714285714292
+phi4,P07,A6,laboratory results are not normal,A5,,
+phi4,P09,A2,If abnormal findings are detected,A3,If abnormal findings are detected,100.0
+phi4,P11,A3,blood pressure is between the defined low and high thresholds,A3,If blood pressure is between the defined low and high thresholds,100.0
+phi4,P11,A4,blood pressure exceeds the high threshold,A4,if blood pressure exceeds the high threshold,100.0
+phi4,P14,A3,If abnormal respiratory parameters are detected,A3,If abnormal respiratory parameters are detected,100.0
+phi4,P14,A4,Otherwise,A4,Otherwise,100.0
+phi4,P15,A2,If an ulcer is detected,A2,If an ulcer is detected,100.0
+phi4,P15,A3,If signs of infection worsen,A3,If signs of infection worsen,100.0
+phi4,P15,A4,Otherwise,A5,Otherwise,100.0
+phi4,P16,A3,oxygen saturation falls below the prescribed threshold,A4,If oxygen saturation falls below the prescribed threshold,100.0
+phi4,P17,A3,If abnormal results are detected,A3,If abnormal results are detected,100.0
+phi4,P18,A2,If the results require further investigation,A3,If the results require further investigation,100.0
+phi4,P18,A3,If indicated by the specialist,A4,If indicated by the specialist,100.0
+phi4,P20,A3,if infection is suspected,A3,If infection is suspected,96.0

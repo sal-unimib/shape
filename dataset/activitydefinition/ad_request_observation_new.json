@@ -1,0 +1,21 @@
+{
+    "resourceType": "ActivityDefinition",
+    "id": "1058",
+    "version": "1.0.0",
+    "name": "ad_request_observation",
+    "title": "Request Clinical Observation",
+    "subtitle": "order observation, request measurement, continuous observation, diagnostic test, vital signs check or tracking",
+    "status": "draft",
+    "description": "Request the measurement, evaluation, or recording of clinical data such as vital signs, laboratory tests, or diagnostic observations.",
+    "kind": "ServiceRequest",
+    "dynamicValue": [
+        {
+            "path": "code.concept",
+            "expression": {
+                "description": "The clinical observation to be acquired",
+                "language": "text/fhirpath",
+                "expression": "%observation_concept"
+            }
+        }
+    ]
+}

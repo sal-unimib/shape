@@ -1,0 +1,13 @@
+- count (positiveInt, 0..1): Number of times to repeat
+- duration (decimal, 0..1): How long when it happens
+- durationUnit (code, 0..1): The units of time for the duration in UCUM, choose one of the following values: s | min | h | d | wk | mo | a
+- frequency (positiveInt, 0..1): Event occurs frequency times per period
+- period (decimal, 0..1): The duration to which the frequency applies. I.e. Event occurs frequency times per period
+- periodUnit (code, 0..1): The units of time for the period in UCUM, choose one of the following values: s | min | h | d | wk | mo | a
+- dayOfWeek (code, 0..*): If one or more days of week is provided, choose one or more of the following values: mon | tue | wed | thu | fri | sat | sun
+- when (code, 0..*): code for time period occurrence, if provided. Choose one of the following values (the description is reported between brackets): MORN | MORN.early | MORN.late | NOON | AFT | AFT.early | AFT.late | EVE | EVE.early | EVE.late | NIGHT | PHS (After Sleep) | IMD (Immediate) | HS (Before Sleep) | WAKE (After Waking) | C (at meal) | CM (at breakfast) | CD (at lunch) | CV (at dinner) | AC (before meal) | ACM (before breakfast) | ACD (before lunch) | ACV (before dinner) | PC (after meal) | PCM (after breakfast) | PCD (after lunch) | PCV (after dinner)
+- boundsDuration (Duration, 0..1): Length/Range of lengths, or (Start and/or end) limits
+    - Duration:
+        - value (decimal, 0..1): Numerical value
+        - system: "http://unitsofmeasure.org"
+        - unit (code, 0..1): The units of time for the offset in UCUM, choose one of the following values: s | min | h | d | wk | mo | a

@@ -1,0 +1,12 @@
+.venv
+.vscode
+.env
+
+__pycache__
+pyrightconfig.json
+
+logs
+
+temp.ipynb
+output_temp
+.DS_Store

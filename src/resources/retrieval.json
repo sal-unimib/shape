@@ -1,0 +1,18 @@
+{
+    "stage1": {},
+    "stage2": {
+        "clinical_activity_grounding": {
+            "collection": "sharp_activity_definition_no_timing",
+            "embedding": "nomic-embed-text",
+            "topk": 3
+        }
+    },
+    "stage3": {},
+    "stage4": {
+        "ontology_grounding": {
+            "collection": "snomed_sapbert",
+            "embedding": "sapbert",
+            "topk": 10
+        }
+    }
+}

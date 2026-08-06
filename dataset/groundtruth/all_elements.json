@@ -1,0 +1,2568 @@
+{
+    "P01": {
+        "actions": [
+            {
+                "id": "A1",
+                "label": "The patient undergoes surgery procedure",
+                "activity_definition": "ActivityDefinition/1052",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "surgery procedure",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "possible_values": [
+                            {
+                                "text": "cardiology specialist follow-up visit",
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "387713003",
+                                        "display": "Surgical procedure"
+                                    }
+                                ]
+                            },
+                            {
+                                "text": "cardiology specialist follow-up visit",
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "257556004",
+                                        "display": "Surgery"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "A2",
+                "label": "One week later, a specialist follow-up visit is performed",
+                "activity_definition": "ActivityDefinition/1059",
+                "temporal_constraint": {
+                    "type": "OFFSET",
+                    "resource": {
+                        "value": 1,
+                        "system": "http://unitsofmeasure.org",
+                        "unit": "wk"
+                    },
+                    "label": "One week later"
+                },
+                "condition": null
+            },
+            {
+                "id": "A3",
+                "label": "the patient completes a clinical questionnaire",
+                "activity_definition": "ActivityDefinition/1002",
+                "temporal_constraint": null,
+                "condition": null
+            },
+            {
+                "id": "A4",
+                "label": "The patient receives education on generic home rehabilitation program",
+                "activity_definition": "ActivityDefinition/1055",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "generic home rehabilitation program",
+                        "path": "patientInstruction[0].instructionReference",
+                        "category": "reference",
+                        "value": "generic home rehabilitation program"
+                    }
+                ]
+            },
+            {
+                "id": "A5",
+                "label": "The patient then performs the prescribed exercises daily for four weeks",
+                "activity_definition": "ActivityDefinition/1001",
+                "temporal_constraint": {
+                    "type": "REPEAT",
+                    "resource": {
+                        "repeat": {
+                            "frequency": 1,
+                            "period": 1,
+                            "periodUnit": "d",
+                            "duration": 4,
+                            "durationUnit": "wk"
+                        }
+                    },
+                    "label": "daily for four weeks"
+                },
+                "condition": null
+            }
+        ],
+        "relationships": [
+            {
+                "from_action": "A1",
+                "to_action": "A2"
+            },
+            {
+                "from_action": "A2",
+                "to_action": "A3"
+            },
+            {
+                "from_action": "A3",
+                "to_action": "A4"
+            },
+            {
+                "from_action": "A4",
+                "to_action": "A5"
+            }
+        ]
+    },
+    "P02": {
+        "actions": [
+            {
+                "id": "A1",
+                "label": "The patient completes a post-stroke follow up questionnaire",
+                "activity_definition": "ActivityDefinition/1002",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "post-stroke follow up questionnaire",
+                        "path": "supportingInfo[0].reference",
+                        "category": "reference",
+                        "value": "post-stroke follow up questionnaire"
+                    }
+                ]
+            },
+            {
+                "id": "A2",
+                "label": "vital signs are monitored for ten days",
+                "activity_definition": "ActivityDefinition/1058",
+                "temporal_constraint": {
+                    "type": "DURATION",
+                    "resource": {
+                        "repeat": {
+                            "duration": 10,
+                            "durationUnit": "d"
+                        }
+                    },
+                    "label": "for ten days"
+                },
+                "condition": null
+            },
+            {
+                "id": "A3",
+                "label": "the practitioner is alerted with urgent priority if abnormal values are detected",
+                "activity_definition": "ActivityDefinition/1051",
+                "temporal_constraint": null,
+                "condition": {
+                    "label": "if abnormal values are detected",
+                    "computability": "TODO"
+                },
+                "parameters": [
+                    {
+                        "label": "with urgent priority",
+                        "path": "priority",
+                        "category": "value_set",
+                        "value": {
+                            "value": "urgent",
+                            "system": "http://hl7.org/fhir/request-priority",
+                            "title": "Urgent",
+                            "description": "The request should be actioned promptly - higher priority than routine."
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A4",
+                "label": "the patient attends attends a cardiology specialist follow-up visit",
+                "activity_definition": "ActivityDefinition/1059",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "cardiology specialist follow-up visit",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "possible_values": [
+                            {
+                                "text": "cardiology specialist follow-up visit",
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "310134005",
+                                        "display": "Cardiology"
+                                    }
+                                ]
+                            },
+                            {
+                                "text": "cardiology specialist follow-up visit",
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "17561000",
+                                        "display": "Cardiologist"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "A5",
+                "label": "The patient receives post-stroke lifestyle education",
+                "activity_definition": "ActivityDefinition/1055",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "post-stroke lifestyle education",
+                        "path": "patientInstruction[0].instructionReference",
+                        "category": "reference",
+                        "value": "Post-stroke lifestyle education"
+                    }
+                ]
+            }
+        ],
+        "relationships": [
+            {
+                "from_action": "A1",
+                "to_action": "A2"
+            },
+            {
+                "from_action": "A2",
+                "to_action": "A3"
+            },
+            {
+                "from_action": "A1",
+                "to_action": "A4"
+            },
+            {
+                "from_action": "A4",
+                "to_action": "A5"
+            }
+        ]
+    },
+    "P03": {
+        "actions": [
+            {
+                "id": "A1",
+                "label": "The patient monitors blood glucose every morning",
+                "activity_definition": "ActivityDefinition/1058",
+                "temporal_constraint": {
+                    "type": "REPEAT",
+                    "resource": {
+                        "repeat": {
+                            "frequency": 1,
+                            "period": 1,
+                            "periodUnit": "d",
+                            "when": [
+                                "MORN"
+                            ]
+                        }
+                    },
+                    "label": "every morning"
+                },
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "blood glucose",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "blood glucose",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "365812005",
+                                    "display": "Finding of blood glucose level"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A2",
+                "label": "If the blood glucose level exceeds the prescribed threshold, the practitioner is notified as soon as possible",
+                "activity_definition": "ActivityDefinition/1051",
+                "temporal_constraint": null,
+                "condition": {
+                    "label": "If the blood glucose level exceeds the prescribed threshold",
+                    "computability": "TODO"
+                },
+                "parameters": [
+                    {
+                        "label": "as soon as possible",
+                        "path": "priority",
+                        "category": "value_set",
+                        "value": {
+                            "value": "asap",
+                            "system": "http://hl7.org/fhir/request-priority",
+                            "title": "ASAP",
+                            "description": "The request should be actioned as soon as possible - higher priority than urgent."
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A3",
+                "label": "Otherwise, the patient performs a 30-minute walking session.",
+                "activity_definition": "ActivityDefinition/1001",
+                "temporal_constraint": {
+                    "type": "DURATION",
+                    "resource": {
+                        "repeat": {
+                            "duration": 30,
+                            "durationUnit": "min"
+                        }
+                    },
+                    "label": "30-minute"
+                },
+                "condition": {
+                    "label": "Otherwise",
+                    "computability": "TODO"
+                },
+                "parameters": [
+                    {
+                        "label": "walking session",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "walking session",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "129006008",
+                                    "display": "Walking"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        ],
+        "relationships": [
+            {
+                "from_action": "A1",
+                "to_action": "A2"
+            },
+            {
+                "from_action": "A1",
+                "to_action": "A3"
+            }
+        ]
+    },
+    "P04": {
+        "actions": [
+            {
+                "id": "A1",
+                "label": "Every morning the patient applies the prescribed medication",
+                "activity_definition": "ActivityDefinition/1000",
+                "temporal_constraint": {
+                    "type": "REPEAT",
+                    "resource": {
+                        "repeat": {
+                            "frequency": 1,
+                            "period": 1,
+                            "periodUnit": "d",
+                            "when": [
+                                "MORN"
+                            ]
+                        }
+                    },
+                    "label": "Every morning"
+                },
+                "condition": null
+            },
+            {
+                "id": "A2",
+                "label": "Every morning the patient measures body temperature",
+                "activity_definition": "ActivityDefinition/1058",
+                "temporal_constraint": {
+                    "type": "REPEAT",
+                    "resource": {
+                        "repeat": {
+                            "frequency": 1,
+                            "period": 1,
+                            "periodUnit": "d",
+                            "when": [
+                                "MORN"
+                            ]
+                        }
+                    },
+                    "label": "Every morning"
+                },
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "body temperature",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "body temperature",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "386725007",
+                                    "display": "Body temperature"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A3",
+                "label": "If body temperature exceeds 38\u00b0C, a post-surgical infection screening questionnaire is administered",
+                "activity_definition": "ActivityDefinition/1002",
+                "temporal_constraint": null,
+                "condition": {
+                    "label": "If body temperature exceeds 38\u00b0C",
+                    "computability": "TODO"
+                },
+                "parameters": [
+                    {
+                        "label": "post-surgical infection screening questionnaire",
+                        "path": "supportingInfo[0].reference",
+                        "category": "reference",
+                        "value": "post-surgical infection screening questionnaire"
+                    }
+                ]
+            },
+            {
+                "id": "A4",
+                "label": "the practitioner is alerted as urgent",
+                "activity_definition": "ActivityDefinition/1051",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "urgent",
+                        "path": "priority",
+                        "category": "value_set",
+                        "value": {
+                            "value": "urgent",
+                            "system": "http://hl7.org/fhir/request-priority",
+                            "title": "Urgent",
+                            "description": "The request should be actioned promptly - higher priority than routine."
+                        }
+                    }
+                ]
+            }
+        ],
+        "relationships": [
+            {
+                "from_action": "A1",
+                "to_action": "A3"
+            },
+            {
+                "from_action": "A2",
+                "to_action": "A3"
+            },
+            {
+                "from_action": "A3",
+                "to_action": "A4"
+            }
+        ]
+    },
+    "P05": {
+        "actions": [
+            {
+                "id": "A1",
+                "label": "The patient undergoes a urine laboratory examination every three months",
+                "activity_definition": "ActivityDefinition/1053",
+                "temporal_constraint": {
+                    "type": "REPEAT",
+                    "resource": {
+                        "repeat": {
+                            "frequency": 1,
+                            "period": 3,
+                            "periodUnit": "mo"
+                        }
+                    },
+                    "label": "Every 3 months"
+                },
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "urine laboratory examination",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "urine laboratory examination",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "167217005",
+                                    "display": "Urine examination"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A2",
+                "label": "the patient attends a nephrology specialist visit",
+                "activity_definition": "ActivityDefinition/1059",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "nephrology specialist visit",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "possible_values": [
+                            {
+                                "text": "nephrology specialist visit",
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "394589003",
+                                        "display": "Nephrology"
+                                    }
+                                ]
+                            },
+                            {
+                                "text": "nephrology specialist visit",
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "11911009",
+                                        "display": "Nephrologist"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "A3",
+                "label": "a low-sodium diet is recommended",
+                "activity_definition": "ActivityDefinition/1054",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "low-sodium diet",
+                        "path": "oralDiet.instruction",
+                        "category": "string",
+                        "value": "low-sodium diet"
+                    }
+                ]
+            },
+            {
+                "id": "A4",
+                "label": "fluid management education is provided",
+                "activity_definition": "ActivityDefinition/1055",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "fluid management education",
+                        "path": "patientInstruction[0].instructionReference",
+                        "category": "reference",
+                        "value": "fluid management education"
+                    }
+                ]
+            }
+        ],
+        "relationships": [
+            {
+                "from_action": "A1",
+                "to_action": "A2"
+            },
+            {
+                "from_action": "A2",
+                "to_action": "A3"
+            },
+            {
+                "from_action": "A2",
+                "to_action": "A4"
+            }
+        ]
+    },
+    "P06": {
+        "actions": [
+            {
+                "id": "A1",
+                "label": "The patient undergoes cardiac rehabilitation therapy",
+                "activity_definition": "ActivityDefinition/1057",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "cardiac rehabilitation therapy",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "cardiac rehabilitation therapy",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "313395003",
+                                    "display": "Cardiac rehabilitation"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A2",
+                "label": "the patient performs aerobic exercises three times per day",
+                "activity_definition": "ActivityDefinition/1001",
+                "temporal_constraint": {
+                    "type": "REPEAT",
+                    "resource": {
+                        "repeat": {
+                            "frequency": 3,
+                            "period": 1,
+                            "periodUnit": "d"
+                        }
+                    },
+                    "label": "three times per day"
+                },
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "aerobic exercises",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "aerobic exercises",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "1386227007",
+                                    "display": "Aerobic exercise"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A3",
+                "label": "monitoring heart rate three times per day",
+                "activity_definition": "ActivityDefinition/1058",
+                "temporal_constraint": {
+                    "type": "REPEAT",
+                    "resource": {
+                        "repeat": {
+                            "frequency": 3,
+                            "period": 1,
+                            "periodUnit": "d"
+                        }
+                    },
+                    "label": "three times per day"
+                },
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "heart rate",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "heart rate",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "364075005",
+                                    "display": "Heart rate"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A4",
+                "label": "The patient subsequently completes a general health questionnaire",
+                "activity_definition": "ActivityDefinition/1002",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "general health questionnaire",
+                        "path": "supportingInfo[0].reference",
+                        "category": "reference",
+                        "value": "general health questionnaire"
+                    }
+                ]
+            }
+        ],
+        "relationships": [
+            {
+                "from_action": "A1",
+                "to_action": "A2"
+            },
+            {
+                "from_action": "A1",
+                "to_action": "A3"
+            },
+            {
+                "from_action": "A2",
+                "to_action": "A4"
+            },
+            {
+                "from_action": "A3",
+                "to_action": "A4"
+            }
+        ]
+    },
+    "P07": {
+        "actions": [
+            {
+                "id": "A1",
+                "label": "Following blood sample collection",
+                "activity_definition": "ActivityDefinition/1053",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "blood sample collection",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "blood sample collection",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "119297000",
+                                    "display": "Blood specimen"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A2",
+                "label": "if laboratory results are normal, chemotherapy is administered",
+                "activity_definition": "ActivityDefinition/1052",
+                "temporal_constraint": null,
+                "condition": {
+                    "label": "if laboratory results are normal",
+                    "computability": "TODO"
+                },
+                "parameters": [
+                    {
+                        "label": "chemotherapy",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "chemotherapy",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "367336001",
+                                    "display": "Chemotherapy"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A3",
+                "label": "vital signs are monitored",
+                "activity_definition": "ActivityDefinition/1055",
+                "temporal_constraint": null,
+                "condition": {
+                    "label": "if laboratory results are normal",
+                    "computability": "TODO"
+                }
+            },
+            {
+                "id": "A4",
+                "label": "Otherwise, the practitioner is alerted",
+                "activity_definition": "ActivityDefinition/1051",
+                "temporal_constraint": null,
+                "condition": {
+                    "label": "Otherwise",
+                    "computability": "TODO"
+                }
+            },
+            {
+                "id": "A5",
+                "label": "an ECG is performed",
+                "activity_definition": "ActivityDefinition/1058",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "ECG",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "ECG",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "29303009",
+                                    "display": "Electrocardiographic procedure"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        ],
+        "relationships": [
+            {
+                "from_action": "A1",
+                "to_action": "A2"
+            },
+            {
+                "from_action": "A1",
+                "to_action": "A3"
+            },
+            {
+                "from_action": "A1",
+                "to_action": "A4"
+            },
+            {
+                "from_action": "A4",
+                "to_action": "A5"
+            }
+        ]
+    },
+    "P08": {
+        "actions": [
+            {
+                "id": "A1",
+                "label": "Following neurological imaging with brain MRI",
+                "activity_definition": "ActivityDefinition/1056",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "brain MRI",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "possible_values": [
+                            {
+                                "text": "brain MRI",
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "816077007",
+                                        "display": "Magnetic resonance imaging of brain"
+                                    }
+                                ]
+                            },
+                            {
+                                "text": "MRI",
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "113091000",
+                                        "display": "Magnetic resonance imaging"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "label": "brain",
+                        "path": "bodySite.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "brain",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "12738006",
+                                    "display": "Brain structure"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A2",
+                "label": "the patient begins physiotherapy once a week",
+                "activity_definition": "ActivityDefinition/1057",
+                "temporal_constraint": {
+                    "type": "REPEAT",
+                    "resource": {
+                        "repeat": {
+                            "frequency": 1,
+                            "period": 1,
+                            "periodUnit": "wk"
+                        }
+                    },
+                    "label": "once a week"
+                },
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "physiotherapy",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "physiotherapy",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "91251008",
+                                    "display": "Physical therapy procedure"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A3",
+                "label": "the patient performs home exercises once daily",
+                "activity_definition": "ActivityDefinition/1001",
+                "temporal_constraint": {
+                    "type": "REPEAT",
+                    "resource": {
+                        "repeat": {
+                            "frequency": 1,
+                            "period": 1,
+                            "periodUnit": "d"
+                        }
+                    },
+                    "label": "once daily"
+                },
+                "condition": null
+            },
+            {
+                "id": "A4",
+                "label": "the patient completes a clinical questionnaire once a month",
+                "activity_definition": "ActivityDefinition/1002",
+                "temporal_constraint": {
+                    "type": "REPEAT",
+                    "resource": {
+                        "repeat": {
+                            "frequency": 1,
+                            "period": 1,
+                            "periodUnit": "mo"
+                        }
+                    },
+                    "label": "once a month"
+                },
+                "condition": null
+            },
+            {
+                "id": "A5",
+                "label": "the patient attends a cardiology follow-up visit",
+                "activity_definition": "ActivityDefinition/1059",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "cardiology follow-up visit",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "possible_values": [
+                            {
+                                "text": "cardiology follow-up visit",
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "310134005",
+                                        "display": "Cardiology"
+                                    }
+                                ]
+                            },
+                            {
+                                "text": "cardiology follow-up visit",
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "17561000",
+                                        "display": "Cardiologist"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "relationships": [
+            {
+                "from_action": "A1",
+                "to_action": "A2"
+            },
+            {
+                "from_action": "A1",
+                "to_action": "A3"
+            },
+            {
+                "from_action": "A1",
+                "to_action": "A4"
+            },
+            {
+                "from_action": "A4",
+                "to_action": "A5"
+            }
+        ]
+    },
+    "P09": {
+        "actions": [
+            {
+                "id": "A1",
+                "label": "The patient undergoes respiratory observation",
+                "activity_definition": "ActivityDefinition/1058",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "respiratory observation",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "respiratory observation",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "106048009",
+                                    "display": "Respiratory finding"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A2",
+                "label": "The patient undergoes SpO2 monitoring",
+                "activity_definition": "ActivityDefinition/1058",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "SpO2",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "SpO2",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "431314004",
+                                    "display": "Peripheral oxygen saturation"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A3",
+                "label": "If abnormal findings are detected, the practitioner is alerted as soon as possible",
+                "activity_definition": "ActivityDefinition/1051",
+                "temporal_constraint": null,
+                "condition": {
+                    "label": "If abnormal findings are detected",
+                    "computability": "TODO"
+                },
+                "parameters": [
+                    {
+                        "label": "as soon as possible",
+                        "path": "priority",
+                        "category": "value_set",
+                        "value": {
+                            "value": "asap",
+                            "system": "http://hl7.org/fhir/request-priority",
+                            "title": "ASAP",
+                            "description": "The request should be actioned as soon as possible - higher priority than urgent."
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A4",
+                "label": "Bronchodilator medication is administered as 2\u20134 puffs every 6 hours",
+                "activity_definition": "ActivityDefinition/1000",
+                "temporal_constraint": {
+                    "type": "REPEAT",
+                    "resource": {
+                        "repeat": {
+                            "frequency": 1,
+                            "period": 6,
+                            "periodUnit": "h"
+                        }
+                    },
+                    "label": "Every 6 hours"
+                },
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "Bronchodilator",
+                        "path": "medication.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "Bronchodilator",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "372580007",
+                                    "display": "Bronchodilator"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "label": "2-4 puffs",
+                        "path": "dosageInstruction[0].doseAndRate[0]",
+                        "category": "resource",
+                        "value": {
+                            "doseRange": {
+                                "low": {
+                                    "value": 2.0,
+                                    "unit": "puffs",
+                                    "system": "http://unitsofmeasure.org",
+                                    "code": "{{puff}}"
+                                },
+                                "high": {
+                                    "value": 4.0,
+                                    "unit": "puffs",
+                                    "system": "http://unitsofmeasure.org",
+                                    "code": "{{puff}}"
+                                }
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A5",
+                "label": "The patient receives education on correct inhaler use and daily self-management strategies",
+                "activity_definition": "ActivityDefinition/1055",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "correct inhaler use and daily self-management strategies",
+                        "path": "patientInstruction[0].instructionReference",
+                        "category": "reference",
+                        "value": "correct inhaler use and daily self-management strategies"
+                    }
+                ]
+            }
+        ],
+        "relationships": [
+            {
+                "from_action": "A1",
+                "to_action": "A3"
+            },
+            {
+                "from_action": "A2",
+                "to_action": "A3"
+            }
+        ]
+    },
+    "P10": {
+        "actions": [
+            {
+                "id": "A1",
+                "label": "The patient completes anamnesis",
+                "activity_definition": "ActivityDefinition/1002",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "anamnesis",
+                        "path": "supportingInfo[0].reference",
+                        "category": "reference",
+                        "value": "anamnesis"
+                    }
+                ]
+            },
+            {
+                "id": "A2",
+                "label": "blood sample collection",
+                "activity_definition": "ActivityDefinition/1053",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "blood sample",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "blood sample",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "119297000",
+                                    "display": "Blood specimen"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A3",
+                "label": "ECG recording",
+                "activity_definition": "ActivityDefinition/1058",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "ECG",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "ECG",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "29303009",
+                                    "display": "Electrocardiographic procedure"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A4",
+                "label": "chest X-ray examination",
+                "activity_definition": "ActivityDefinition/1056",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "chest X-ray",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "possible_values": [
+                            {
+                                "text": "chest X-ray",
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "399208008",
+                                        "display": "Plain X-ray of chest"
+                                    }
+                                ]
+                            },
+                            {
+                                "text": "X-ray",
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "168537006",
+                                        "display": "Plain X-ray"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "label": "chest",
+                        "path": "bodySite.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "chest",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "51185008",
+                                    "display": "Thoracic structure"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A5",
+                "label": "The patient then undergoes an anaesthesia consultation",
+                "activity_definition": "ActivityDefinition/1059",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "anaesthesia consultation",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "possible_values": [
+                            {
+                                "text": "anaesthesia consultation",
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "398228004",
+                                        "display": "Anesthesia consultation"
+                                    }
+                                ]
+                            },
+                            {
+                                "text": "anaesthesia consultation",
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "88189002",
+                                        "display": "Anesthesiologist"
+                                    }
+                                ]
+                            },
+                            {
+                                "text": "anaesthesia consultation",
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "394577000",
+                                        "display": "Anesthetics"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "A6",
+                "label": "The patient receives preoperative education regarding the surgical procedure",
+                "activity_definition": "ActivityDefinition/1055",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "preoperative education on surgical procedure",
+                        "path": "patientInstruction[0].instructionReference",
+                        "category": "reference",
+                        "value": "preoperative education on surgical procedure"
+                    }
+                ]
+            }
+        ],
+        "relationships": [
+            {
+                "from_action": "A1",
+                "to_action": "A2"
+            },
+            {
+                "from_action": "A2",
+                "to_action": "A3"
+            },
+            {
+                "from_action": "A3",
+                "to_action": "A4"
+            },
+            {
+                "from_action": "A4",
+                "to_action": "A5"
+            },
+            {
+                "from_action": "A5",
+                "to_action": "A6"
+            }
+        ]
+    },
+    "P11": {
+        "actions": [
+            {
+                "id": "A1",
+                "label": "The patient completes a general health questionnaire twice a day",
+                "activity_definition": "ActivityDefinition/1002",
+                "temporal_constraint": {
+                    "type": "REPEAT",
+                    "resource": {
+                        "repeat": {
+                            "frequency": 2,
+                            "period": 1,
+                            "periodUnit": "d"
+                        }
+                    },
+                    "label": "Twice a day"
+                },
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "general health questionnaire",
+                        "path": "supportingInfo[0].reference",
+                        "category": "reference",
+                        "value": "general health questionnaire"
+                    }
+                ]
+            },
+            {
+                "id": "A2",
+                "label": "The patient measures blood pressure",
+                "activity_definition": "ActivityDefinition/1058",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "blood pressure",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "blood pressure",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "75367002",
+                                    "display": "Blood pressure"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A3",
+                "label": "If blood pressure is between the defined low and high thresholds, the practitioner is alerted urgently",
+                "activity_definition": "ActivityDefinition/1051",
+                "temporal_constraint": null,
+                "condition": {
+                    "label": "If blood pressure is between the defined low and high thresholds",
+                    "computability": "TODO"
+                },
+                "parameters": [
+                    {
+                        "label": "urgently",
+                        "path": "priority",
+                        "category": "value_set",
+                        "value": {
+                            "value": "urgent",
+                            "system": "http://hl7.org/fhir/request-priority",
+                            "title": "Urgent",
+                            "description": "The request should be actioned promptly - higher priority than routine."
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A4",
+                "label": "if it exceeds the high threshold, the emergency team is alerted with stat priority",
+                "activity_definition": "ActivityDefinition/1051",
+                "temporal_constraint": null,
+                "condition": {
+                    "label": "if blood pressure exceeds the high threshold",
+                    "computability": "TODO"
+                },
+                "parameters": [
+                    {
+                        "label": "stat priority",
+                        "path": "priority",
+                        "category": "value_set",
+                        "value": {
+                            "value": "stat",
+                            "system": "http://hl7.org/fhir/request-priority",
+                            "title": "STAT",
+                            "description": "The request should be actioned immediately - highest possible priority. E.g. an emergency."
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A5",
+                "label": "The patient takes ramipril 2.5 mg once daily",
+                "activity_definition": "ActivityDefinition/1000",
+                "temporal_constraint": {
+                    "type": "REPEAT",
+                    "resource": {
+                        "repeat": {
+                            "frequency": 1,
+                            "period": 1,
+                            "periodUnit": "d"
+                        }
+                    },
+                    "label": "once daily"
+                },
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "ramipril",
+                        "path": "medication.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "ramipril",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "386872004",
+                                    "display": "Ramipril"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "label": "2.5 mg",
+                        "path": "dosageInstruction[0].doseAndRate[0]",
+                        "category": "resource",
+                        "value": {
+                            "doseQuantity": {
+                                "value": 2.5,
+                                "unit": "mg",
+                                "system": "http://unitsofmeasure.org",
+                                "code": "mg"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A6",
+                "label": "Every six months, the patient attends a cardiology specialist follow-up visit",
+                "activity_definition": "ActivityDefinition/1059",
+                "temporal_constraint": {
+                    "type": "REPEAT",
+                    "resource": {
+                        "repeat": {
+                            "frequency": 1,
+                            "period": 6,
+                            "periodUnit": "mo"
+                        }
+                    },
+                    "label": "Every six months"
+                },
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "cardiology specialist follow-up visit",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "possible_values": [
+                            {
+                                "text": "cardiology specialist follow-up visit",
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "310134005",
+                                        "display": "Cardiology"
+                                    }
+                                ]
+                            },
+                            {
+                                "text": "cardiology specialist follow-up visit",
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "17561000",
+                                        "display": "Cardiologist"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "relationships": [
+            {
+                "from_action": "A1",
+                "to_action": "A2"
+            },
+            {
+                "from_action": "A2",
+                "to_action": "A3"
+            },
+            {
+                "from_action": "A2",
+                "to_action": "A4"
+            }
+        ]
+    },
+    "P12": {
+        "actions": [
+            {
+                "id": "A1",
+                "label": "The patient completes a pain assessment survey",
+                "activity_definition": "ActivityDefinition/1002",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "pain assessment survey",
+                        "path": "supportingInfo[0].reference",
+                        "category": "reference",
+                        "value": "pain assessment survey"
+                    }
+                ]
+            },
+            {
+                "id": "A2",
+                "label": "Analgesic treatment is administered",
+                "activity_definition": "ActivityDefinition/1000",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "Analgesic",
+                        "path": "medication.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "Analgesic",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "373265006",
+                                    "display": "Analgesic"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A3",
+                "label": "routine alerting of the practitioner",
+                "activity_definition": "ActivityDefinition/1051",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "routine",
+                        "path": "priority",
+                        "category": "value_set",
+                        "value": {
+                            "value": "routine",
+                            "system": "http://hl7.org/fhir/request-priority",
+                            "title": "Routine",
+                            "description": "The request has normal priority."
+                        }
+                    }
+                ]
+            }
+        ],
+        "relationships": [
+            {
+                "from_action": "A1",
+                "to_action": "A2"
+            },
+            {
+                "from_action": "A2",
+                "to_action": "A3"
+            }
+        ]
+    },
+    "P13": {
+        "actions": [
+            {
+                "id": "A1",
+                "label": "The patient attends a monthly rheumatology specialist visit",
+                "activity_definition": "ActivityDefinition/1059",
+                "temporal_constraint": {
+                    "type": "REPEAT",
+                    "resource": {
+                        "repeat": {
+                            "frequency": 1,
+                            "period": 1,
+                            "periodUnit": "mo"
+                        }
+                    },
+                    "label": "monthly"
+                },
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "rheumatology specialist visit",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "possible_values": [
+                            {
+                                "text": "rheumatology specialist visit",
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "394810000",
+                                        "display": "Rheumatology"
+                                    }
+                                ]
+                            },
+                            {
+                                "text": "rheumatology specialist visit",
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "45440000",
+                                        "display": "Rheumatologist"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "A2",
+                "label": "The patient receives medication administration",
+                "activity_definition": "ActivityDefinition/1000",
+                "temporal_constraint": null,
+                "condition": null
+            },
+            {
+                "id": "A3",
+                "label": "The patient performs prescribed exercises",
+                "activity_definition": "ActivityDefinition/1001",
+                "temporal_constraint": null,
+                "condition": null
+            }
+        ],
+        "relationships": [
+            {
+                "from_action": "A1",
+                "to_action": "A2"
+            },
+            {
+                "from_action": "A1",
+                "to_action": "A3"
+            }
+        ]
+    },
+    "P14": {
+        "actions": [
+            {
+                "id": "A1",
+                "label": "The patient completes a general health questionnaire every day",
+                "activity_definition": "ActivityDefinition/1002",
+                "temporal_constraint": {
+                    "type": "REPEAT",
+                    "resource": {
+                        "repeat": {
+                            "frequency": 1,
+                            "period": 1,
+                            "periodUnit": "d"
+                        }
+                    },
+                    "label": "every day"
+                },
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "general health questionnaire",
+                        "path": "supportingInfo[0].reference",
+                        "category": "reference",
+                        "value": "general health questionnaire"
+                    }
+                ]
+            },
+            {
+                "id": "A2",
+                "label": "respiratory parameters are monitored for 30 minutes",
+                "activity_definition": "ActivityDefinition/1058",
+                "temporal_constraint": {
+                    "type": "DURATION",
+                    "resource": {
+                        "repeat": {
+                            "duration": 30,
+                            "durationUnit": "min"
+                        }
+                    },
+                    "label": "for 30 minutes"
+                },
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "respiratory parameters",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "respiratory parameters",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "106048009",
+                                    "display": "Respiratory finding"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A3",
+                "label": "If abnormal respiratory parameters are detected, the practitioner is alerted urgently",
+                "activity_definition": "ActivityDefinition/1051",
+                "temporal_constraint": null,
+                "condition": {
+                    "label": "If abnormal respiratory parameters are detected",
+                    "computability": "TODO"
+                },
+                "parameters": [
+                    {
+                        "label": "urgently",
+                        "path": "priority",
+                        "category": "value_set",
+                        "value": {
+                            "value": "urgent",
+                            "system": "http://hl7.org/fhir/request-priority",
+                            "title": "Urgent",
+                            "description": "The request should be actioned promptly - higher priority than routine."
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A4",
+                "label": "Otherwise, the patient is educated on correct inhaler use",
+                "activity_definition": "ActivityDefinition/1055",
+                "temporal_constraint": null,
+                "condition": {
+                    "label": "Otherwise",
+                    "computability": "TODO"
+                },
+                "parameters": [
+                    {
+                        "label": "correct inhaler use",
+                        "path": "patientInstruction[0].instructionReference",
+                        "category": "reference",
+                        "value": "correct inhaler use"
+                    }
+                ]
+            }
+        ],
+        "relationships": [
+            {
+                "from_action": "A1",
+                "to_action": "A2"
+            },
+            {
+                "from_action": "A2",
+                "to_action": "A3"
+            },
+            {
+                "from_action": "A2",
+                "to_action": "A4"
+            }
+        ]
+    },
+    "P15": {
+        "actions": [
+            {
+                "id": "A1",
+                "label": "The patient undergoes wound specimen collection",
+                "activity_definition": "ActivityDefinition/1053",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "wound specimen",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "wound specimen",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "119365002",
+                                    "display": "Specimen from wound"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A2",
+                "label": "If an ulcer is detected, the patient attends a general surgery specialist visit",
+                "activity_definition": "ActivityDefinition/1059",
+                "temporal_constraint": null,
+                "condition": {
+                    "label": "If an ulcer is detected",
+                    "computability": "TODO"
+                },
+                "parameters": [
+                    {
+                        "label": "general surgery specialist visit",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "general surgery specialist visit",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "394609007",
+                                    "display": "General surgery"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A3",
+                "label": "If signs of infection worsen, the clinical team is alerted",
+                "activity_definition": "ActivityDefinition/1051",
+                "temporal_constraint": null,
+                "condition": {
+                    "label": "If signs of infection worsen",
+                    "computability": "TODO"
+                }
+            },
+            {
+                "id": "A4",
+                "label": "therapeutic intervention is initiated",
+                "activity_definition": "ActivityDefinition/1057",
+                "temporal_constraint": null,
+                "condition": null
+            },
+            {
+                "id": "A5",
+                "label": "Otherwise, the patient receives education on home wound care and medication guidelines",
+                "activity_definition": "ActivityDefinition/1055",
+                "temporal_constraint": null,
+                "condition": {
+                    "label": "Otherwise",
+                    "computability": "TODO"
+                },
+                "parameters": [
+                    {
+                        "label": "home wound care and medication guidelines",
+                        "path": "patientInstruction[0].instructionReference",
+                        "category": "reference",
+                        "value": "home wound care and medication guidelines"
+                    }
+                ]
+            }
+        ],
+        "relationships": [
+            {
+                "from_action": "A1",
+                "to_action": "A2"
+            },
+            {
+                "from_action": "A1",
+                "to_action": "A3"
+            },
+            {
+                "from_action": "A3",
+                "to_action": "A4"
+            },
+            {
+                "from_action": "A1",
+                "to_action": "A5"
+            }
+        ]
+    },
+    "P16": {
+        "actions": [
+            {
+                "id": "A1",
+                "label": "The patient attends a respiratory disease specialist visit",
+                "activity_definition": "ActivityDefinition/1059",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "respiratory disease specialist visit",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "respiratory disease specialist visit",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "41672002",
+                                    "display": "Respiratory disease specialist"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A2",
+                "label": "the patient performs the prescribed exercises three times per week",
+                "activity_definition": "ActivityDefinition/1001",
+                "temporal_constraint": {
+                    "type": "REPEAT",
+                    "resource": {
+                        "repeat": {
+                            "frequency": 3,
+                            "period": 1,
+                            "periodUnit": "wk"
+                        }
+                    },
+                    "label": "three times per week"
+                },
+                "condition": null
+            },
+            {
+                "id": "A3",
+                "label": "Patient undergoes SpO2 monitoring",
+                "activity_definition": "ActivityDefinition/1058",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "SpO2",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "SpO2",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "431314004",
+                                    "display": "Peripheral oxygen saturation"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A4",
+                "label": "If oxygen saturation falls below the prescribed threshold, the practitioner is alerted",
+                "activity_definition": "ActivityDefinition/1051",
+                "temporal_constraint": null,
+                "condition": {
+                    "label": "If oxygen saturation falls below the prescribed threshold",
+                    "computability": "TODO"
+                }
+            }
+        ],
+        "relationships": [
+            {
+                "from_action": "A1",
+                "to_action": "A2"
+            },
+            {
+                "from_action": "A1",
+                "to_action": "A3"
+            },
+            {
+                "from_action": "A3",
+                "to_action": "A4"
+            }
+        ]
+    },
+    "P17": {
+        "actions": [
+            {
+                "id": "A1",
+                "label": "The patient takes anticoagulant therapy at a dose of 5 mg twice daily",
+                "activity_definition": "ActivityDefinition/1000",
+                "temporal_constraint": {
+                    "type": "REPEAT",
+                    "resource": {
+                        "repeat": {
+                            "frequency": 2,
+                            "period": 1,
+                            "periodUnit": "d"
+                        }
+                    },
+                    "label": "twice daily"
+                },
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "anticoagulant",
+                        "path": "medication.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "anticoagulant",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "372862008",
+                                    "display": "Anticoagulant"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "label": "5 mg",
+                        "path": "dosageInstruction[0].doseAndRate[0]",
+                        "category": "resource",
+                        "value": {
+                            "doseQuantity": {
+                                "value": 5.0,
+                                "unit": "mg",
+                                "system": "http://unitsofmeasure.org",
+                                "code": "mg"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A2",
+                "label": "Laboratory examinations are performed every month",
+                "activity_definition": "ActivityDefinition/1053",
+                "temporal_constraint": {
+                    "type": "REPEAT",
+                    "resource": {
+                        "repeat": {
+                            "frequency": 1,
+                            "period": 1,
+                            "periodUnit": "mo"
+                        }
+                    },
+                    "label": "every month"
+                },
+                "condition": null
+            },
+            {
+                "id": "A3",
+                "label": "A routine notification is issued",
+                "activity_definition": "ActivityDefinition/1051",
+                "temporal_constraint": null,
+                "condition": {
+                    "label": "If abnormal results are detected",
+                    "computability": "TODO"
+                },
+                "parameters": [
+                    {
+                        "label": "routine",
+                        "path": "priority",
+                        "category": "value_set",
+                        "value": {
+                            "value": "routine",
+                            "system": "http://hl7.org/fhir/request-priority",
+                            "title": "Routine",
+                            "description": "The request has normal priority."
+                        }
+                    }
+                ]
+            }
+        ],
+        "relationships": [
+            {
+                "from_action": "A1",
+                "to_action": "A2"
+            }
+        ]
+    },
+    "P18": {
+        "actions": [
+            {
+                "id": "A1",
+                "label": "The patient undergoes mammography",
+                "activity_definition": "ActivityDefinition/1056",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "mammography",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "mammography",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "71651007",
+                                    "display": "Mammography"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A2",
+                "label": "breast ultrasound examination",
+                "activity_definition": "ActivityDefinition/1056",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "breast ultrasound examination",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "possible_values": [
+                            {
+                                "text": "breast ultrasound examination",
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "47079000",
+                                        "display": "Ultrasonography of breast"
+                                    }
+                                ]
+                            },
+                            {
+                                "text": "ultrasound examination",
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "16310003",
+                                        "display": "Ultrasonography"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "label": "breast",
+                        "path": "bodySite.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "breast",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "76752008",
+                                    "display": "Breast structure"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A3",
+                "label": "If results require further investigation, a breast examination is performed",
+                "activity_definition": "ActivityDefinition/1052",
+                "temporal_constraint": null,
+                "condition": {
+                    "label": "If the results require further investigation",
+                    "computability": "TODO"
+                },
+                "parameters": [
+                    {
+                        "label": "breast examination",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "breast examination",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "46662001",
+                                    "display": "Examination of breast"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "label": "breast",
+                        "path": "bodySite.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "breast",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "76752008",
+                                    "display": "Breast structure"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A4",
+                "label": "a breast biopsy is carried out",
+                "activity_definition": "ActivityDefinition/1053",
+                "temporal_constraint": null,
+                "condition": {
+                    "label": "If indicated by the specialist",
+                    "computability": "TODO"
+                },
+                "parameters": [
+                    {
+                        "label": "breast biopsy",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "possible_values": [
+                            {
+                                "text": "breast biopsy",
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "122548005",
+                                        "display": "Biopsy of breast"
+                                    }
+                                ]
+                            },
+                            {
+                                "text": "biopsy",
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "86273004",
+                                        "display": "Biopsy"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "label": "breast",
+                        "path": "bodySite.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "breast",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "76752008",
+                                    "display": "Breast structure"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        ],
+        "relationships": [
+            {
+                "from_action": "A1",
+                "to_action": "A2"
+            },
+            {
+                "from_action": "A2",
+                "to_action": "A3"
+            },
+            {
+                "from_action": "A3",
+                "to_action": "A4"
+            }
+        ]
+    },
+    "P19": {
+        "actions": [
+            {
+                "id": "A1",
+                "label": "The patient completes a general health questionnaire",
+                "activity_definition": "ActivityDefinition/1002",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "general health questionnaire",
+                        "path": "supportingInfo[0].reference",
+                        "category": "reference",
+                        "value": "general health questionnaire"
+                    }
+                ]
+            },
+            {
+                "id": "A2",
+                "label": "The patient attends a geriatric specialist visit",
+                "activity_definition": "ActivityDefinition/1059",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "geriatric specialist visit",
+                        "path": "code.concept",
+                        "category": "ontology",
+                        "possible_values": [
+                            {
+                                "text": "geriatric specialist visit",
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "90655003",
+                                        "display": "Geriatrics specialist"
+                                    }
+                                ]
+                            },
+                            {
+                                "text": "geriatric specialist visit",
+                                "coding": [
+                                    {
+                                        "system": "http://snomed.info/sct",
+                                        "code": "394811001",
+                                        "display": "Geriatric medicine"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "A3",
+                "label": "the patient receives education on the prescribed care plan",
+                "activity_definition": "ActivityDefinition/1055",
+                "temporal_constraint": null,
+                "condition": null
+            },
+            {
+                "id": "A4",
+                "label": "the patient performs the prescribed exercises for 30 minutes",
+                "activity_definition": "ActivityDefinition/1001",
+                "temporal_constraint": {
+                    "type": "DURATION",
+                    "resource": {
+                        "repeat": {
+                            "duration": 30,
+                            "durationUnit": "min"
+                        }
+                    },
+                    "label": "For 30 minutes"
+                },
+                "condition": null
+            },
+            {
+                "id": "A5",
+                "label": "the patient follows a protein-rich Mediterranean diet with adequate hydration and soft-textured foods",
+                "activity_definition": "ActivityDefinition/1054",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "protein-rich Mediterranean diet with adequate hydration and soft-textured foods",
+                        "path": "oralDiet.instruction",
+                        "category": "string",
+                        "value": "protein-rich Mediterranean diet with adequate hydration and soft-textured foods"
+                    }
+                ]
+            }
+        ],
+        "relationships": [
+            {
+                "from_action": "A1",
+                "to_action": "A2"
+            },
+            {
+                "from_action": "A2",
+                "to_action": "A3"
+            },
+            {
+                "from_action": "A3",
+                "to_action": "A4"
+            },
+            {
+                "from_action": "A3",
+                "to_action": "A5"
+            }
+        ]
+    },
+    "P20": {
+        "actions": [
+            {
+                "id": "A1",
+                "label": "The patient completes a wound assessment survey",
+                "activity_definition": "ActivityDefinition/1002",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "wound assessment survey",
+                        "path": "supportingInfo[0].reference",
+                        "category": "reference",
+                        "value": "wound assessment survey"
+                    }
+                ]
+            },
+            {
+                "id": "A2",
+                "label": "The patient undergoes specimen collection",
+                "activity_definition": "ActivityDefinition/1053",
+                "temporal_constraint": null,
+                "condition": null
+            },
+            {
+                "id": "A3",
+                "label": "If infection is suspected, therapeutic intervention is initiated",
+                "activity_definition": "ActivityDefinition/1057",
+                "temporal_constraint": null,
+                "condition": {
+                    "label": "If infection is suspected",
+                    "computability": "TODO"
+                }
+            },
+            {
+                "id": "A4",
+                "label": "the patient follows a high-protein, micronutrient-dense diet rich in vitamin C and zinc, with optimal hydration and strict glycemic control",
+                "activity_definition": "ActivityDefinition/1054",
+                "temporal_constraint": null,
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "a high-protein, micronutrient-dense diet rich in vitamin C and zinc, with optimal hydration and strict glycemic control",
+                        "path": "oralDiet.instruction",
+                        "category": "string",
+                        "value": "a high-protein, micronutrient-dense diet rich in vitamin C and zinc, with optimal hydration and strict glycemic control"
+                    }
+                ]
+            },
+            {
+                "id": "A5",
+                "label": "the patient takes amoxicillin 1 g every 8 hours for 7 days ",
+                "activity_definition": "ActivityDefinition/1000",
+                "temporal_constraint": {
+                    "type": "REPEAT",
+                    "resource": {
+                        "repeat": {
+                            "frequency": 1,
+                            "period": 8,
+                            "periodUnit": "h",
+                            "duration": 7,
+                            "durationUnit": "d"
+                        }
+                    },
+                    "label": "every 8 hours for 7 days"
+                },
+                "condition": null,
+                "parameters": [
+                    {
+                        "label": "amoxicillin",
+                        "path": "medication.concept",
+                        "category": "ontology",
+                        "value": {
+                            "text": "amoxicillin",
+                            "coding": [
+                                {
+                                    "system": "http://snomed.info/sct",
+                                    "code": "372687004",
+                                    "display": "Amoxicillin"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "label": "1 mg",
+                        "path": "dosageInstruction[0].doseAndRate[0]",
+                        "category": "resource",
+                        "value": {
+                            "doseQuantity": {
+                                "value": 1.0,
+                                "unit": "mg",
+                                "system": "http://unitsofmeasure.org",
+                                "code": "mg"
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "id": "A6",
+                "label": "Tte patient attends a follow-up visit after four weeks",
+                "activity_definition": "ActivityDefinition/1059",
+                "temporal_constraint": {
+                    "type": "OFFSET",
+                    "resource": {
+                        "value": 4,
+                        "system": "http://unitsofmeasure.org",
+                        "unit": "wk"
+                    },
+                    "label": "after four weeks"
+                },
+                "condition": null
+            }
+        ],
+        "relationships": [
+            {
+                "from_action": "A1",
+                "to_action": "A3"
+            },
+            {
+                "from_action": "A2",
+                "to_action": "A3"
+            },
+            {
+                "from_action": "A3",
+                "to_action": "A4"
+            },
+            {
+                "from_action": "A3",
+                "to_action": "A5"
+            },
+            {
+                "from_action": "A3",
+                "to_action": "A6"
+            }
+        ]
+    }
+}

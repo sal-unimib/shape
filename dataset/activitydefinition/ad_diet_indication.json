@@ -1,0 +1,37 @@
+{
+    "resourceType": "ActivityDefinition",
+    "id": "1054",
+    "version": "1.0.0",
+    "name": "ad_diet_indication",
+    "title": "Prescribe Dietary Plan",
+    "subtitle": "diet prescription, nutrition plan, dietary recommendation, food regimen",
+    "status": "draft",
+    "description": "Definition of a dietary regimen tailored to the patient's clinical condition, including restrictions, recommendations, and nutritional goals.",
+    "kind": "NutritionOrder",
+    "dynamicValue": [
+        {
+            "path": "oralDiet.instruction",
+            "expression": {
+                "description": "Diet given orally in contrast to enteral (tube) feeding.",
+                "language": "text/fhirpath",
+                "expression": "%oral_diet"
+            }
+        },
+        {
+            "path": "supplement[0].instruction",
+            "expression": {
+                "description": "Oral nutritional products given in order to add further nutritional value to the patient's diet.",
+                "language": "text/fhirpath",
+                "expression": "%supplement"
+            }
+        },
+        {
+            "path": "enteralFormula.administrationInstruction",
+            "expression": {
+                "description": "Feeding provided through the gastrointestinal tract via a tube, catheter, or stoma that delivers nutrition distal to the oral cavity.",
+                "language": "text/fhirpath",
+                "expression": "%enteral_formula"
+            }
+        }
+    ]
+}

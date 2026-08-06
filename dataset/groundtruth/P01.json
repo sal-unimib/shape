@@ -1,0 +1,96 @@
+{
+    "resourceType": "PlanDefinition",
+    "id": "1",
+    "name": "P01",
+    "title": "Postoperative Rehabilitation Initiation",
+    "description": "The patient undergoes surgery procedure. One week later, a specialist follow-up visit is performed. Subsequently, the patient completes a clinical questionnaire and receives education on generic home rehabilitation program. The patient then performs the rehabilitation exercises daily for four weeks.",
+    "status": "draft",
+    "action": [
+        {
+            "linkId": "A1",
+            "title": "The patient undergoes surgery procedure",
+            "definitionCanonical": "ActivityDefinition/1052",
+            "dynamicValue": [
+                {
+                    "path": "code.concept",
+                    "expression": {
+                        "description": "surgery procedure",
+                        "language": "text/fhirpath",
+                        "expression": "{\"coding\": [{\"system\": \"http://snomed.info/sct\", \"code\": \"387713003\", \"display\": \"Surgical procedure\"}], \"text\": \"cardiology specialist follow-up visit\"}"
+                    }
+                }
+            ]
+        },
+        {
+            "linkId": "A2",
+            "title": "One week later, a specialist follow-up visit is performed",
+            "relatedAction": [
+                {
+                    "targetId": "A1",
+                    "relationship": "after-end",
+                    "offsetDuration": {
+                        "value": 1,
+                        "unit": "wk",
+                        "system": "http://unitsofmeasure.org"
+                    }
+                }
+            ],
+            "definitionCanonical": "ActivityDefinition/1059",
+            "dynamicValue": []
+        },
+        {
+            "linkId": "A3",
+            "title": "the patient completes a clinical questionnaire",
+            "relatedAction": [
+                {
+                    "targetId": "A2",
+                    "relationship": "after-end"
+                }
+            ],
+            "definitionCanonical": "ActivityDefinition/1002",
+            "dynamicValue": []
+        },
+        {
+            "linkId": "A4",
+            "title": "The patient receives education on generic home rehabilitation program",
+            "relatedAction": [
+                {
+                    "targetId": "A3",
+                    "relationship": "after-end"
+                }
+            ],
+            "definitionCanonical": "ActivityDefinition/1055",
+            "dynamicValue": [
+                {
+                    "path": "patientInstruction[0].instructionReference",
+                    "expression": {
+                        "description": "generic home rehabilitation program",
+                        "language": "text/fhirpath",
+                        "expression": "generic home rehabilitation program"
+                    }
+                }
+            ]
+        },
+        {
+            "linkId": "A5",
+            "title": "The patient then performs the prescribed exercises daily for four weeks",
+            "relatedAction": [
+                {
+                    "targetId": "A4",
+                    "relationship": "after-end"
+                }
+            ],
+            "timingTiming": {
+                "repeat": {
+                    "duration": 4,
+                    "durationUnit": "wk",
+                    "frequency": 1,
+                    "period": 1,
+                    "periodUnit": "d"
+                }
+            },
+            "definitionCanonical": "ActivityDefinition/1001",
+            "dynamicValue": []
+        }
+    ]
+}

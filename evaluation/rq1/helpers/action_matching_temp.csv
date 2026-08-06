@@ -1,0 +1,650 @@
+llm,plan_id,gt_action_id,gt_action_label,gen_action_id,gen_action_label,sim
+mistral,P01,A1,The patient undergoes surgery procedure,A1,The patient undergoes surgery procedure.,98.73417721518987
+mistral,P01,A2,"One week later, a specialist follow-up visit is performed",A2,"One week later, a specialist follow-up visit is performed.",99.1304347826087
+mistral,P01,A3,the patient completes a clinical questionnaire,A3,The patient completes a clinical questionnaire.,90.3225806451613
+mistral,P01,A4,The patient receives education on generic home rehabilitation program,A4,The patient receives education on generic home rehabilitation program.,99.28057553956835
+mistral,P01,A5,The patient then performs the prescribed exercises daily for four weeks,A5,The patient performs the rehabilitation exercises daily for four weeks.,85.91549295774648
+mistral,P01,,,GEN_NO_MATCH,A6 - The patient performs the rehabilitation exercises.,
+mistral,P01,GEN_NO_MATCH,[],,,
+mistral,P02,A1,The patient completes a post-stroke follow up questionnaire,A1,The patient completes a post-stroke follow up questionnaire,100.0
+mistral,P02,A2,vital signs are monitored for ten days,A2,vital signs are monitored for ten days,100.0
+mistral,P02,A3,the practitioner is alerted with urgent priority if abnormal values are detected,A3,the practitioner is alerted with urgent priority if abnormal values are detected,100.0
+mistral,P02,A4,the patient attends attends a cardiology specialist follow-up visit,A4,The patient attends a cardiology specialist follow-up visit,98.30508474576271
+mistral,P02,A5,The patient receives post-stroke lifestyle education,A5,subsequently receives post-stroke lifestyle education,86.95652173913044
+mistral,P02,,,GEN_NO_MATCH,,
+mistral,P02,GEN_NO_MATCH,[],,,
+mistral,P03,A1,The patient monitors blood glucose every morning,A1,The patient monitors blood glucose every morning,100.0
+mistral,P03,A2,"If the blood glucose level exceeds the prescribed threshold, the practitioner is notified as soon as possible",A3,the practitioner is notified as soon as possible,100.0
+mistral,P03,A3,"Otherwise, the patient performs a 30-minute walking session.",A4,"Otherwise, the patient performs a 30-minute walking session",99.15966386554622
+mistral,P03,,,GEN_NO_MATCH,A2 - If the blood glucose level exceeds the prescribed threshold,
+mistral,P03,GEN_NO_MATCH,[],,,
+mistral,P04,A1,Every morning the patient applies the prescribed medication,A1,Every morning the patient applies the prescribed medication,100.0
+mistral,P04,A2,Every morning the patient measures body temperature,A2,the patient measures body temperature,100.0
+mistral,P04,A3,"If body temperature exceeds 38°C, a post-surgical infection screening questionnaire is administered",A4,a post-surgical infection screening questionnaire is administered,100.0
+mistral,P04,A4,the practitioner is alerted as urgent,A5,the practitioner is alerted as urgent,100.0
+mistral,P04,,,GEN_NO_MATCH,A3 - If body temperature exceeds 38°C,
+mistral,P04,GEN_NO_MATCH,[],,,
+mistral,P05,A1,The patient undergoes a urine laboratory examination every three months,A1,The patient undergoes a urine laboratory examination,100.0
+mistral,P05,A2,the patient attends a nephrology specialist visit,A2,The patient attends a nephrology specialist visit,97.95918367346938
+mistral,P05,A3,a low-sodium diet is recommended,A3,a low-sodium diet is recommended,100.0
+mistral,P05,A4,fluid management education is provided,A4,fluid management education is provided,100.0
+mistral,P05,,,GEN_NO_MATCH,,
+mistral,P05,GEN_NO_MATCH,[],,,
+mistral,P06,A1,The patient undergoes cardiac rehabilitation therapy,A1,The patient undergoes cardiac rehabilitation therapy.,99.04761904761905
+mistral,P06,A2,the patient performs aerobic exercises three times per day,A2,The patient performs aerobic exercises three times per day,98.27586206896552
+mistral,P06,A3,monitoring heart rate three times per day,A2,The patient performs aerobic exercises three times per day,64.64646464646464
+mistral,P06,A4,The patient subsequently completes a general health questionnaire,A4,The patient completes a general health questionnaire.,88.13559322033899
+mistral,P06,,,GEN_NO_MATCH,A3 - The patient monitors heart rate during aerobic exercises,
+mistral,P06,GEN_NO_MATCH,[],,,
+mistral,P07,A1,Following blood sample collection,A1,Following blood sample collection,100.0
+mistral,P07,A2,"if laboratory results are normal, chemotherapy is administered",A3,chemotherapy is administered,100.0
+mistral,P07,A3,vital signs are monitored,A4,vital signs are monitored,100.0
+mistral,P07,A4,"Otherwise, the practitioner is alerted",A5,the practitioner is alerted,100.0
+mistral,P07,A5,an ECG is performed,A6,an ECG is performed,100.0
+mistral,P07,,,GEN_NO_MATCH,A2 - laboratory results are normal,
+mistral,P07,GEN_NO_MATCH,[],,,
+mistral,P08,A1,Following neurological imaging with brain MRI,A1,Following neurological imaging with brain MRI,100.0
+mistral,P08,A2,the patient begins physiotherapy once a week,A2,the patient begins physiotherapy once a week,100.0
+mistral,P08,A3,the patient performs home exercises once daily,A3,performs home exercises once daily,100.0
+mistral,P08,A4,the patient completes a clinical questionnaire once a month,A4,completes a clinical questionnaire once a month,100.0
+mistral,P08,A5,the patient attends a cardiology follow-up visit,A5,the patient attends a cardiology follow-up visit,100.0
+mistral,P08,,,GEN_NO_MATCH,,
+mistral,P08,GEN_NO_MATCH,[],,,
+mistral,P09,A1,The patient undergoes respiratory observation,A1,The patient undergoes respiratory observation,100.0
+mistral,P09,A2,The patient undergoes SpO2 monitoring,A2,The patient undergoes SpO₂ monitoring,97.29729729729729
+mistral,P09,A3,"If abnormal findings are detected, the practitioner is alerted as soon as possible",A3,"If abnormal findings are detected, the practitioner is alerted as soon as possible",100.0
+mistral,P09,A4,Bronchodilator medication is administered as 2–4 puffs every 6 hours,A4,Bronchodilator medication is administered,100.0
+mistral,P09,A5,The patient receives education on correct inhaler use and daily self-management strategies,A5,The patient receives education on correct inhaler use,100.0
+mistral,P09,,,GEN_NO_MATCH,A6 - The patient receives education on daily self-management strategies,
+mistral,P09,GEN_NO_MATCH,[],,,
+mistral,P10,A1,The patient completes anamnesis,A1,The patient completes anamnesis,100.0
+mistral,P10,A2,blood sample collection,A2,blood sample collection,100.0
+mistral,P10,A3,ECG recording,A3,ECG recording,100.0
+mistral,P10,A4,chest X-ray examination,A4,chest X-ray examination,100.0
+mistral,P10,A5,The patient then undergoes an anaesthesia consultation,A5,The patient undergoes an anaesthesia consultation,100.0
+mistral,P10,A6,The patient receives preoperative education regarding the surgical procedure,A6,receives preoperative education regarding the surgical procedure,100.0
+mistral,P10,,,GEN_NO_MATCH,,
+mistral,P10,GEN_NO_MATCH,[],,,
+mistral,P11,A1,The patient completes a general health questionnaire twice a day,A1,The patient completes a general health questionnaire twice a day,100.0
+mistral,P11,A2,The patient measures blood pressure,A2,The patient measures blood pressure,100.0
+mistral,P11,A3,"If blood pressure is between the defined low and high thresholds, the practitioner is alerted urgently",A3,"If blood pressure is between the defined low and high thresholds, the practitioner is alerted urgently",100.0
+mistral,P11,A4,"if it exceeds the high threshold, the emergency team is alerted with stat priority",A4,"If blood pressure exceeds the high threshold, the emergency team is alerted with stat priority",96.0
+mistral,P11,A5,The patient takes ramipril 2.5 mg once daily,A5,The patient takes ramipril 2.5 mg once daily,100.0
+mistral,P11,A6,"Every six months, the patient attends a cardiology specialist follow-up visit",A6,"Every six months, the patient attends a cardiology specialist follow-up visit",100.0
+mistral,P11,,,GEN_NO_MATCH,,
+mistral,P11,GEN_NO_MATCH,[],,,
+mistral,P12,A1,The patient completes a pain assessment survey,A1,The patient completes a pain assessment survey,100.0
+mistral,P12,A2,Analgesic treatment is administered,A2,Analgesic treatment is administered,100.0
+mistral,P12,A3,routine alerting of the practitioner,A3,routine alerting of the practitioner,100.0
+mistral,P12,,,GEN_NO_MATCH,,
+mistral,P12,GEN_NO_MATCH,[],,,
+mistral,P13,A1,The patient attends a monthly rheumatology specialist visit,A1,attends a monthly rheumatology specialist visit,100.0
+mistral,P13,A2,The patient receives medication administration,A2,receives medication administration,100.0
+mistral,P13,A3,The patient performs prescribed exercises,A3,performs prescribed exercises,100.0
+mistral,P13,,,GEN_NO_MATCH,,
+mistral,P13,GEN_NO_MATCH,[],,,
+mistral,P14,A1,The patient completes a general health questionnaire every day,A1,The patient completes a general health questionnaire every day,100.0
+mistral,P14,A2,respiratory parameters are monitored for 30 minutes,A2,Respiratory parameters are monitored for 30 minutes,98.03921568627452
+mistral,P14,A3,"If abnormal respiratory parameters are detected, the practitioner is alerted urgently",A3,"If abnormal respiratory parameters are detected, the practitioner is alerted urgently",100.0
+mistral,P14,A4,"Otherwise, the patient is educated on correct inhaler use",A4,"Otherwise, the patient is educated on correct inhaler use",100.0
+mistral,P14,,,GEN_NO_MATCH,,
+mistral,P14,GEN_NO_MATCH,[],,,
+mistral,P15,A1,The patient undergoes wound specimen collection,A1,The patient undergoes wound specimen collection.,98.94736842105263
+mistral,P15,A2,"If an ulcer is detected, the patient attends a general surgery specialist visit",A2,"If an ulcer is detected, the patient attends a general surgery specialist visit.",99.37106918238993
+mistral,P15,A3,"If signs of infection worsen, the clinical team is alerted",A3,"If signs of infection worsen, the clinical team is alerted and therapeutic intervention is initiated.",100.0
+mistral,P15,A4,therapeutic intervention is initiated,A3,"If signs of infection worsen, the clinical team is alerted and therapeutic intervention is initiated.",84.375
+mistral,P15,A5,"Otherwise, the patient receives education on home wound care and medication guidelines",A4,"Otherwise, the patient receives education on home wound care and medication guidelines.",99.42196531791907
+mistral,P15,,,GEN_NO_MATCH,,
+mistral,P15,GEN_NO_MATCH,[],,,
+mistral,P16,A1,The patient attends a respiratory disease specialist visit,A1,The patient attends a respiratory disease specialist visit,100.0
+mistral,P16,A2,the patient performs the prescribed exercises three times per week,A2,The patient performs the prescribed exercises,95.34883720930233
+mistral,P16,A3,Patient undergoes SpO2 monitoring,A3,The patient undergoes SpO₂ monitoring,77.14285714285714
+mistral,P16,A4,"If oxygen saturation falls below the prescribed threshold, the practitioner is alerted",A5,the practitioner is alerted,100.0
+mistral,P16,,,GEN_NO_MATCH,A4 - If oxygen saturation falls below the prescribed threshold,
+mistral,P16,GEN_NO_MATCH,[],,,
+mistral,P17,A1,The patient takes anticoagulant therapy at a dose of 5 mg twice daily,A1,takes anticoagulant therapy at a dose of 5 mg twice daily,100.0
+mistral,P17,A2,Laboratory examinations are performed every month,A2,laboratory examinations are performed every month,97.95918367346938
+mistral,P17,A3,A routine notification is issued,A3,"if abnormal results are detected, a routine notification is issued",96.7741935483871
+mistral,P17,,,GEN_NO_MATCH,,
+mistral,P17,GEN_NO_MATCH,[],,,
+mistral,P18,A1,The patient undergoes mammography,A1,The patient undergoes mammography,100.0
+mistral,P18,A2,breast ultrasound examination,A2,breast ultrasound examination,100.0
+mistral,P18,A3,"If results require further investigation, a breast examination is performed",A3,"If the results require further investigation, a breast examination is performed.",96.7741935483871
+mistral,P18,A4,a breast biopsy is carried out,A4,"If indicated by the specialist, a breast biopsy is subsequently carried out.",92.85714285714286
+mistral,P18,,,GEN_NO_MATCH,,
+mistral,P18,GEN_NO_MATCH,[],,,
+mistral,P19,A1,The patient completes a general health questionnaire,A1,The patient completes a general health questionnaire,100.0
+mistral,P19,A2,The patient attends a geriatric specialist visit,A2,The patient attends a geriatric specialist visit,100.0
+mistral,P19,A3,the patient receives education on the prescribed care plan,A3,"Following the clinical assessment, the patient receives education on the prescribed care plan",100.0
+mistral,P19,A4,the patient performs the prescribed exercises for 30 minutes,A4,The patient performs the prescribed exercises for 30 minutes,100.0
+mistral,P19,A5,the patient follows a protein-rich Mediterranean diet with adequate hydration and soft-textured foods,A5,The patient follows a protein-rich Mediterranean diet with adequate hydration and soft-textured foods,99.00990099009901
+mistral,P19,,,GEN_NO_MATCH,,
+mistral,P19,GEN_NO_MATCH,[],,,
+mistral,P20,A1,The patient completes a wound assessment survey,A1,The patient completes a wound assessment survey,100.0
+mistral,P20,A2,The patient undergoes specimen collection,A2,undergoes specimen collection,100.0
+mistral,P20,A3,"If infection is suspected, therapeutic intervention is initiated",A3,therapeutic intervention is initiated,100.0
+mistral,P20,A4,"the patient follows a high-protein, micronutrient-dense diet rich in vitamin C and zinc, with optimal hydration and strict glycemic control",A6,with optimal hydration and strict glycemic control,100.0
+mistral,P20,A5,the patient takes amoxicillin 1 g every 8 hours for 7 days ,A4,the patient takes amoxicillin 1 g,100.0
+mistral,P20,A6,Tte patient attends a follow-up visit after four weeks,A8,the patient attends a follow-up visit after four weeks,98.14814814814815
+mistral,P20,,,GEN_NO_MATCH,"A5 - follows a high-protein, micronutrient-dense diet rich in vitamin C and zinc
+A7 - the patient takes zinc",
+mistral,P20,GEN_NO_MATCH,[],,,
+mixtral_8x7,P01,A1,The patient undergoes surgery procedure,A1,The patient undergoes surgery procedure,100.0
+mixtral_8x7,P01,A2,"One week later, a specialist follow-up visit is performed",A2,a specialist follow-up visit is performed,100.0
+mixtral_8x7,P01,A3,the patient completes a clinical questionnaire,A3,the patient completes a clinical questionnaire,100.0
+mixtral_8x7,P01,A4,The patient receives education on generic home rehabilitation program,A4,receives education on generic home rehabilitation program,100.0
+mixtral_8x7,P01,A5,The patient then performs the prescribed exercises daily for four weeks,A5,performs the rehabilitation exercises,74.57627118644068
+mixtral_8x7,P01,,,GEN_NO_MATCH,,
+mixtral_8x7,P01,GEN_NO_MATCH,[],,,
+mixtral_8x7,P02,A1,The patient completes a post-stroke follow up questionnaire,A1,The patient completes a post-stroke follow up questionnaire,100.0
+mixtral_8x7,P02,A2,vital signs are monitored for ten days,A2,Vital signs are monitored for ten days,97.36842105263158
+mixtral_8x7,P02,A3,the practitioner is alerted with urgent priority if abnormal values are detected,A3,Practitioner is alerted with urgent priority if abnormal values are detected,96.15384615384616
+mixtral_8x7,P02,A4,the patient attends attends a cardiology specialist follow-up visit,A4,The patient attends a cardiology specialist follow-up visit,98.30508474576271
+mixtral_8x7,P02,A5,The patient receives post-stroke lifestyle education,A5,The patient receives post-stroke lifestyle education,100.0
+mixtral_8x7,P02,,,GEN_NO_MATCH,,
+mixtral_8x7,P02,GEN_NO_MATCH,[],,,
+mixtral_8x7,P03,A1,The patient monitors blood glucose every morning,A1,The patient monitors blood glucose,100.0
+mixtral_8x7,P03,A2,"If the blood glucose level exceeds the prescribed threshold, the practitioner is notified as soon as possible",A2,the practitioner is notified as soon as possible,100.0
+mixtral_8x7,P03,A3,"Otherwise, the patient performs a 30-minute walking session.",A3,the patient performs a 30-minute walking session,90.9090909090909
+mixtral_8x7,P03,,,GEN_NO_MATCH,,
+mixtral_8x7,P03,GEN_NO_MATCH,[],,,
+mixtral_8x7,P04,A1,Every morning the patient applies the prescribed medication,A1,the patient applies the prescribed medication,100.0
+mixtral_8x7,P04,A2,Every morning the patient measures body temperature,A2,measure body temperature,80.0
+mixtral_8x7,P04,A3,"If body temperature exceeds 38°C, a post-surgical infection screening questionnaire is administered",A3,administer post-surgical infection screening questionnaire,89.52380952380952
+mixtral_8x7,P04,A4,the practitioner is alerted as urgent,A4,alert practitioner as urgent,88.0
+mixtral_8x7,P04,,,GEN_NO_MATCH,,
+mixtral_8x7,P04,GEN_NO_MATCH,[],,,
+mixtral_8x7,P05,A1,The patient undergoes a urine laboratory examination every three months,A1,The patient undergoes a urine laboratory examination,100.0
+mixtral_8x7,P05,A2,the patient attends a nephrology specialist visit,A3,the patient attends a nephrology specialist visit,100.0
+mixtral_8x7,P05,A3,a low-sodium diet is recommended,A4,a low-sodium diet is recommended,100.0
+mixtral_8x7,P05,A4,fluid management education is provided,A5,fluid management education is provided,100.0
+mixtral_8x7,P05,,,GEN_NO_MATCH,A2 - following the results,
+mixtral_8x7,P05,GEN_NO_MATCH,[],,,
+mixtral_8x7,P06,A1,The patient undergoes cardiac rehabilitation therapy,A1,The patient undergoes cardiac rehabilitation therapy,100.0
+mixtral_8x7,P06,A2,the patient performs aerobic exercises three times per day,A2,the patient performs aerobic exercises three times per day while monitoring heart rate,100.0
+mixtral_8x7,P06,A3,monitoring heart rate three times per day,A2,the patient performs aerobic exercises three times per day while monitoring heart rate,100.0
+mixtral_8x7,P06,A4,The patient subsequently completes a general health questionnaire,A3,The patient subsequently completes a general health questionnaire,100.0
+mixtral_8x7,P06,,,GEN_NO_MATCH,,
+mixtral_8x7,P06,GEN_NO_MATCH,[],,,
+mixtral_8x7,P07,A1,Following blood sample collection,A1,following blood sample collection,96.96969696969697
+mixtral_8x7,P07,A2,"if laboratory results are normal, chemotherapy is administered",A3,chemotherapy is administered,100.0
+mixtral_8x7,P07,A3,vital signs are monitored,A4,vital signs are monitored,100.0
+mixtral_8x7,P07,A4,"Otherwise, the practitioner is alerted",A6,the practitioner is alerted,100.0
+mixtral_8x7,P07,A5,an ECG is performed,A7,an ECG performed,100.0
+mixtral_8x7,P07,,,GEN_NO_MATCH,"A2 - if laboratory results are normal
+A5 - otherwise",
+mixtral_8x7,P07,GEN_NO_MATCH,[],,,
+mixtral_8x7,P08,A1,Following neurological imaging with brain MRI,A1,neurological imaging with brain MRI,100.0
+mixtral_8x7,P08,A2,the patient begins physiotherapy once a week,A2,patient begins physiotherapy,100.0
+mixtral_8x7,P08,A3,the patient performs home exercises once daily,A3,home exercises,100.0
+mixtral_8x7,P08,A4,the patient completes a clinical questionnaire once a month,A4,clinical questionnaire,100.0
+mixtral_8x7,P08,A5,the patient attends a cardiology follow-up visit,A5,cardiology follow-up visit,100.0
+mixtral_8x7,P08,,,GEN_NO_MATCH,,
+mixtral_8x7,P08,GEN_NO_MATCH,[],,,
+mixtral_8x7,P09,A1,The patient undergoes respiratory observation,A1,The patient undergoes respiratory observation,100.0
+mixtral_8x7,P09,A2,The patient undergoes SpO2 monitoring,A2,SpO₂ monitoring,80.0
+mixtral_8x7,P09,A3,"If abnormal findings are detected, the practitioner is alerted as soon as possible",A3,The practitioner is alerted as soon as possible,95.23809523809524
+mixtral_8x7,P09,A4,Bronchodilator medication is administered as 2–4 puffs every 6 hours,A4,Bronchodilator medication is administered,100.0
+mixtral_8x7,P09,A5,The patient receives education on correct inhaler use and daily self-management strategies,A5,The patient receives education on correct inhaler use and daily self-management strategies,100.0
+mixtral_8x7,P09,,,GEN_NO_MATCH,,
+mixtral_8x7,P09,GEN_NO_MATCH,[],,,
+mixtral_8x7,P10,A1,The patient completes anamnesis,A1,The patient completes anamnesis,100.0
+mixtral_8x7,P10,A2,blood sample collection,A2,blood sample collection,100.0
+mixtral_8x7,P10,A3,ECG recording,A3,ECG recording,100.0
+mixtral_8x7,P10,A4,chest X-ray examination,A4,chest X-ray examination,100.0
+mixtral_8x7,P10,A5,The patient then undergoes an anaesthesia consultation,A5,The patient undergoes an anaesthesia consultation,100.0
+mixtral_8x7,P10,A6,The patient receives preoperative education regarding the surgical procedure,A6,receives preoperative education regarding the surgical procedure,100.0
+mixtral_8x7,P10,,,GEN_NO_MATCH,,
+mixtral_8x7,P10,GEN_NO_MATCH,[],,,
+mixtral_8x7,P11,A1,The patient completes a general health questionnaire twice a day,A1,The patient completes a general health questionnaire twice a day,100.0
+mixtral_8x7,P11,A2,The patient measures blood pressure,A2,measures blood pressure,100.0
+mixtral_8x7,P11,A3,"If blood pressure is between the defined low and high thresholds, the practitioner is alerted urgently",A3,the practitioner is alerted urgently,100.0
+mixtral_8x7,P11,A4,"if it exceeds the high threshold, the emergency team is alerted with stat priority",A4,the emergency team is alerted with stat priority,100.0
+mixtral_8x7,P11,A5,The patient takes ramipril 2.5 mg once daily,A5,takes ramipril 2.5 mg once daily,100.0
+mixtral_8x7,P11,A6,"Every six months, the patient attends a cardiology specialist follow-up visit",A6,the patient attends a cardiology specialist follow-up visit,100.0
+mixtral_8x7,P11,,,GEN_NO_MATCH,,
+mixtral_8x7,P11,GEN_NO_MATCH,[],,,
+mixtral_8x7,P12,A1,The patient completes a pain assessment survey,A1,The patient completes a pain assessment survey,100.0
+mixtral_8x7,P12,A2,Analgesic treatment is administered,A2,Analgesic treatment is administered,100.0
+mixtral_8x7,P12,A3,routine alerting of the practitioner,A3,Routine alerting of the practitioner,97.22222222222223
+mixtral_8x7,P12,,,GEN_NO_MATCH,,
+mixtral_8x7,P12,GEN_NO_MATCH,[],,,
+mixtral_8x7,P13,A1,The patient attends a monthly rheumatology specialist visit,A1,The patient attends a monthly rheumatology specialist visit,100.0
+mixtral_8x7,P13,A2,The patient receives medication administration,A2,The patient receives medication administration,100.0
+mixtral_8x7,P13,A3,The patient performs prescribed exercises,A3,The patient performs prescribed exercises,100.0
+mixtral_8x7,P13,,,GEN_NO_MATCH,,
+mixtral_8x7,P13,GEN_NO_MATCH,[],,,
+mixtral_8x7,P14,A1,The patient completes a general health questionnaire every day,A1,The patient completes a general health questionnaire every day,100.0
+mixtral_8x7,P14,A2,respiratory parameters are monitored for 30 minutes,A2,respiratory parameters are monitored for 30 minutes,100.0
+mixtral_8x7,P14,A3,"If abnormal respiratory parameters are detected, the practitioner is alerted urgently",A3,the practitioner is alerted urgently,100.0
+mixtral_8x7,P14,A4,"Otherwise, the patient is educated on correct inhaler use",A4,the patient is educated on correct inhaler use,100.0
+mixtral_8x7,P14,,,GEN_NO_MATCH,,
+mixtral_8x7,P14,GEN_NO_MATCH,[],,,
+mixtral_8x7,P15,A1,The patient undergoes wound specimen collection,A1,The patient undergoes wound specimen collection,100.0
+mixtral_8x7,P15,A2,"If an ulcer is detected, the patient attends a general surgery specialist visit",A2,the patient attends a general surgery specialist visit,100.0
+mixtral_8x7,P15,A3,"If signs of infection worsen, the clinical team is alerted",A3,the clinical team is alerted and therapeutic intervention is initiated,65.11627906976744
+mixtral_8x7,P15,A4,therapeutic intervention is initiated,A3,the clinical team is alerted and therapeutic intervention is initiated,100.0
+mixtral_8x7,P15,A5,"Otherwise, the patient receives education on home wound care and medication guidelines",A4,the patient receives education on home wound care and medication guidelines,100.0
+mixtral_8x7,P15,,,GEN_NO_MATCH,,
+mixtral_8x7,P15,GEN_NO_MATCH,[],,,
+mixtral_8x7,P16,A1,The patient attends a respiratory disease specialist visit,A1,The patient attends a respiratory disease specialist visit,100.0
+mixtral_8x7,P16,A2,the patient performs the prescribed exercises three times per week,A2,The patient performs the prescribed exercises,95.34883720930233
+mixtral_8x7,P16,A3,Patient undergoes SpO2 monitoring,A3,SpO₂ monitoring is performed,62.295081967213115
+mixtral_8x7,P16,A4,"If oxygen saturation falls below the prescribed threshold, the practitioner is alerted",A4,The practitioner is alerted if oxygen saturation falls below the prescribed threshold,95.80838323353294
+mixtral_8x7,P16,,,GEN_NO_MATCH,,
+mixtral_8x7,P16,GEN_NO_MATCH,[],,,
+mixtral_8x7,P17,A1,The patient takes anticoagulant therapy at a dose of 5 mg twice daily,A1,The patient takes anticoagulant therapy at a dose of 5 mg twice daily,100.0
+mixtral_8x7,P17,A2,Laboratory examinations are performed every month,A2,Laboratory examinations are performed,100.0
+mixtral_8x7,P17,A3,A routine notification is issued,A3,A routine notification is issued,100.0
+mixtral_8x7,P17,,,GEN_NO_MATCH,,
+mixtral_8x7,P17,GEN_NO_MATCH,[],,,
+mixtral_8x7,P18,A1,The patient undergoes mammography,A1,The patient undergoes mammography,100.0
+mixtral_8x7,P18,A2,breast ultrasound examination,A2,breast ultrasound examination,100.0
+mixtral_8x7,P18,A3,"If results require further investigation, a breast examination is performed",A3,a breast examination is performed,100.0
+mixtral_8x7,P18,A4,a breast biopsy is carried out,A4,a breast biopsy is subsequently carried out,100.0
+mixtral_8x7,P18,,,GEN_NO_MATCH,,
+mixtral_8x7,P18,GEN_NO_MATCH,[],,,
+mixtral_8x7,P19,A1,The patient completes a general health questionnaire,A1,The patient completes a general health questionnaire,100.0
+mixtral_8x7,P19,A2,The patient attends a geriatric specialist visit,A2,attends a geriatric specialist visit,100.0
+mixtral_8x7,P19,A3,the patient receives education on the prescribed care plan,A4,the patient receives education on the prescribed care plan,100.0
+mixtral_8x7,P19,A4,the patient performs the prescribed exercises for 30 minutes,A5,the patient performs the prescribed exercises,100.0
+mixtral_8x7,P19,A5,the patient follows a protein-rich Mediterranean diet with adequate hydration and soft-textured foods,A7,follows a protein-rich Mediterranean diet,100.0
+mixtral_8x7,P19,,,GEN_NO_MATCH,"A3 - following the clinical assessment
+A6 - for 30 minutes
+A8 - with adequate hydration and soft-textured foods",
+mixtral_8x7,P19,GEN_NO_MATCH,[],,,
+mixtral_8x7,P20,A1,The patient completes a wound assessment survey,A1,The patient completes a wound assessment survey,100.0
+mixtral_8x7,P20,A2,The patient undergoes specimen collection,A2,undergoes specimen collection,100.0
+mixtral_8x7,P20,A3,"If infection is suspected, therapeutic intervention is initiated",A3,therapeutic intervention is initiated,100.0
+mixtral_8x7,P20,A4,"the patient follows a high-protein, micronutrient-dense diet rich in vitamin C and zinc, with optimal hydration and strict glycemic control",A4,"follows a high-protein, micronutrient-dense diet rich in vitamin C and zinc, with optimal hydration and strict glycemic control",100.0
+mixtral_8x7,P20,A5,the patient takes amoxicillin 1 g every 8 hours for 7 days ,A5,takes amoxicillin 1 g every 8 hours for 7 days,100.0
+mixtral_8x7,P20,A6,Tte patient attends a follow-up visit after four weeks,A6,attends a follow-up visit,100.0
+mixtral_8x7,P20,,,GEN_NO_MATCH,A7 - after four weeks,
+mixtral_8x7,P20,GEN_NO_MATCH,[],,,
+mixtral_8x22,P01,A1,The patient undergoes surgery procedure,A1,The patient undergoes surgery procedure,100.0
+mixtral_8x22,P01,A2,"One week later, a specialist follow-up visit is performed",A2,a specialist follow-up visit is performed,100.0
+mixtral_8x22,P01,A3,the patient completes a clinical questionnaire,A3,the patient completes a clinical questionnaire and receives education on generic home rehabilitation program,100.0
+mixtral_8x22,P01,A4,The patient receives education on generic home rehabilitation program,A3,the patient completes a clinical questionnaire and receives education on generic home rehabilitation program,97.01492537313433
+mixtral_8x22,P01,A5,The patient then performs the prescribed exercises daily for four weeks,A4,The patient performs the rehabilitation exercises daily,84.21052631578948
+mixtral_8x22,P01,,,GEN_NO_MATCH,,
+mixtral_8x22,P01,GEN_NO_MATCH,[],,,
+mixtral_8x22,P02,A1,The patient completes a post-stroke follow up questionnaire,A1,The patient completes a post-stroke follow up questionnaire,100.0
+mixtral_8x22,P02,A2,vital signs are monitored for ten days,A2,vital signs are monitored for ten days,100.0
+mixtral_8x22,P02,A3,the practitioner is alerted with urgent priority if abnormal values are detected,A3,the practitioner is alerted with urgent priority,100.0
+mixtral_8x22,P02,A4,the patient attends attends a cardiology specialist follow-up visit,A4,the patient attends a cardiology specialist follow-up visit,100.0
+mixtral_8x22,P02,A5,The patient receives post-stroke lifestyle education,A5,the patient receives post-stroke lifestyle education,98.07692307692308
+mixtral_8x22,P02,,,GEN_NO_MATCH,,
+mixtral_8x22,P02,GEN_NO_MATCH,[],,,
+mixtral_8x22,P03,A1,The patient monitors blood glucose every morning,A1,The patient monitors blood glucose every morning.,98.96907216494846
+mixtral_8x22,P03,A2,"If the blood glucose level exceeds the prescribed threshold, the practitioner is notified as soon as possible",A2,"If the blood glucose level exceeds the prescribed threshold, the practitioner is notified as soon as possible.",99.49238578680203
+mixtral_8x22,P03,A3,"Otherwise, the patient performs a 30-minute walking session.",A3,"Otherwise, the patient performs a 30-minute walking session.",100.0
+mixtral_8x22,P03,,,GEN_NO_MATCH,,
+mixtral_8x22,P03,GEN_NO_MATCH,[],,,
+mixtral_8x22,P04,A1,Every morning the patient applies the prescribed medication,A1,the patient applies the prescribed medication,100.0
+mixtral_8x22,P04,A2,Every morning the patient measures body temperature,A2,measures body temperature,100.0
+mixtral_8x22,P04,A3,"If body temperature exceeds 38°C, a post-surgical infection screening questionnaire is administered",A3,a post-surgical infection screening questionnaire is administered,100.0
+mixtral_8x22,P04,A4,the practitioner is alerted as urgent,A4,the practitioner is alerted as urgent,100.0
+mixtral_8x22,P04,,,GEN_NO_MATCH,,
+mixtral_8x22,P04,GEN_NO_MATCH,[],,,
+mixtral_8x22,P05,A1,The patient undergoes a urine laboratory examination every three months,A1,The patient undergoes a urine laboratory examination every three months,100.0
+mixtral_8x22,P05,A2,the patient attends a nephrology specialist visit,A2,the patient attends a nephrology specialist visit,100.0
+mixtral_8x22,P05,A3,a low-sodium diet is recommended,A3,a low-sodium diet is recommended,100.0
+mixtral_8x22,P05,A4,fluid management education is provided,A4,fluid management education is provided,100.0
+mixtral_8x22,P05,,,GEN_NO_MATCH,,
+mixtral_8x22,P05,GEN_NO_MATCH,[],,,
+mixtral_8x22,P06,A1,The patient undergoes cardiac rehabilitation therapy,A1,The patient undergoes cardiac rehabilitation therapy,100.0
+mixtral_8x22,P06,A2,the patient performs aerobic exercises three times per day,A2,the patient performs aerobic exercises three times per day while monitoring heart rate,100.0
+mixtral_8x22,P06,A3,monitoring heart rate three times per day,A2,the patient performs aerobic exercises three times per day while monitoring heart rate,100.0
+mixtral_8x22,P06,A4,The patient subsequently completes a general health questionnaire,A3,The patient subsequently completes a general health questionnaire,100.0
+mixtral_8x22,P06,,,GEN_NO_MATCH,,
+mixtral_8x22,P06,GEN_NO_MATCH,[],,,
+mixtral_8x22,P07,A1,Following blood sample collection,A1,following blood sample collection,96.96969696969697
+mixtral_8x22,P07,A2,"if laboratory results are normal, chemotherapy is administered",A2,if laboratory results are normal,87.71929824561403
+mixtral_8x22,P07,A3,vital signs are monitored,A3,chemotherapy is administered while vital signs are monitored,100.0
+mixtral_8x22,P07,A4,"Otherwise, the practitioner is alerted",A4,"Otherwise, the practitioner is alerted",100.0
+mixtral_8x22,P07,A5,an ECG is performed,A5,an ECG performed,100.0
+mixtral_8x22,P07,,,GEN_NO_MATCH,,
+mixtral_8x22,P07,GEN_NO_MATCH,[],,,
+mixtral_8x22,P08,A1,Following neurological imaging with brain MRI,A1,Following neurological imaging with brain MRI,100.0
+mixtral_8x22,P08,A2,the patient begins physiotherapy once a week,A2,the patient begins physiotherapy once a week,100.0
+mixtral_8x22,P08,A3,the patient performs home exercises once daily,A3,performs home exercises once daily,100.0
+mixtral_8x22,P08,A4,the patient completes a clinical questionnaire once a month,A4,the patient completes a clinical questionnaire once a month,100.0
+mixtral_8x22,P08,A5,the patient attends a cardiology follow-up visit,A5,the patient attends a cardiology follow-up visit,100.0
+mixtral_8x22,P08,,,GEN_NO_MATCH,,
+mixtral_8x22,P08,GEN_NO_MATCH,[],,,
+mixtral_8x22,P09,A1,The patient undergoes respiratory observation,A1,The patient undergoes respiratory observation and SpO₂ monitoring,100.0
+mixtral_8x22,P09,A2,The patient undergoes SpO2 monitoring,A1,The patient undergoes respiratory observation and SpO₂ monitoring,92.7536231884058
+mixtral_8x22,P09,A3,"If abnormal findings are detected, the practitioner is alerted as soon as possible",A3,The patient receives education on correct inhaler use and daily self-management strategies,41.42011834319526
+mixtral_8x22,P09,A4,Bronchodilator medication is administered as 2–4 puffs every 6 hours,A2,Bronchodilator medication is administered,100.0
+mixtral_8x22,P09,A5,The patient receives education on correct inhaler use and daily self-management strategies,A3,The patient receives education on correct inhaler use and daily self-management strategies,100.0
+mixtral_8x22,P09,,,GEN_NO_MATCH,,
+mixtral_8x22,P09,GEN_NO_MATCH,[],,,
+mixtral_8x22,P10,A1,The patient completes anamnesis,A1,The patient completes anamnesis,100.0
+mixtral_8x22,P10,A2,blood sample collection,A2,blood sample collection,100.0
+mixtral_8x22,P10,A3,ECG recording,A3,ECG recording,100.0
+mixtral_8x22,P10,A4,chest X-ray examination,A4,chest X-ray examination,100.0
+mixtral_8x22,P10,A5,The patient then undergoes an anaesthesia consultation,A5,The patient undergoes anaesthesia consultation,100.0
+mixtral_8x22,P10,A6,The patient receives preoperative education regarding the surgical procedure,A6,The patient receives preoperative education regarding the surgical procedure,100.0
+mixtral_8x22,P10,,,GEN_NO_MATCH,,
+mixtral_8x22,P10,GEN_NO_MATCH,[],,,
+mixtral_8x22,P11,A1,The patient completes a general health questionnaire twice a day,A1,The patient completes a general health questionnaire twice a day,100.0
+mixtral_8x22,P11,A2,The patient measures blood pressure,A2,The patient measures blood pressure,100.0
+mixtral_8x22,P11,A3,"If blood pressure is between the defined low and high thresholds, the practitioner is alerted urgently",A3,The practitioner is alerted urgently,94.11764705882354
+mixtral_8x22,P11,A4,"if it exceeds the high threshold, the emergency team is alerted with stat priority",A4,The emergency team is alerted with stat priority,95.65217391304348
+mixtral_8x22,P11,A5,The patient takes ramipril 2.5 mg once daily,A5,The patient takes ramipril 2.5 mg once daily,100.0
+mixtral_8x22,P11,A6,"Every six months, the patient attends a cardiology specialist follow-up visit",A6,The patient attends a cardiology specialist follow-up visit,96.49122807017544
+mixtral_8x22,P11,,,GEN_NO_MATCH,,
+mixtral_8x22,P11,GEN_NO_MATCH,[],,,
+mixtral_8x22,P12,A1,The patient completes a pain assessment survey,A1,The patient completes a pain assessment survey.,98.9247311827957
+mixtral_8x22,P12,A2,Analgesic treatment is administered,A2,Analgesic treatment is administered.,98.59154929577466
+mixtral_8x22,P12,A3,routine alerting of the practitioner,A3,routine alerting of the practitioner.,98.63013698630137
+mixtral_8x22,P12,,,GEN_NO_MATCH,,
+mixtral_8x22,P12,GEN_NO_MATCH,[],,,
+mixtral_8x22,P13,A1,The patient attends a monthly rheumatology specialist visit,A1,The patient attends a monthly rheumatology specialist visit,100.0
+mixtral_8x22,P13,A2,The patient receives medication administration,A2,The patient receives medication administration,100.0
+mixtral_8x22,P13,A3,The patient performs prescribed exercises,A3,The patient performs prescribed exercises,100.0
+mixtral_8x22,P13,,,GEN_NO_MATCH,,
+mixtral_8x22,P13,GEN_NO_MATCH,[],,,
+mixtral_8x22,P14,A1,The patient completes a general health questionnaire every day,A1,The patient completes a general health questionnaire every day.,99.2
+mixtral_8x22,P14,A2,respiratory parameters are monitored for 30 minutes,A2,respiratory parameters are monitored for 30 minutes.,99.02912621359224
+mixtral_8x22,P14,A3,"If abnormal respiratory parameters are detected, the practitioner is alerted urgently",A3,the practitioner is alerted urgently.,84.375
+mixtral_8x22,P14,A4,"Otherwise, the patient is educated on correct inhaler use",A4,the patient is educated on correct inhaler use.,94.38202247191012
+mixtral_8x22,P14,,,GEN_NO_MATCH,,
+mixtral_8x22,P14,GEN_NO_MATCH,[],,,
+mixtral_8x22,P15,A1,The patient undergoes wound specimen collection,A1,The patient undergoes wound specimen collection,100.0
+mixtral_8x22,P15,A2,"If an ulcer is detected, the patient attends a general surgery specialist visit",A2,"If an ulcer is detected, the patient attends a general surgery specialist visit",100.0
+mixtral_8x22,P15,A3,"If signs of infection worsen, the clinical team is alerted",A3,"If signs of infection worsen, the clinical team is alerted and therapeutic intervention is initiated",100.0
+mixtral_8x22,P15,A4,therapeutic intervention is initiated,A3,"If signs of infection worsen, the clinical team is alerted and therapeutic intervention is initiated",100.0
+mixtral_8x22,P15,A5,"Otherwise, the patient receives education on home wound care and medication guidelines",A4,"Otherwise, the patient receives education on home wound care and medication guidelines",100.0
+mixtral_8x22,P15,,,GEN_NO_MATCH,,
+mixtral_8x22,P15,GEN_NO_MATCH,[],,,
+mixtral_8x22,P16,A1,The patient attends a respiratory disease specialist visit,A1,The patient attends a respiratory disease specialist visit.,99.14529914529915
+mixtral_8x22,P16,A2,the patient performs the prescribed exercises three times per week,A2,The patient performs the prescribed exercises three times per week while undergoing SpO₂ monitoring.,100.0
+mixtral_8x22,P16,A3,Patient undergoes SpO2 monitoring,A2,The patient performs the prescribed exercises three times per week while undergoing SpO₂ monitoring.,34.58646616541354
+mixtral_8x22,P16,A4,"If oxygen saturation falls below the prescribed threshold, the practitioner is alerted",A3,The practitioner is alerted if oxygen saturation falls below the prescribed threshold.,95.23809523809524
+mixtral_8x22,P16,,,GEN_NO_MATCH,,
+mixtral_8x22,P16,GEN_NO_MATCH,[],,,
+mixtral_8x22,P17,A1,The patient takes anticoagulant therapy at a dose of 5 mg twice daily,A1,The patient takes anticoagulant therapy at a dose of 5 mg twice daily.,99.28057553956835
+mixtral_8x22,P17,A2,Laboratory examinations are performed every month,A2,"Independently, laboratory examinations are performed.",70.58823529411765
+mixtral_8x22,P17,A3,A routine notification is issued,A3,"If abnormal results are detected, a routine notification is issued.",83.63636363636364
+mixtral_8x22,P17,,,GEN_NO_MATCH,,
+mixtral_8x22,P17,GEN_NO_MATCH,[],,,
+mixtral_8x22,P18,A1,The patient undergoes mammography,A1,The patient undergoes mammography,100.0
+mixtral_8x22,P18,A2,breast ultrasound examination,A2,breast ultrasound examination,100.0
+mixtral_8x22,P18,A3,"If results require further investigation, a breast examination is performed",A3,a breast examination is performed,100.0
+mixtral_8x22,P18,A4,a breast biopsy is carried out,A4,a breast biopsy is subsequently carried out,100.0
+mixtral_8x22,P18,,,GEN_NO_MATCH,,
+mixtral_8x22,P18,GEN_NO_MATCH,[],,,
+mixtral_8x22,P19,A1,The patient completes a general health questionnaire,A1,The patient completes a general health questionnaire,100.0
+mixtral_8x22,P19,A2,The patient attends a geriatric specialist visit,A2,The patient attends a geriatric specialist visit,100.0
+mixtral_8x22,P19,A3,the patient receives education on the prescribed care plan,A3,"Following the clinical assessment, the patient receives education on the prescribed care plan",100.0
+mixtral_8x22,P19,A4,the patient performs the prescribed exercises for 30 minutes,A4,The patient performs the prescribed exercises for 30 minutes,100.0
+mixtral_8x22,P19,A5,the patient follows a protein-rich Mediterranean diet with adequate hydration and soft-textured foods,A5,The patient follows a protein-rich Mediterranean diet with adequate hydration and soft-textured foods,99.00990099009901
+mixtral_8x22,P19,,,GEN_NO_MATCH,,
+mixtral_8x22,P19,GEN_NO_MATCH,[],,,
+mixtral_8x22,P20,A1,The patient completes a wound assessment survey,A1,The patient completes a wound assessment survey,100.0
+mixtral_8x22,P20,A2,The patient undergoes specimen collection,A2,undergoes specimen collection,100.0
+mixtral_8x22,P20,A3,"If infection is suspected, therapeutic intervention is initiated",A3,"If infection is suspected, therapeutic intervention is initiated",100.0
+mixtral_8x22,P20,A4,"the patient follows a high-protein, micronutrient-dense diet rich in vitamin C and zinc, with optimal hydration and strict glycemic control",A4,"follows a high-protein, micronutrient-dense diet rich in vitamin C and zinc, with optimal hydration and strict glycemic control",100.0
+mixtral_8x22,P20,A5,the patient takes amoxicillin 1 g every 8 hours for 7 days ,A5,takes amoxicillin 1 g every 8 hours for 7 days,100.0
+mixtral_8x22,P20,A6,Tte patient attends a follow-up visit after four weeks,A6,attends a follow-up visit after four weeks,100.0
+mixtral_8x22,P20,,,GEN_NO_MATCH,,
+mixtral_8x22,P20,GEN_NO_MATCH,[],,,
+llama,P01,A1,The patient undergoes surgery procedure,A1,The patient undergoes surgery procedure.,98.73417721518987
+llama,P01,A2,"One week later, a specialist follow-up visit is performed",A2,a specialist follow-up visit is performed,100.0
+llama,P01,A3,the patient completes a clinical questionnaire,A3,the patient completes a clinical questionnaire,100.0
+llama,P01,A4,The patient receives education on generic home rehabilitation program,A4,receives education on generic home rehabilitation program,100.0
+llama,P01,A5,The patient then performs the prescribed exercises daily for four weeks,A5,the patient performs the rehabilitation exercises daily,82.75862068965517
+llama,P01,,,GEN_NO_MATCH,,
+llama,P01,GEN_NO_MATCH,[],,,
+llama,P02,A1,The patient completes a post-stroke follow up questionnaire,A1,The patient completes a post-stroke follow up questionnaire.,99.15966386554622
+llama,P02,A2,vital signs are monitored for ten days,A2,vital signs are monitored for ten days,100.0
+llama,P02,A3,the practitioner is alerted with urgent priority if abnormal values are detected,A3,the practitioner is alerted with urgent priority if abnormal values are detected,100.0
+llama,P02,A4,the patient attends attends a cardiology specialist follow-up visit,A4,the patient attends a cardiology specialist follow-up visit,100.0
+llama,P02,A5,The patient receives post-stroke lifestyle education,A5,subsequently receives post-stroke lifestyle education,86.95652173913044
+llama,P02,,,GEN_NO_MATCH,,
+llama,P02,GEN_NO_MATCH,[],,,
+llama,P03,A1,The patient monitors blood glucose every morning,A1,monitors blood glucose every morning,100.0
+llama,P03,A2,"If the blood glucose level exceeds the prescribed threshold, the practitioner is notified as soon as possible",A2,the practitioner is notified as soon as possible,100.0
+llama,P03,A3,"Otherwise, the patient performs a 30-minute walking session.",A3,performs a 30-minute walking session,87.5
+llama,P03,,,GEN_NO_MATCH,,
+llama,P03,GEN_NO_MATCH,[],,,
+llama,P04,A1,Every morning the patient applies the prescribed medication,A1,applies the prescribed medication,100.0
+llama,P04,A2,Every morning the patient measures body temperature,A2,measures body temperature,100.0
+llama,P04,A3,"If body temperature exceeds 38°C, a post-surgical infection screening questionnaire is administered",A3,administered a post-surgical infection screening questionnaire,100.0
+llama,P04,A4,the practitioner is alerted as urgent,A4,the practitioner is alerted as urgent,100.0
+llama,P04,,,GEN_NO_MATCH,,
+llama,P04,GEN_NO_MATCH,[],,,
+llama,P05,A1,The patient undergoes a urine laboratory examination every three months,A1,undergoes a urine laboratory examination,100.0
+llama,P05,A2,the patient attends a nephrology specialist visit,A2,attends a nephrology specialist visit,100.0
+llama,P05,A3,a low-sodium diet is recommended,A3,a low-sodium diet is recommended,100.0
+llama,P05,A4,fluid management education is provided,A4,fluid management education is provided,100.0
+llama,P05,,,GEN_NO_MATCH,,
+llama,P05,GEN_NO_MATCH,[],,,
+llama,P06,A1,The patient undergoes cardiac rehabilitation therapy,A1,undergoes cardiac rehabilitation therapy,100.0
+llama,P06,A2,the patient performs aerobic exercises three times per day,A2,performs aerobic exercises three times per day while monitoring heart rate,88.46153846153847
+llama,P06,A3,monitoring heart rate three times per day,A2,performs aerobic exercises three times per day while monitoring heart rate,100.0
+llama,P06,A4,The patient subsequently completes a general health questionnaire,A3,completes a general health questionnaire,100.0
+llama,P06,,,GEN_NO_MATCH,,
+llama,P06,GEN_NO_MATCH,[],,,
+llama,P07,A1,Following blood sample collection,A1,blood sample collection,100.0
+llama,P07,A2,"if laboratory results are normal, chemotherapy is administered",A2,chemotherapy is administered,100.0
+llama,P07,A3,vital signs are monitored,A3,vital signs are monitored,100.0
+llama,P07,A4,"Otherwise, the practitioner is alerted",A4,the practitioner is alerted,100.0
+llama,P07,A5,an ECG is performed,A5,an ECG performed,100.0
+llama,P07,,,GEN_NO_MATCH,,
+llama,P07,GEN_NO_MATCH,[],,,
+llama,P08,A1,Following neurological imaging with brain MRI,A1,Following neurological imaging with brain MRI,100.0
+llama,P08,A2,the patient begins physiotherapy once a week,A2,the patient begins physiotherapy once a week,100.0
+llama,P08,A3,the patient performs home exercises once daily,A3,performs home exercises once daily,100.0
+llama,P08,A4,the patient completes a clinical questionnaire once a month,A4,the patient completes a clinical questionnaire once a month,100.0
+llama,P08,A5,the patient attends a cardiology follow-up visit,A5,the patient attends a cardiology follow-up visit,100.0
+llama,P08,,,GEN_NO_MATCH,,
+llama,P08,GEN_NO_MATCH,[],,,
+llama,P09,A1,The patient undergoes respiratory observation,A1,The patient undergoes respiratory observation and SpO₂ monitoring.,100.0
+llama,P09,A2,The patient undergoes SpO2 monitoring,A1,The patient undergoes respiratory observation and SpO₂ monitoring.,72.41379310344828
+llama,P09,A3,"If abnormal findings are detected, the practitioner is alerted as soon as possible",A2,the practitioner is alerted as soon as possible,100.0
+llama,P09,A4,Bronchodilator medication is administered as 2–4 puffs every 6 hours,A3,Bronchodilator medication is administered.,80.0
+llama,P09,A5,The patient receives education on correct inhaler use and daily self-management strategies,A4,The patient receives education on correct inhaler use and daily self-management strategies.,99.4475138121547
+llama,P09,,,GEN_NO_MATCH,,
+llama,P09,GEN_NO_MATCH,[],,,
+llama,P10,A1,The patient completes anamnesis,A1,completes anamnesis,100.0
+llama,P10,A2,blood sample collection,A2,blood sample collection,100.0
+llama,P10,A3,ECG recording,A3,ECG recording,100.0
+llama,P10,A4,chest X-ray examination,A4,chest X-ray examination,100.0
+llama,P10,A5,The patient then undergoes an anaesthesia consultation,A5,anaesthesia consultation,100.0
+llama,P10,A6,The patient receives preoperative education regarding the surgical procedure,A6,receives preoperative education regarding the surgical procedure,100.0
+llama,P10,,,GEN_NO_MATCH,,
+llama,P10,GEN_NO_MATCH,[],,,
+llama,P11,A1,The patient completes a general health questionnaire twice a day,A1,completes a general health questionnaire twice a day,100.0
+llama,P11,A2,The patient measures blood pressure,A2,measures blood pressure,100.0
+llama,P11,A3,"If blood pressure is between the defined low and high thresholds, the practitioner is alerted urgently",A3,the practitioner is alerted urgently,100.0
+llama,P11,A4,"if it exceeds the high threshold, the emergency team is alerted with stat priority",A4,the emergency team is alerted with stat priority,100.0
+llama,P11,A5,The patient takes ramipril 2.5 mg once daily,A5,takes ramipril 2.5 mg once daily,100.0
+llama,P11,A6,"Every six months, the patient attends a cardiology specialist follow-up visit",A6,attends a cardiology specialist follow-up visit,100.0
+llama,P11,,,GEN_NO_MATCH,,
+llama,P11,GEN_NO_MATCH,[],,,
+llama,P12,A1,The patient completes a pain assessment survey,A1,the patient completes a pain assessment survey,97.82608695652173
+llama,P12,A2,Analgesic treatment is administered,A2,Analgesic treatment is administered,100.0
+llama,P12,A3,routine alerting of the practitioner,A3,routine alerting of the practitioner,100.0
+llama,P12,,,GEN_NO_MATCH,,
+llama,P12,GEN_NO_MATCH,[],,,
+llama,P13,A1,The patient attends a monthly rheumatology specialist visit,A1,attends a monthly rheumatology specialist visit,100.0
+llama,P13,A2,The patient receives medication administration,A2,receives medication administration,100.0
+llama,P13,A3,The patient performs prescribed exercises,A3,performs prescribed exercises,100.0
+llama,P13,,,GEN_NO_MATCH,,
+llama,P13,GEN_NO_MATCH,[],,,
+llama,P14,A1,The patient completes a general health questionnaire every day,A1,completes a general health questionnaire every day,100.0
+llama,P14,A2,respiratory parameters are monitored for 30 minutes,A2,respiratory parameters are monitored for 30 minutes,100.0
+llama,P14,A3,"If abnormal respiratory parameters are detected, the practitioner is alerted urgently",A3,the practitioner is alerted urgently,100.0
+llama,P14,A4,"Otherwise, the patient is educated on correct inhaler use",A4,the patient is educated on correct inhaler use,100.0
+llama,P14,,,GEN_NO_MATCH,,
+llama,P14,GEN_NO_MATCH,[],,,
+llama,P15,A1,The patient undergoes wound specimen collection,A1,wound specimen collection,100.0
+llama,P15,A2,"If an ulcer is detected, the patient attends a general surgery specialist visit",A2,general surgery specialist visit,100.0
+llama,P15,A3,"If signs of infection worsen, the clinical team is alerted",A3,alert clinical team and initiate therapeutic intervention,60.869565217391305
+llama,P15,A4,therapeutic intervention is initiated,A3,alert clinical team and initiate therapeutic intervention,78.68852459016394
+llama,P15,A5,"Otherwise, the patient receives education on home wound care and medication guidelines",A4,education on home wound care and medication guidelines,100.0
+llama,P15,,,GEN_NO_MATCH,,
+llama,P15,GEN_NO_MATCH,[],,,
+llama,P16,A1,The patient attends a respiratory disease specialist visit,A1,attends a respiratory disease specialist visit,100.0
+llama,P16,A2,the patient performs the prescribed exercises three times per week,A2,performs the prescribed exercises three times per week,100.0
+llama,P16,A3,Patient undergoes SpO2 monitoring,A3,undergoing SpO₂ monitoring,74.57627118644068
+llama,P16,A4,"If oxygen saturation falls below the prescribed threshold, the practitioner is alerted",A4,the practitioner is alerted,100.0
+llama,P16,,,GEN_NO_MATCH,,
+llama,P16,GEN_NO_MATCH,[],,,
+llama,P17,A1,The patient takes anticoagulant therapy at a dose of 5 mg twice daily,A1,takes anticoagulant therapy at a dose of 5 mg twice daily,100.0
+llama,P17,A2,Laboratory examinations are performed every month,A2,perform laboratory examinations,75.0
+llama,P17,A3,A routine notification is issued,A3,issue routine notification,89.65517241379311
+llama,P17,,,GEN_NO_MATCH,,
+llama,P17,GEN_NO_MATCH,[],,,
+llama,P18,A1,The patient undergoes mammography,A1,The patient undergoes mammography followed by breast ultrasound examination.,100.0
+llama,P18,A2,breast ultrasound examination,A2,a breast examination is performed,76.59574468085106
+llama,P18,A3,"If results require further investigation, a breast examination is performed",A2,a breast examination is performed,100.0
+llama,P18,A4,a breast biopsy is carried out,A3,a breast biopsy is subsequently carried out,100.0
+llama,P18,,,GEN_NO_MATCH,,
+llama,P18,GEN_NO_MATCH,[],,,
+llama,P19,A1,The patient completes a general health questionnaire,A1,completes a general health questionnaire,100.0
+llama,P19,A2,The patient attends a geriatric specialist visit,A2,attends a geriatric specialist visit,100.0
+llama,P19,A3,the patient receives education on the prescribed care plan,A3,receives education on the prescribed care plan,100.0
+llama,P19,A4,the patient performs the prescribed exercises for 30 minutes,A4,performs the prescribed exercises for 30 minutes,100.0
+llama,P19,A5,the patient follows a protein-rich Mediterranean diet with adequate hydration and soft-textured foods,A5,follows a protein-rich Mediterranean diet with adequate hydration and soft-textured foods,100.0
+llama,P19,,,GEN_NO_MATCH,,
+llama,P19,GEN_NO_MATCH,[],,,
+llama,P20,A1,The patient completes a wound assessment survey,A1,completes a wound assessment survey,100.0
+llama,P20,A2,The patient undergoes specimen collection,A2,undergoes specimen collection,100.0
+llama,P20,A3,"If infection is suspected, therapeutic intervention is initiated",A3,initiates therapeutic intervention,82.75862068965517
+llama,P20,A4,"the patient follows a high-protein, micronutrient-dense diet rich in vitamin C and zinc, with optimal hydration and strict glycemic control",A4,"follows a high-protein, micronutrient-dense diet rich in vitamin C and zinc, with optimal hydration and strict glycemic control",100.0
+llama,P20,A5,the patient takes amoxicillin 1 g every 8 hours for 7 days ,A5,takes amoxicillin 1 g every 8 hours for 7 days,100.0
+llama,P20,A6,Tte patient attends a follow-up visit after four weeks,A6,attends a follow-up visit after four weeks,100.0
+llama,P20,,,GEN_NO_MATCH,,
+llama,P20,GEN_NO_MATCH,[],,,
+phi4,P01,A1,The patient undergoes surgery procedure,A1,the patient undergoes surgery procedure,97.43589743589743
+phi4,P01,A2,"One week later, a specialist follow-up visit is performed",A2,a specialist follow-up visit is performed,100.0
+phi4,P01,A3,the patient completes a clinical questionnaire,A3,the patient completes a clinical questionnaire,100.0
+phi4,P01,A4,The patient receives education on generic home rehabilitation program,A4,receives education on generic home rehabilitation program,100.0
+phi4,P01,A5,The patient then performs the prescribed exercises daily for four weeks,A5,the patient performs the rehabilitation exercises daily for four weeks,87.17948717948718
+phi4,P01,,,GEN_NO_MATCH,,
+phi4,P01,GEN_NO_MATCH,[],,,
+phi4,P02,A1,The patient completes a post-stroke follow up questionnaire,A1,The patient completes a post-stroke follow up questionnaire.,99.15966386554622
+phi4,P02,A2,vital signs are monitored for ten days,A2,vital signs are monitored for ten days,100.0
+phi4,P02,A3,the practitioner is alerted with urgent priority if abnormal values are detected,A3,the practitioner is alerted with urgent priority if abnormal values are detected,100.0
+phi4,P02,A4,the patient attends attends a cardiology specialist follow-up visit,A4,the patient attends a cardiology specialist follow-up visit,100.0
+phi4,P02,A5,The patient receives post-stroke lifestyle education,A5,receives post-stroke lifestyle education,100.0
+phi4,P02,,,GEN_NO_MATCH,,
+phi4,P02,GEN_NO_MATCH,[],,,
+phi4,P03,A1,The patient monitors blood glucose every morning,A1,the patient monitors blood glucose every morning,97.91666666666667
+phi4,P03,A2,"If the blood glucose level exceeds the prescribed threshold, the practitioner is notified as soon as possible",A2,the practitioner is notified as soon as possible,100.0
+phi4,P03,A3,"Otherwise, the patient performs a 30-minute walking session.",A3,the patient performs a 30-minute walking session,90.9090909090909
+phi4,P03,,,GEN_NO_MATCH,,
+phi4,P03,GEN_NO_MATCH,[],,,
+phi4,P04,A1,Every morning the patient applies the prescribed medication,A1,applies the prescribed medication,100.0
+phi4,P04,A2,Every morning the patient measures body temperature,A2,measures body temperature,100.0
+phi4,P04,A3,"If body temperature exceeds 38°C, a post-surgical infection screening questionnaire is administered",A3,administers a post-surgical infection screening questionnaire,89.0909090909091
+phi4,P04,A4,the practitioner is alerted as urgent,A4,alerts the practitioner as urgent,94.28571428571429
+phi4,P04,,,GEN_NO_MATCH,,
+phi4,P04,GEN_NO_MATCH,[],,,
+phi4,P05,A1,The patient undergoes a urine laboratory examination every three months,A1,the patient undergoes a urine laboratory examination,96.0
+phi4,P05,A2,the patient attends a nephrology specialist visit,A2,the patient attends a nephrology specialist visit,100.0
+phi4,P05,A3,a low-sodium diet is recommended,A3,a low-sodium diet is recommended,100.0
+phi4,P05,A4,fluid management education is provided,A4,fluid management education is provided,100.0
+phi4,P05,,,GEN_NO_MATCH,,
+phi4,P05,GEN_NO_MATCH,[],,,
+phi4,P06,A1,The patient undergoes cardiac rehabilitation therapy,A1,the patient undergoes cardiac rehabilitation therapy,98.07692307692308
+phi4,P06,A2,the patient performs aerobic exercises three times per day,A2,the patient performs aerobic exercises three times per day while monitoring heart rate,100.0
+phi4,P06,A3,monitoring heart rate three times per day,A2,the patient performs aerobic exercises three times per day while monitoring heart rate,100.0
+phi4,P06,A4,The patient subsequently completes a general health questionnaire,A3,the patient completes a general health questionnaire,96.0
+phi4,P06,,,GEN_NO_MATCH,,
+phi4,P06,GEN_NO_MATCH,[],,,
+phi4,P07,A1,Following blood sample collection,A1,blood sample collection,100.0
+phi4,P07,A2,"if laboratory results are normal, chemotherapy is administered",A3,chemotherapy is administered,100.0
+phi4,P07,A3,vital signs are monitored,A4,vital signs are monitored,100.0
+phi4,P07,A4,"Otherwise, the practitioner is alerted",A5,the practitioner is alerted,100.0
+phi4,P07,A5,an ECG is performed,A6,an ECG performed,100.0
+phi4,P07,,,GEN_NO_MATCH,A2 - laboratory results are normal,
+phi4,P07,GEN_NO_MATCH,[],,,
+phi4,P08,A1,Following neurological imaging with brain MRI,A1,Following neurological imaging with brain MRI,100.0
+phi4,P08,A2,the patient begins physiotherapy once a week,A2,the patient begins physiotherapy once a week,100.0
+phi4,P08,A3,the patient performs home exercises once daily,A3,performs home exercises once daily,100.0
+phi4,P08,A4,the patient completes a clinical questionnaire once a month,A4,the patient completes a clinical questionnaire once a month,100.0
+phi4,P08,A5,the patient attends a cardiology follow-up visit,A5,the patient attends a cardiology follow-up visit,100.0
+phi4,P08,,,GEN_NO_MATCH,,
+phi4,P08,GEN_NO_MATCH,[],,,
+phi4,P09,A1,The patient undergoes respiratory observation,A1,the patient undergoes respiratory observation and SpO₂ monitoring,95.34883720930233
+phi4,P09,A2,The patient undergoes SpO2 monitoring,A1,the patient undergoes respiratory observation and SpO₂ monitoring,86.15384615384616
+phi4,P09,A3,"If abnormal findings are detected, the practitioner is alerted as soon as possible",A2,the practitioner is alerted as soon as possible,100.0
+phi4,P09,A4,Bronchodilator medication is administered as 2–4 puffs every 6 hours,A3,Bronchodilator medication is administered,100.0
+phi4,P09,A5,The patient receives education on correct inhaler use and daily self-management strategies,A4,the patient receives education on correct inhaler use and daily self-management strategies,98.88888888888889
+phi4,P09,,,GEN_NO_MATCH,,
+phi4,P09,GEN_NO_MATCH,[],,,
+phi4,P10,A1,The patient completes anamnesis,A1,the patient completes anamnesis,96.7741935483871
+phi4,P10,A2,blood sample collection,A2,blood sample collection,100.0
+phi4,P10,A3,ECG recording,A3,ECG recording,100.0
+phi4,P10,A4,chest X-ray examination,A4,chest X-ray examination,100.0
+phi4,P10,A5,The patient then undergoes an anaesthesia consultation,A5,the patient undergoes an anaesthesia consultation,95.74468085106383
+phi4,P10,A6,The patient receives preoperative education regarding the surgical procedure,A6,receives preoperative education regarding the surgical procedure,100.0
+phi4,P10,,,GEN_NO_MATCH,,
+phi4,P10,GEN_NO_MATCH,[],,,
+phi4,P11,A1,The patient completes a general health questionnaire twice a day,A1,the patient completes a general health questionnaire twice a day,98.38709677419355
+phi4,P11,A2,The patient measures blood pressure,A2,measures blood pressure,100.0
+phi4,P11,A3,"If blood pressure is between the defined low and high thresholds, the practitioner is alerted urgently",A3,the practitioner is alerted urgently,100.0
+phi4,P11,A4,"if it exceeds the high threshold, the emergency team is alerted with stat priority",A4,the emergency team is alerted with stat priority,100.0
+phi4,P11,A5,The patient takes ramipril 2.5 mg once daily,A5,the patient takes ramipril 2.5 mg once daily,97.72727272727273
+phi4,P11,A6,"Every six months, the patient attends a cardiology specialist follow-up visit",A6,the patient attends a cardiology specialist follow-up visit,100.0
+phi4,P11,,,GEN_NO_MATCH,,
+phi4,P11,GEN_NO_MATCH,[],,,
+phi4,P12,A1,The patient completes a pain assessment survey,A1,the patient completes a pain assessment survey,97.82608695652173
+phi4,P12,A2,Analgesic treatment is administered,A2,analgesic treatment is administered,97.14285714285714
+phi4,P12,A3,routine alerting of the practitioner,A3,routine alerting of the practitioner,100.0
+phi4,P12,,,GEN_NO_MATCH,,
+phi4,P12,GEN_NO_MATCH,[],,,
+phi4,P13,A1,The patient attends a monthly rheumatology specialist visit,A1,attend a monthly rheumatology specialist visit,91.76470588235294
+phi4,P13,A2,The patient receives medication administration,A2,receives medication administration,100.0
+phi4,P13,A3,The patient performs prescribed exercises,A3,performs prescribed exercises,100.0
+phi4,P13,,,GEN_NO_MATCH,,
+phi4,P13,GEN_NO_MATCH,[],,,
+phi4,P14,A1,The patient completes a general health questionnaire every day,A1,The patient completes a general health questionnaire every day,100.0
+phi4,P14,A2,respiratory parameters are monitored for 30 minutes,A2,respiratory parameters are monitored for 30 minutes,100.0
+phi4,P14,A3,"If abnormal respiratory parameters are detected, the practitioner is alerted urgently",A3,the practitioner is alerted urgently,100.0
+phi4,P14,A4,"Otherwise, the patient is educated on correct inhaler use",A4,the patient is educated on correct inhaler use,100.0
+phi4,P14,,,GEN_NO_MATCH,,
+phi4,P14,GEN_NO_MATCH,[],,,
+phi4,P15,A1,The patient undergoes wound specimen collection,A1,the patient undergoes wound specimen collection,97.87234042553192
+phi4,P15,A2,"If an ulcer is detected, the patient attends a general surgery specialist visit",A2,the patient attends a general surgery specialist visit,100.0
+phi4,P15,A3,"If signs of infection worsen, the clinical team is alerted",A3,the clinical team is alerted and therapeutic intervention is initiated,65.11627906976744
+phi4,P15,A4,therapeutic intervention is initiated,A3,the clinical team is alerted and therapeutic intervention is initiated,100.0
+phi4,P15,A5,"Otherwise, the patient receives education on home wound care and medication guidelines",A4,the patient receives education on home wound care and medication guidelines,100.0
+phi4,P15,,,GEN_NO_MATCH,,
+phi4,P15,GEN_NO_MATCH,[],,,
+phi4,P16,A1,The patient attends a respiratory disease specialist visit,A1,The patient attends a respiratory disease specialist visit,100.0
+phi4,P16,A2,the patient performs the prescribed exercises three times per week,A2,the patient performs the prescribed exercises three times per week while undergoing SpO₂ monitoring,100.0
+phi4,P16,A3,Patient undergoes SpO2 monitoring,A2,the patient performs the prescribed exercises three times per week while undergoing SpO₂ monitoring,46.51162790697674
+phi4,P16,A4,"If oxygen saturation falls below the prescribed threshold, the practitioner is alerted",A3,the practitioner is alerted,100.0
+phi4,P16,,,GEN_NO_MATCH,,
+phi4,P16,GEN_NO_MATCH,[],,,
+phi4,P17,A1,The patient takes anticoagulant therapy at a dose of 5 mg twice daily,A1,The patient takes anticoagulant therapy at a dose of 5 mg twice daily,100.0
+phi4,P17,A2,Laboratory examinations are performed every month,A2,laboratory examinations are performed every month,97.95918367346938
+phi4,P17,A3,A routine notification is issued,A3,a routine notification is issued,96.875
+phi4,P17,,,GEN_NO_MATCH,,
+phi4,P17,GEN_NO_MATCH,[],,,
+phi4,P18,A1,The patient undergoes mammography,A1,the patient undergoes mammography followed by breast ultrasound examination,93.54838709677419
+phi4,P18,A2,breast ultrasound examination,A1,the patient undergoes mammography followed by breast ultrasound examination,100.0
+phi4,P18,A3,"If results require further investigation, a breast examination is performed",A2,a breast examination is performed,100.0
+phi4,P18,A4,a breast biopsy is carried out,A3,a breast biopsy is subsequently carried out,100.0
+phi4,P18,,,GEN_NO_MATCH,,
+phi4,P18,GEN_NO_MATCH,[],,,
+phi4,P19,A1,The patient completes a general health questionnaire,A1,the patient completes a general health questionnaire,98.07692307692308
+phi4,P19,A2,The patient attends a geriatric specialist visit,A2,attends a geriatric specialist visit,100.0
+phi4,P19,A3,the patient receives education on the prescribed care plan,A3,the patient receives education on the prescribed care plan,100.0
+phi4,P19,A4,the patient performs the prescribed exercises for 30 minutes,A4,the patient performs the prescribed exercises for 30 minutes,100.0
+phi4,P19,A5,the patient follows a protein-rich Mediterranean diet with adequate hydration and soft-textured foods,A5,follows a protein-rich Mediterranean diet with adequate hydration and soft-textured foods,100.0
+phi4,P19,,,GEN_NO_MATCH,,
+phi4,P19,GEN_NO_MATCH,[],,,
+phi4,P20,A1,The patient completes a wound assessment survey,A1,the patient completes a wound assessment survey,97.87234042553192
+phi4,P20,A2,The patient undergoes specimen collection,A2,undergoes specimen collection,100.0
+phi4,P20,A3,"If infection is suspected, therapeutic intervention is initiated",A3,therapeutic intervention is initiated,100.0
+phi4,P20,A4,"the patient follows a high-protein, micronutrient-dense diet rich in vitamin C and zinc, with optimal hydration and strict glycemic control",A4,"the patient follows a high-protein, micronutrient-dense diet rich in vitamin C and zinc, with optimal hydration and strict glycemic control",100.0
+phi4,P20,A5,the patient takes amoxicillin 1 g every 8 hours for 7 days ,A5,takes amoxicillin 1 g every 8 hours for 7 days,100.0
+phi4,P20,A6,Tte patient attends a follow-up visit after four weeks,A6,attends a follow-up visit,100.0
+phi4,P20,,,GEN_NO_MATCH,,
+phi4,P20,GEN_NO_MATCH,[],,,

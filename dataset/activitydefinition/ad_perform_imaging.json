@@ -1,0 +1,29 @@
+{
+    "resourceType": "ActivityDefinition",
+    "id": "1056",
+    "version": "1.0.0",
+    "name": "ad_perform_imaging",
+    "title": "Perform Diagnostic Imaging Study",
+    "subtitle": "radiology exam, imaging procedure, MRI, CT scan, ultrasound, X-ray",
+    "status": "draft",
+    "description": "Execute a diagnostic imaging procedure to visualize internal anatomical structures for diagnostic or monitoring purposes.",
+    "kind": "ServiceRequest",
+    "dynamicValue": [
+        {
+            "path": "code.concept",
+            "expression": {
+                "description": "Imaging modality: The type of diagnostic imaging procedure to be performed",
+                "language": "text/fhirpath",
+                "expression": "%imaging_modality_concept"
+            }
+        },
+        {
+            "path": "bodySite.concept",
+            "expression": {
+                "description": "Anatomic location where the imaging study should be performed. This is the target site.",
+                "language": "text/fhirpath",
+                "expression": "%body_site_concept"
+            }
+        }
+    ]
+}

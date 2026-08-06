@@ -1,0 +1,174 @@
+{
+    "1000": {
+        "medication.concept": {
+            "category": "ontology",
+            "description": "The medication to be taken",
+            "value": null
+        },
+        "dosageInstruction[0].doseAndRate[0]": {
+            "category" : "resource",
+            "description": "The dose of the medication to be taken",
+            "value": "- dose[x] (0..1): Amount of medication per dose. One of these 2:\n  - doseRange : {\n      \"low\" : { // Low limit\n        \"value\" : Decimal, // The value that express the quantity\n        \"unit\" : String, // The unit of measure\n        \"system\" : \"http://unitsofmeasure.org\",\n        \"code\" : String // The code for the unit of measure\n      },\n      \"high\" : { // High limit\n        \"value\" : Decimal, // The value that express the quantity\n        \"unit\" : String, // The unit of measure\n        \"system\" : \"http://unitsofmeasure.org\",\n        \"code\" : String // The code for the unit of measure\n      }\n    }\n  - doseQuantity : { Quantity(SimpleQuantity) }\n- rate[x] (0..1): Amount of medication per unit of time. One of these 3:\n  - rateRatio: {\n      \"numerator\" : { // Numerator value\n          \"value\" : Decimal, // The value that express the quantity\n          \"unit\" : String, // The unit of measure\n          \"system\" : \"http://unitsofmeasure.org\",\n          \"code\" : String // The code for the unit of measure\n        },\n      \"denominator\" : { // Denominator value\n          \"value\" : Decimal, // The value that express the quantity\n          \"unit\" : String, // The unit of measure\n          \"system\" : \"http://unitsofmeasure.org\",\n          \"code\" : String // The code for the unit of measure\n        }\n    }\n  - rateRange: {\n      \"low\" : { // Low limit\n          \"value\" : Decimal, // The value that express the quantity\n          \"unit\" : String, // The unit of measure\n          \"system\" : \"http://unitsofmeasure.org\",\n          \"code\" : String // The code for the unit of measure\n        },\n      \"high\" : { // High limit\n          \"value\" : Decimal, // The value that express the quantity\n          \"unit\" : String, // The unit of measure\n          \"system\" : \"http://unitsofmeasure.org\",\n          \"code\" : String // The code for the unit of measure\n        }\n    }\n  - rateQuantity: {\n      \"value\" : Decimal, // The value that express the quantity\n      \"unit\" : String, // The unit of measure\n      \"system\" : \"http://unitsofmeasure.org\",\n      \"code\" : String // The code for the unit of measure\n    }\n"
+        }
+    },
+    "1059": {
+        "code.concept": {
+            "category": "ontology",
+            "description": "The type of specialist visit to be attended or the specialist that has to perform the visit",
+            "value": null
+        }
+    },
+    "1058": {
+        "code.concept": {
+            "category": "ontology",
+            "description": "The clinical observation to be acquired",
+            "value": null
+        }
+    },
+    "1057": {
+        "code.concept": {
+            "category": "ontology",
+            "description": "Therapy type: The type of therapeutic intervention to be provided",
+            "value": null
+        },
+        "bodySite.concept": {
+            "category": "ontology",
+            "description": "Anatomic location where the therapy should be performed. This is the target site",
+            "value": null
+        }
+    },
+    "1056": {
+        "code.concept": {
+            "category": "ontology",
+            "description": "Imaging modality: The type of diagnostic imaging procedure to be performed",
+            "value": null
+        },
+        "bodySite.concept": {
+            "category": "ontology",
+            "description": "Anatomic location where the imaging study should be performed. This is the target site",
+            "value": null
+        }
+    },
+    "1001": {
+        "code.concept": {
+            "category": "ontology",
+            "description": "Exercise type: The type of exercise to be executed",
+            "value": null
+        }
+    },
+    "1055": {
+        "patientInstruction[0].instructionReference": {
+            "category": "reference",
+            "description": "Patient instruction: The information or guidance to be provided to the patient regarding the clinical activity, including details on how to perform the activity, expected outcomes, and any necessary precautions.",
+            "value": null
+        }
+    },
+    "1054": {
+        "oralDiet.instruction": {
+            "category": "string",
+            "description": "Diet given orally in contrast to enteral (tube) feeding.",
+            "value": null
+        },
+        "supplement[0].instruction": {
+            "category": "string",
+            "description": "Oral nutritional products given in order to add further nutritional value to the patient's diet.",
+            "value": null
+        },
+        "enteralFormula.administrationInstruction": {
+            "category": "string",
+            "description": "Feeding provided through the gastrointestinal tract via a tube, catheter, or stoma that delivers nutrition distal to the oral cavity.",
+            "value": null
+        }
+    },
+    "1003": {
+        "code.concept": {
+            "category": "ontology",
+            "description": "The vital sign to be monitored or acquired",
+            "value": null
+        }
+    },
+    "1002": {
+        "supportingInfo[0].reference": {
+            "category": "reference",
+            "description": "The reference to the FHIR Resource Questionnaire that represents the questionnaire to be compiled",
+            "value": null
+        }
+    },
+    "1053": {
+        "code.concept": {
+            "category": "ontology",
+            "description": "Specimen type: The type of biological sample to be collected",
+            "value": null
+        },
+        "bodySite.concept": {
+            "category": "ontology",
+            "description": "Anatomic location where the speciment has to be collected. This is the target site",
+            "value": null
+        }
+    },
+    "1052": {
+        "code.concept": {
+            "category": "ontology",
+            "description": "Clinical procedure type: The type of clinical procedure to be executed",
+            "value": null
+        },
+        "bodySite.concept": {
+            "category": "ontology",
+            "description": "Anatomic location where the procedure should be performed. This is the target site",
+            "value": null
+        }
+    },
+    "1051": {
+        "priority": {
+            "category": "value_set",
+            "description": "Characterizes how quickly the proposed act must be initiated. Accepted values are: routine, urgent, asap, stat.",
+            "value": [
+                {
+                    "value": "routine",
+                    "system": "http://hl7.org/fhir/request-priority",
+                    "title": "Routine",
+                    "description": "The request has normal priority."
+                },
+                {
+                    "value": "urgent",
+                    "system": "http://hl7.org/fhir/request-priority",
+                    "title": "Urgent",
+                    "description": "The request should be actioned promptly - higher priority than routine."
+                },
+                {
+                    "value": "asap",
+                    "system": "http://hl7.org/fhir/request-priority",
+                    "title": "ASAP",
+                    "description": "The request should be actioned as soon as possible - higher priority than urgent."
+                },
+                {
+                    "value": "stat",
+                    "system": "http://hl7.org/fhir/request-priority",
+                    "title": "STAT",
+                    "description": "The request should be actioned immediately - highest possible priority. E.g. an emergency."
+                }
+            ]
+        },
+        "payload[0].contentAttachment": {
+            "category" : "resource",
+            "description": "The content to be communicated to the recipient",
+            "value": "- contentType (0..1): \"<code>\", // Mime type of the content, with charset etc.\n- \"language\" (0..1): \"<code>\", // Human language of the content (BCP-47)\n- \"data\" (0..1): \"<base64Binary>\", // Data inline, base64ed\n- \"url\" (0..1): \"<url>\", // Uri where the data can be found\n- \"title\" (0..1): \"<string>\", // Label to display in place of the data"
+
+        },
+        "requester": {
+            "category": "reference",
+            "description": "The device, individual, or organization who asks for the information to be shared.",
+            "value": null
+        },
+        "recipient[]": {
+            "category": "reference",
+            "description": "The list of entities (e.g. person, organization, clinical information system, device, group, or care team) which is the intended target of the communication.",
+            "value": null
+        },
+        "informationProvider[]": {
+            "category": "reference",
+            "description": "The list of entities (e.g. person, organization, clinical information system, or device) which is to be the source of the communication.",
+            "value": null
+        }
+    }
+}

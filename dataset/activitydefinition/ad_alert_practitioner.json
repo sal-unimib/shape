@@ -1,0 +1,53 @@
+{
+    "resourceType": "ActivityDefinition",
+    "id": "1051",
+    "version": "1.0.0",
+    "name": "ad_alert_practitioner",
+    "title": "Alert Healthcare Practitioner",
+    "subtitle": "send alert, notify clinician, trigger notification, clinical alert",
+    "status": "draft",
+    "description": "Send a notification or alert to a healthcare professional in response to clinical events, thresholds, or workflow triggers.",
+    "kind": "CommunicationRequest",
+    "dynamicValue": [
+        {
+            "path": "priority",
+            "expression": {
+                "description": "Characterizes how quickly the proposed act must be initiated. Accepted values are: routine, urgent, asap, stat.",
+                "language": "text/fhirpath",
+                "expression": "%priority"
+            }
+        },
+        {
+            "path": "payload[0].contentAttachment",
+            "expression": {
+                "description": "The content to be communicated to the recipient.",
+                "language": "text/fhirpath",
+                "expression": "%payload"
+            }
+        },
+        {
+            "path": "requester",
+            "expression": {
+                "description": "The device, individual, or organization who asks for the information to be shared.",
+                "language": "text/fhirpath",
+                "expression": "%requester"
+            }
+        },
+        {
+            "path": "recipient[]",
+            "expression": {
+                "description": "The list of entities (e.g. person, organization, clinical information system, device, group, or care team) which is the intended target of the communication.",
+                "language": "text/fhirpath",
+                "expression": "%recipient"
+            }
+        },
+        {
+            "path": "informationProvider[]",
+            "expression": {
+                "description": "The list of entities (e.g. person, organization, clinical information system, or device) which is to be the source of the communication.",
+                "language": "text/fhirpath",
+                "expression": "%information_provider"
+            }
+        }
+    ]
+}

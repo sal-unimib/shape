@@ -1,0 +1,29 @@
+{
+    "resourceType": "ActivityDefinition",
+    "id": "1053",
+    "version": "1.0.0",
+    "name": "ad_collect_specimen",
+    "title": "Collect Biological Specimen",
+    "subtitle": "sample collection, blood draw, specimen retrieval, lab sample collection",
+    "status": "draft",
+    "description": "Collection of a biological sample such as blood, urine, or tissue for laboratory analysis and diagnostic evaluation.",
+    "kind": "ServiceRequest",
+    "dynamicValue": [
+        {
+            "path": "code.concept",
+            "expression": {
+                "description": "Specimen type: The type of biological sample to be collected",
+                "language": "text/fhirpath",
+                "expression": "%specimen_concept"
+            }
+        },
+        {
+            "path": "bodySite.concept",
+            "expression": {
+                "description": "Anatomic location where the speciment has to be collected. This is the target site.",
+                "language": "text/fhirpath",
+                "expression": "%body_site_concept"
+            }
+        }
+    ]
+}

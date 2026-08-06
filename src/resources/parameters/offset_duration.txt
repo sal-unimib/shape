@@ -1,0 +1,3 @@
+- value (decimal, 0..1): Numerical value
+- system: "http://unitsofmeasure.org"
+- unit (code, 0..1): The units of time for the offset in UCUM, choose one of the following values: s | min | h | d | wk | mo | a

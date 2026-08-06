@@ -1,0 +1,29 @@
+{
+    "resourceType": "ActivityDefinition",
+    "id": "1057",
+    "version": "1.0.0",
+    "name": "ad_provide_therapy",
+    "title": "Provide Therapeutic Intervention",
+    "subtitle": "therapy session, treatment, rehabilitation therapy, non-pharmacological treatment",
+    "status": "draft",
+    "description": "Delivery of a therapeutic intervention excluding medications, such as physiotherapy, psychotherapy, or other rehabilitative treatments.",
+    "kind": "ServiceRequest",
+    "dynamicValue": [
+        {
+            "path": "code.concept",
+            "expression": {
+                "description": "Therapy type: The type of therapeutic intervention to be provided",
+                "language": "text/fhirpath",
+                "expression": "%therapy_concept"
+            }
+        },
+        {
+            "path": "bodySite.concept",
+            "expression": {
+                "description": "Anatomic location where the therapy should be performed. This is the target site.",
+                "language": "text/fhirpath",
+                "expression": "%body_site_concept"
+            }
+        }
+    ]
+}
