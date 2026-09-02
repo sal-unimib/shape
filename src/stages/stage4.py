@@ -1,4 +1,3 @@
-from src.model.core import Relationship
 from fhir.resources.activitydefinition import ActivityDefinition
 import logging
 import json

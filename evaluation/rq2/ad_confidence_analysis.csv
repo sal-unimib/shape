@@ -1,0 +1,6 @@
+llm,correct_high,correct_medium,correct_low,not_correct_high,not_correct_medium,not_correct_low,not_correct_high_no_cand,not_correct_medium_no_cand,not_correct_low_no_cand,none_gt_in_cand,none_gt_not_in_cand
+mistral,74,1,0,11,1,1,9,1,1,0,0
+mixtral_8x7,64,3,0,6,0,1,2,0,1,4,9
+mixtral_8x22,67,2,0,7,2,3,6,2,3,0,1
+llama,74,0,0,7,0,0,6,0,0,0,4
+phi4,66,3,0,6,2,0,4,1,0,1,6
