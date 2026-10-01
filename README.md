@@ -315,8 +315,23 @@ evaluation/RQ3
 
 # Citation
 
-If you use SHAPE in your research, please cite:
+This repository contains the artifacts used for the experimental evaluation presented in the following paper:
 
-```text
-TODO
+> *Gallo, G. D., Bergamini, F., Napolitano, M. and Micucci, D. (2026). Exploring Persistent Configuration Decisions for Adaptive Data Provisioning. In Proceedings of the 21st International Conference on Software Technologies - ICSOFT; ISBN 978-989-758-855-6; ISSN 2184-2833, SciTePress, pages 95-106. DOI: 10.5220/0015229900004088*
+
+If you use this repository, please cite the associated publication:
+
+```bibtex
+@inproceedings{gallo2026,
+    title={Exploring Persistent Configuration Decisions for Adaptive Data Provisioning},
+    author={Gallo, Giovanni Donato; Bergamini, Federico; Napolitano, Marco; Micucci, Daniela},
+    booktitle={Proceedings of the 21st International Conference on Software Technologies - ICSOFT},
+    year={2026},
+    pages={95-106},
+    publisher={SciTePress},
+    organization={INSTICC},
+    doi={10.5220/0015229900004088},
+    isbn={978-989-758-855-6},
+    issn={2184-2833}
+}
 ```
