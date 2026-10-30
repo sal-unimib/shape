@@ -34,6 +34,8 @@ def deterministic_plandefinition_construction(fhir_workflow : FHIRWorkflow) -> P
             'linkId' : action.id,
             'title' : action.label
         }
+        if action.activity_definition:
+            pd_action['definitionCanonical'] = action.activity_definition.url or f'ActivityDefinition/{action.activity_definition.id}'
         if action.condition:
             pd_action['condition'] = [{
                 "kind": "applicability",
