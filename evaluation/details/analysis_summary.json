@@ -1,0 +1,431 @@
+{
+  "MI07": [
+    {
+      "model": "mistral",
+      "intermediate_constraints": 5,
+      "transferred": 0,
+      "log_supported_omissions": 4,
+      "affected_pathways": 3,
+      "other_omissions": 1,
+      "expected_exact": 0,
+      "expected_different": 0,
+      "expected_missing": 26,
+      "expected_missing_causes": {
+        "no_encoded_temporal_constraint": 22,
+        "validation_omission_log_supported": 3,
+        "no_incoming_relationship": 1
+      }
+    },
+    {
+      "model": "mixtral_8x7",
+      "intermediate_constraints": 7,
+      "transferred": 5,
+      "log_supported_omissions": 2,
+      "affected_pathways": 1,
+      "other_omissions": 0,
+      "expected_exact": 0,
+      "expected_different": 4,
+      "expected_missing": 22,
+      "expected_missing_causes": {
+        "no_encoded_temporal_constraint": 19,
+        "missing_action": 1,
+        "validation_omission_log_supported": 2
+      }
+    },
+    {
+      "model": "mixtral_8x22",
+      "intermediate_constraints": 26,
+      "transferred": 26,
+      "log_supported_omissions": 0,
+      "affected_pathways": 0,
+      "other_omissions": 0,
+      "expected_exact": 3,
+      "expected_different": 18,
+      "expected_missing": 5,
+      "expected_missing_causes": {
+        "no_encoded_temporal_constraint": 4,
+        "missing_action": 1
+      }
+    },
+    {
+      "model": "llama",
+      "intermediate_constraints": 28,
+      "transferred": 27,
+      "log_supported_omissions": 0,
+      "affected_pathways": 0,
+      "other_omissions": 1,
+      "expected_exact": 18,
+      "expected_different": 5,
+      "expected_missing": 3,
+      "expected_missing_causes": {
+        "missing_action": 1,
+        "no_encoded_temporal_constraint": 1,
+        "no_incoming_relationship": 1
+      }
+    },
+    {
+      "model": "phi4",
+      "intermediate_constraints": 25,
+      "transferred": 1,
+      "log_supported_omissions": 24,
+      "affected_pathways": 14,
+      "other_omissions": 0,
+      "expected_exact": 0,
+      "expected_different": 1,
+      "expected_missing": 25,
+      "expected_missing_causes": {
+        "validation_omission_log_supported": 24,
+        "no_encoded_temporal_constraint": 1
+      }
+    }
+  ],
+  "MI12": [
+    {
+      "model": "mistral",
+      "N": 88,
+      "retrieval_errors": 10,
+      "selection_errors": 2,
+      "correct": 76
+    },
+    {
+      "model": "mixtral_8x7",
+      "N": 87,
+      "retrieval_errors": 11,
+      "selection_errors": 8,
+      "correct": 68
+    },
+    {
+      "model": "mixtral_8x22",
+      "N": 82,
+      "retrieval_errors": 12,
+      "selection_errors": 1,
+      "correct": 69
+    },
+    {
+      "model": "llama",
+      "N": 85,
+      "retrieval_errors": 9,
+      "selection_errors": 1,
+      "correct": 75
+    },
+    {
+      "model": "phi4",
+      "N": 85,
+      "retrieval_errors": 10,
+      "selection_errors": 4,
+      "correct": 71
+    }
+  ],
+  "MI12_by_activity": [
+    {
+      "expected_id": "1000",
+      "title": "Administer medication",
+      "N": 35,
+      "retrieval_errors": 20,
+      "selection_errors": 0,
+      "correct": 15
+    },
+    {
+      "expected_id": "1001",
+      "title": "Perform exercise",
+      "N": 35,
+      "retrieval_errors": 20,
+      "selection_errors": 1,
+      "correct": 14
+    },
+    {
+      "expected_id": "1002",
+      "title": "Complete Clinical Questionnaire",
+      "N": 55,
+      "retrieval_errors": 0,
+      "selection_errors": 2,
+      "correct": 53
+    },
+    {
+      "expected_id": "1051",
+      "title": "Alert Healthcare Practitioner",
+      "N": 59,
+      "retrieval_errors": 0,
+      "selection_errors": 2,
+      "correct": 57
+    },
+    {
+      "expected_id": "1052",
+      "title": "Perform Clinical Procedure",
+      "N": 15,
+      "retrieval_errors": 6,
+      "selection_errors": 4,
+      "correct": 5
+    },
+    {
+      "expected_id": "1053",
+      "title": "Collect Biological Specimen",
+      "N": 35,
+      "retrieval_errors": 1,
+      "selection_errors": 2,
+      "correct": 32
+    },
+    {
+      "expected_id": "1054",
+      "title": "Prescribe Dietary Plan",
+      "N": 15,
+      "retrieval_errors": 0,
+      "selection_errors": 1,
+      "correct": 14
+    },
+    {
+      "expected_id": "1055",
+      "title": "Provide Patient Education",
+      "N": 39,
+      "retrieval_errors": 0,
+      "selection_errors": 0,
+      "correct": 39
+    },
+    {
+      "expected_id": "1056",
+      "title": "Perform Diagnostic Imaging Study",
+      "N": 18,
+      "retrieval_errors": 0,
+      "selection_errors": 0,
+      "correct": 18
+    },
+    {
+      "expected_id": "1057",
+      "title": "Provide Therapeutic Intervention",
+      "N": 15,
+      "retrieval_errors": 0,
+      "selection_errors": 1,
+      "correct": 14
+    },
+    {
+      "expected_id": "1058",
+      "title": "Request Clinical Observation",
+      "N": 51,
+      "retrieval_errors": 5,
+      "selection_errors": 2,
+      "correct": 44
+    },
+    {
+      "expected_id": "1059",
+      "title": "Attend Scheduled Specialist Visit",
+      "N": 55,
+      "retrieval_errors": 0,
+      "selection_errors": 1,
+      "correct": 54
+    }
+  ],
+  "MI15_classes": {
+    "reference_text_difference": 8,
+    "ontology_different_code": 12,
+    "string_value_difference": 3,
+    "ontology_unresolved_value": 3
+  },
+  "MI14_N": {
+    "mistral": [
+      12
+    ],
+    "mixtral_8x7": [
+      28
+    ],
+    "mixtral_8x22": [
+      31
+    ],
+    "llama": [
+      31
+    ],
+    "phi4": [
+      25
+    ]
+  },
+  "MI14_selection_one": [
+    {
+      "model": "mistral",
+      "embedding": "nomic",
+      "strategy": "full",
+      "k": 10,
+      "H": 1,
+      "C": 1,
+      "N": 12
+    },
+    {
+      "model": "mixtral_8x22",
+      "embedding": "nomic",
+      "strategy": "full",
+      "k": 10,
+      "H": 3,
+      "C": 3,
+      "N": 31
+    },
+    {
+      "model": "llama",
+      "embedding": "nomic",
+      "strategy": "full",
+      "k": 10,
+      "H": 2,
+      "C": 2,
+      "N": 31
+    },
+    {
+      "model": "phi4",
+      "embedding": "nomic",
+      "strategy": "full",
+      "k": 10,
+      "H": 3,
+      "C": 3,
+      "N": 25
+    },
+    {
+      "model": "mistral",
+      "embedding": "nomic",
+      "strategy": "avg",
+      "k": 20,
+      "H": 1,
+      "C": 1,
+      "N": 12
+    },
+    {
+      "model": "mixtral_8x7",
+      "embedding": "nomic",
+      "strategy": "term",
+      "k": 10,
+      "H": 3,
+      "C": 3,
+      "N": 28
+    },
+    {
+      "model": "mixtral_8x22",
+      "embedding": "nomic",
+      "strategy": "term",
+      "k": 10,
+      "H": 3,
+      "C": 3,
+      "N": 31
+    },
+    {
+      "model": "llama",
+      "embedding": "nomic",
+      "strategy": "term",
+      "k": 10,
+      "H": 4,
+      "C": 4,
+      "N": 31
+    },
+    {
+      "model": "phi4",
+      "embedding": "nomic",
+      "strategy": "term",
+      "k": 10,
+      "H": 3,
+      "C": 3,
+      "N": 25
+    },
+    {
+      "model": "mistral",
+      "embedding": "nomic",
+      "strategy": "avg",
+      "k": 50,
+      "H": 2,
+      "C": 2,
+      "N": 12
+    },
+    {
+      "model": "mixtral_8x22",
+      "embedding": "nomic",
+      "strategy": "full",
+      "k": 50,
+      "H": 3,
+      "C": 3,
+      "N": 31
+    },
+    {
+      "model": "llama",
+      "embedding": "nomic",
+      "strategy": "full",
+      "k": 50,
+      "H": 2,
+      "C": 2,
+      "N": 31
+    },
+    {
+      "model": "phi4",
+      "embedding": "nomic",
+      "strategy": "full",
+      "k": 50,
+      "H": 3,
+      "C": 3,
+      "N": 25
+    },
+    {
+      "model": "mistral",
+      "embedding": "nomic",
+      "strategy": "avg",
+      "k": 10,
+      "H": 1,
+      "C": 1,
+      "N": 12
+    },
+    {
+      "model": "llama",
+      "embedding": "nomic",
+      "strategy": "avg",
+      "k": 10,
+      "H": 2,
+      "C": 2,
+      "N": 31
+    },
+    {
+      "model": "phi4",
+      "embedding": "nomic",
+      "strategy": "avg",
+      "k": 10,
+      "H": 3,
+      "C": 3,
+      "N": 25
+    },
+    {
+      "model": "mistral",
+      "embedding": "nomic",
+      "strategy": "full",
+      "k": 20,
+      "H": 1,
+      "C": 1,
+      "N": 12
+    },
+    {
+      "model": "mixtral_8x7",
+      "embedding": "nomic",
+      "strategy": "full",
+      "k": 20,
+      "H": 3,
+      "C": 3,
+      "N": 28
+    },
+    {
+      "model": "mixtral_8x22",
+      "embedding": "nomic",
+      "strategy": "full",
+      "k": 20,
+      "H": 3,
+      "C": 3,
+      "N": 31
+    },
+    {
+      "model": "llama",
+      "embedding": "nomic",
+      "strategy": "full",
+      "k": 20,
+      "H": 2,
+      "C": 2,
+      "N": 31
+    },
+    {
+      "model": "phi4",
+      "embedding": "nomic",
+      "strategy": "full",
+      "k": 20,
+      "H": 3,
+      "C": 3,
+      "N": 25
+    }
+  ]
+}

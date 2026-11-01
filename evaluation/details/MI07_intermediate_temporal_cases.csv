@@ -1,0 +1,92 @@
+model,plan,generated_action,type,state,intermediate_value,matching_warnings
+mistral,P01,A6,REPEAT,validation_omission_log_supported,"{""repeat"": {""Quantity"": {""value"": 4, ""unitCode"": ""wk"", ""system"": ""http://unitsofmeasure.org"", ""period"": 4.0, ""periodUnitCode"": ""wk""}}}","[{""log"": ""shape_20260805_202038.log"", ""line"": 173}]"
+mistral,P02,A2,DURATION,validation_omission_log_supported,"{""repeat"": {""Quantity"": {""value"": 10, ""unitCode"": ""d"", ""system"": ""http://unitsofmeasure.org""}}}","[{""log"": ""shape_20260805_202038.log"", ""line"": 325}]"
+mistral,P20,A4,REPEAT,validation_omission_log_supported,"{""repeat"": {""Periodicity"": {""frequency"": 1, ""period"": 7, ""periodUnit"": ""d"", ""when"": [""EVE"", ""MORN""], ""boundsDuration"": {""value"": 8, ""system"": ""http://unitsofmeasure.org"", ""unit"": ""h""}}}}","[{""log"": ""shape_20260805_202038.log"", ""line"": 2970}]"
+mistral,P20,A7,OFFSET,validation_omission_log_supported,"{""Quantity"": {""value"": 1, ""unitCode"": ""g"", ""system"": ""http://unitsofmeasure.org"", ""period"": {""startTime"": ""P8H"", ""endTime"": ""P7D""}}}","[{""log"": ""shape_20260805_101213.log"", ""line"": 2975}, {""log"": ""shape_20260805_101213.log"", ""line"": 2976}, {""log"": ""shape_20260805_202038.log"", ""line"": 2975}, {""log"": ""shape_20260805_202038.log"", ""line"": 2976}]"
+mistral,P20,A8,OFFSET,no_incoming_relationship,"{""Quantity"": {""value"": 0, ""unitCode"": ""mo"", ""system"": ""http://unitsofmeasure.org""}}",[]
+mixtral_8x7,P08,A3,REPEAT,transferred,"{""repeat"": {""frequency"": 1, ""period"": 1, ""periodUnit"": ""wk""}}",[]
+mixtral_8x7,P08,A4,REPEAT,transferred,"{""repeat"": {""frequency"": 1, ""periodUnit"": ""d"", ""dayOfWeek"": []}}",[]
+mixtral_8x7,P11,A6,REPEAT,transferred,"{""repeat"": {""frequency"": 2, ""periodUnit"": ""mo""}}",[]
+mixtral_8x7,P14,A1,REPEAT,validation_omission_log_supported,"{""repeat"": {""event"": {""period"": {""value"": 1, ""code"": {""coding"": [{""system"": ""http://terminology.hl7.org/CodeSystem/frequency"", ""code"": ""daily""}]}}}}}","[{""log"": ""shape_20260805_202038.log"", ""line"": 4493}]"
+mixtral_8x7,P14,A2,DURATION,validation_omission_log_supported,"{""repeat"": {""duration"": {""value"": 30, ""system"": ""http://unitsofmeasure.org"", ""unit"": ""min""}}}","[{""log"": ""shape_20260805_202038.log"", ""line"": 4495}]"
+mixtral_8x7,P20,A5,DURATION,transferred,"{""repeat"": {""duration"": 7, ""durationUnit"": ""d""}}",[]
+mixtral_8x7,P20,A7,OFFSET,transferred,"{""value"": 4, ""system"": ""http://unitsofmeasure.org"", ""unit"": ""wk""}",[]
+mixtral_8x22,P01,A2,OFFSET,transferred,"{""value"": 1, ""unit"": ""wk"", ""system"": ""http://unitsofmeasure.org""}",[]
+mixtral_8x22,P01,A4,DURATION,transferred,"{""repeat"": {""duration"": 4, ""durationUnit"": ""wk""}}",[]
+mixtral_8x22,P03,A1,REPEAT,transferred,"{""repeat"": {""when"": [""MORN""]}}",[]
+mixtral_8x22,P03,A3,DURATION,transferred,"{""repeat"": {""duration"": 30, ""durationUnit"": ""min""}}",[]
+mixtral_8x22,P04,A1,REPEAT,transferred,"{""repeat"": {""when"": [""MORN""]}}",[]
+mixtral_8x22,P04,A2,REPEAT,transferred,"{""repeat"": {""when"": [""MORN""]}}",[]
+mixtral_8x22,P06,A2,REPEAT,transferred,"{""repeat"": {""frequency"": 3, ""periodUnit"": ""d"", ""dayOfWeek"": []}}",[]
+mixtral_8x22,P08,A2,REPEAT,transferred,"{""repeat"": {""frequency"": 1, ""periodUnit"": ""wk""}}",[]
+mixtral_8x22,P08,A3,REPEAT,transferred,"{""repeat"": {""frequency"": 1, ""periodUnit"": ""d""}}",[]
+mixtral_8x22,P08,A4,REPEAT,transferred,"{""repeat"": {""duration"": 1, ""frequency"": 1, ""periodUnit"": ""mo""}}",[]
+mixtral_8x22,P08,A5,OFFSET,transferred,"{""value"": null, ""system"": ""http://unitsofmeasure.org"", ""unit"": null}",[]
+mixtral_8x22,P11,A1,REPEAT,transferred,"{""repeat"": {""frequency"": 2, ""periodUnit"": ""d""}}",[]
+mixtral_8x22,P11,A5,REPEAT,transferred,"{""repeat"": {""frequency"": 1, ""periodUnit"": ""d""}}",[]
+mixtral_8x22,P11,A6,REPEAT,transferred,"{""repeat"": {""duration"": 6, ""durationUnit"": ""mo"", ""frequency"": 1, ""period"": 12, ""periodUnit"": ""mo""}}",[]
+mixtral_8x22,P12,A2,OFFSET,transferred,"{""value"": null, ""system"": ""http://unitsofmeasure.org"", ""unit"": null}",[]
+mixtral_8x22,P13,A2,REPEAT,transferred,"{""repeat"": {""duration"": 1, ""durationUnit"": ""mo""}}",[]
+mixtral_8x22,P13,A3,REPEAT,transferred,"{""repeat"": {""duration"": 1, ""durationUnit"": ""mo""}}",[]
+mixtral_8x22,P14,A1,REPEAT,transferred,"{""repeat"": {""duration"": 1, ""durationUnit"": ""d"", ""frequency"": 1}}",[]
+mixtral_8x22,P14,A2,DURATION,transferred,"{""repeat"": {""duration"": 30, ""durationUnit"": ""min"", ""count"": null, ""frequency"": null, ""period"": null, ""periodUnit"": null, ""dayOfWeek"": [], ""when"": [], ""boundsDuration"": {""value"": 30, ""system"": ""http://unitsofmeasure.org"", ""unit"": ""min""}}}",[]
+mixtral_8x22,P16,A2,REPEAT,transferred,"{""repeat"": {""frequency"": 3, ""periodUnit"": ""wk""}}",[]
+mixtral_8x22,P17,A1,REPEAT,transferred,"{""repeat"": {""frequency"": 2, ""periodUnit"": ""d""}}",[]
+mixtral_8x22,P17,A2,REPEAT,transferred,"{""repeat"": {""duration"": 1, ""durationUnit"": ""mo""}}",[]
+mixtral_8x22,P19,A4,DURATION,transferred,"{""repeat"": {""duration"": 30, ""durationUnit"": ""min"", ""count"": null, ""frequency"": null, ""period"": null, ""periodUnit"": null, ""dayOfWeek"": [], ""when"": [], ""boundsDuration"": {""value"": 30, ""system"": ""http://unitsofmeasure.org"", ""unit"": ""min""}}}",[]
+mixtral_8x22,P20,A4,DURATION,transferred,"{""repeat"": {""when"": [""C"", ""CM"", ""CD"", ""CV""]}}",[]
+mixtral_8x22,P20,A5,REPEAT,transferred,"{""repeat"": {""frequency"": 1, ""period"": 8, ""periodUnit"": ""h""}}",[]
+mixtral_8x22,P20,A6,OFFSET,transferred,"{""value"": 4, ""unit"": ""wk"", ""system"": ""http://unitsofmeasure.org""}",[]
+llama,P01,A2,OFFSET,transferred,"{""value"": 1, ""system"": ""http://unitsofmeasure.org"", ""unit"": ""wk""}",[]
+llama,P01,A5,REPEAT,transferred,"{""repeat"": {""frequency"": 1, ""period"": 4, ""periodUnit"": ""wk""}}",[]
+llama,P02,A2,DURATION,transferred,"{""repeat"": {""boundsDuration"": {""value"": 10, ""system"": ""http://unitsofmeasure.org"", ""unit"": ""d""}}}",[]
+llama,P03,A1,REPEAT,transferred,"{""repeat"": {""when"": [""MORN""]}}",[]
+llama,P03,A3,DURATION,transferred,"{""repeat"": {""duration"": 30, ""durationUnit"": ""min""}}",[]
+llama,P04,A1,REPEAT,transferred,"{""repeat"": {""when"": [""MORN""]}}",[]
+llama,P04,A2,REPEAT,transferred,"{""repeat"": {""when"": [""MORN""]}}",[]
+llama,P05,A1,REPEAT,transferred,"{""repeat"": {""frequency"": 1, ""period"": 3, ""periodUnit"": ""mo""}}",[]
+llama,P06,A2,REPEAT,transferred,"{""repeat"": {""frequency"": 3, ""period"": 1, ""periodUnit"": ""d""}}",[]
+llama,P07,A3,DURATION,transferred,"{""repeat"": {""when"": [""IMD""]}}",[]
+llama,P07,A5,OFFSET,transferred,{},[]
+llama,P08,A2,REPEAT,transferred,"{""repeat"": {""frequency"": 1, ""period"": 1, ""periodUnit"": ""wk""}}",[]
+llama,P08,A3,REPEAT,transferred,"{""repeat"": {""frequency"": 1, ""period"": 1, ""periodUnit"": ""d""}}",[]
+llama,P08,A4,REPEAT,transferred,"{""repeat"": {""frequency"": 1, ""period"": 1, ""periodUnit"": ""mo""}}",[]
+llama,P09,A2,OFFSET,transferred,{},[]
+llama,P11,A1,REPEAT,transferred,"{""repeat"": {""frequency"": 2, ""period"": 1, ""periodUnit"": ""d""}}",[]
+llama,P11,A5,REPEAT,transferred,"{""repeat"": {""frequency"": 1, ""period"": 1, ""periodUnit"": ""d""}}",[]
+llama,P11,A6,OFFSET,no_incoming_relationship,"{""value"": 6, ""system"": ""http://unitsofmeasure.org"", ""unit"": ""mo""}",[]
+llama,P13,A1,REPEAT,transferred,"{""repeat"": {""frequency"": 1, ""period"": 1, ""periodUnit"": ""mo""}}",[]
+llama,P14,A1,REPEAT,transferred,"{""repeat"": {""frequency"": 1, ""period"": 1, ""periodUnit"": ""d""}}",[]
+llama,P14,A2,DURATION,transferred,"{""repeat"": {""duration"": 30, ""durationUnit"": ""min""}}",[]
+llama,P16,A2,REPEAT,transferred,"{""repeat"": {""frequency"": 3, ""period"": 1, ""periodUnit"": ""wk""}}",[]
+llama,P17,A1,REPEAT,transferred,"{""repeat"": {""frequency"": 2, ""period"": 1, ""periodUnit"": ""d""}}",[]
+llama,P17,A2,REPEAT,transferred,"{""repeat"": {""frequency"": 1, ""period"": 1, ""periodUnit"": ""mo""}}",[]
+llama,P18,A3,OFFSET,transferred,{},[]
+llama,P19,A4,DURATION,transferred,"{""repeat"": {""duration"": 30, ""durationUnit"": ""min""}}",[]
+llama,P20,A5,REPEAT,transferred,"{""repeat"": {""frequency"": 1, ""period"": 8, ""periodUnit"": ""h"", ""duration"": 7, ""durationUnit"": ""d""}}",[]
+llama,P20,A6,OFFSET,transferred,"{""value"": 4, ""system"": ""http://unitsofmeasure.org"", ""unit"": ""wk""}",[]
+phi4,P01,A2,OFFSET,validation_omission_log_supported,"{""value"": {""decimal"": 7, ""system"": ""http://unitsofmeasure.org"", ""unit"": {""code"": ""d""}}}","[{""log"": ""shape_20260805_101213.log"", ""line"": 10733}, {""log"": ""shape_20260805_202038.log"", ""line"": 10816}]"
+phi4,P01,A5,REPEAT,validation_omission_log_supported,"{""repeat"": {""timing"": {""repeat"": [{""frequency"": 1, ""period"": 1, ""periodUnit"": {""coding"": [{""code"": ""d"", ""system"": ""http://unitsofmeasure.org""}]}}]}}}","[{""log"": ""shape_20260805_202038.log"", ""line"": 10817}]"
+phi4,P02,A2,DURATION,transferred,"{""repeat"": {""boundsDuration"": {""value"": 10, ""system"": ""http://unitsofmeasure.org"", ""unit"": ""d""}}}",[]
+phi4,P03,A1,REPEAT,validation_omission_log_supported,"{""repeat"": {""timing"": {""repeat"": [{""frequency"": 1, ""period"": 1, ""periodUnit"": {""coding"": [{""code"": ""d"", ""system"": ""http://unitsofmeasure.org""}]}, ""when"": [{""coding"": [{""code"": ""MORN"", ""system"": ""http://terminology.hl7.org/CodeSystem/timing-event-timing-modifier""}]}]}]}}}","[{""log"": ""shape_20260805_202038.log"", ""line"": 11156}]"
+phi4,P03,A3,DURATION,validation_omission_log_supported,"{""repeat"": {""duration"": {""value"": 30, ""system"": ""http://unitsofmeasure.org"", ""unit"": ""min""}}}","[{""log"": ""shape_20260805_202038.log"", ""line"": 11158}]"
+phi4,P04,A1,REPEAT,validation_omission_log_supported,"{""repeat"": {""timing"": {""repeat"": [{""frequency"": 1, ""period"": 1, ""periodUnit"": {""coding"": [{""code"": ""d"", ""system"": ""http://unitsofmeasure.org""}]}, ""when"": [{""coding"": [{""code"": ""MORN"", ""system"": ""http://terminology.hl7.org/CodeSystem/timing-event-timing-modifier""}]}]}]}}}","[{""log"": ""shape_20260805_202038.log"", ""line"": 11352}]"
+phi4,P04,A2,REPEAT,validation_omission_log_supported,"{""repeat"": {""timing"": {""repeat"": [{""frequency"": 1, ""period"": 1, ""periodUnit"": {""coding"": [{""code"": ""d"", ""system"": ""http://unitsofmeasure.org""}]}, ""when"": [{""coding"": [{""code"": ""MORN"", ""system"": ""http://terminology.hl7.org/CodeSystem/timing-event-timing-modifier""}]}]}]}}}","[{""log"": ""shape_20260805_202038.log"", ""line"": 11354}]"
+phi4,P05,A1,REPEAT,validation_omission_log_supported,"{""repeat"": {""timing"": {""repeat"": [{""count"": 3, ""period"": 1, ""periodUnit"": ""mo""}]}}}","[{""log"": ""shape_20260805_202038.log"", ""line"": 11490}]"
+phi4,P06,A2,REPEAT,validation_omission_log_supported,"{""repeat"": {""timing"": {""repeat"": [{""frequency"": 3, ""period"": 1, ""periodUnit"": ""d""}]}}}","[{""log"": ""shape_20260805_202038.log"", ""line"": 11610}]"
+phi4,P08,A2,REPEAT,validation_omission_log_supported,"{""repeat"": {""timing"": {""repeat"": [{""frequency"": 1, ""period"": 7, ""periodUnit"": ""d""}]}}}","[{""log"": ""shape_20260805_202038.log"", ""line"": 11995}]"
+phi4,P08,A3,REPEAT,validation_omission_log_supported,"{""repeat"": {""timing"": {""repeat"": [{""count"": 1, ""period"": 1, ""periodUnit"": ""d""}]}}}","[{""log"": ""shape_20260805_202038.log"", ""line"": 11997}]"
+phi4,P08,A4,REPEAT,validation_omission_log_supported,"{""repeat"": {""timing"": {""repeat"": [{""frequency"": 1, ""period"": 1, ""periodUnit"": ""mo""}]}}}","[{""log"": ""shape_20260805_202038.log"", ""line"": 11999}]"
+phi4,P11,A1,REPEAT,validation_omission_log_supported,"{""repeat"": {""timing"": {""repeat"": [{""frequency"": 2, ""period"": 12, ""periodUnit"": ""h""}]}}}","[{""log"": ""shape_20260805_202038.log"", ""line"": 12563}]"
+phi4,P11,A5,REPEAT,validation_omission_log_supported,"{""repeat"": {""timing"": {""repeat"": [{""count"": 1, ""period"": 1, ""periodUnit"": {""coding"": [{""code"": ""d"", ""system"": ""http://unitsofmeasure.org""}]}}]}}}","[{""log"": ""shape_20260805_202038.log"", ""line"": 12565}]"
+phi4,P11,A6,REPEAT,validation_omission_log_supported,"{""repeat"": {""timing"": {""repeat"": [{""count"": 2, ""period"": 6, ""periodUnit"": ""mo""}]}}}","[{""log"": ""shape_20260805_202038.log"", ""line"": 12567}]"
+phi4,P12,A2,OFFSET,validation_omission_log_supported,"{""value"": {""decimal"": null, ""system"": ""http://unitsofmeasure.org"", ""unit"": null}}","[{""log"": ""shape_20260805_101213.log"", ""line"": 12493}, {""log"": ""shape_20260805_202038.log"", ""line"": 12665}]"
+phi4,P13,A1,REPEAT,validation_omission_log_supported,"{""repeat"": {""timing"": {""repeat"": [{""frequency"": 1, ""period"": 1, ""periodUnit"": ""mo""}]}}}","[{""log"": ""shape_20260805_202038.log"", ""line"": 12772}]"
+phi4,P14,A1,REPEAT,validation_omission_log_supported,"{""repeat"": {""timing"": {""repeat"": [{""frequency"": 1, ""period"": 1, ""periodUnit"": {""coding"": [{""code"": ""d"", ""system"": ""http://unitsofmeasure.org""}]}, ""boundsDuration"": {""start"": {""value"": 0}, ""end"": {""value"": 1, ""system"": ""http://unitsofmeasure.org"", ""unit"": ""d""}}}], ""dayOfWeek"": [""mon"", ""tue"", ""wed"", ""thu"", ""fri"", ""sat"", ""sun""]}}}","[{""log"": ""shape_20260805_202038.log"", ""line"": 12962}]"
+phi4,P14,A2,DURATION,validation_omission_log_supported,"{""repeat"": {""duration"": {""value"": 30, ""system"": ""http://unitsofmeasure.org"", ""unit"": ""min""}}}","[{""log"": ""shape_20260805_202038.log"", ""line"": 12964}]"
+phi4,P16,A2,REPEAT,validation_omission_log_supported,"{""repeat"": {""timing"": {""repeat"": [{""frequency"": 3, ""period"": ""1"", ""periodUnit"": {""coding"": [{""code"": ""wk""}]}}]}}}","[{""log"": ""shape_20260805_202038.log"", ""line"": 13226}]"
+phi4,P17,A1,REPEAT,validation_omission_log_supported,"{""repeat"": {""timing"": {""repeat"": [{""frequency"": 2, ""period"": 12, ""periodUnit"": {""coding"": [{""code"": ""h"", ""system"": ""http://unitsofmeasure.org""}]}}]}}}","[{""log"": ""shape_20260805_202038.log"", ""line"": 13356}]"
+phi4,P17,A2,REPEAT,validation_omission_log_supported,"{""repeat"": {""timing"": {""repeat"": [{""frequency"": 1, ""period"": 1, ""periodUnit"": ""mo""}]}}}","[{""log"": ""shape_20260805_202038.log"", ""line"": 13358}]"
+phi4,P19,A4,DURATION,validation_omission_log_supported,"{""repeat"": {""duration"": {""value"": 30, ""system"": ""http://unitsofmeasure.org"", ""unit"": ""min""}}}","[{""log"": ""shape_20260805_202038.log"", ""line"": 13664}]"
+phi4,P20,A5,REPEAT,validation_omission_log_supported,"{""repeat"": {""timing"": {""repeat"": [{""frequency"": 3, ""period"": 8, ""periodUnit"": ""h""}]}}}","[{""log"": ""shape_20260805_202038.log"", ""line"": 13843}]"
+phi4,P20,A6,OFFSET,validation_omission_log_supported,"{""value"": {""decimal"": 28, ""system"": ""http://unitsofmeasure.org"", ""unit"": {""code"": ""d""}}}","[{""log"": ""shape_20260805_101213.log"", ""line"": 13609}, {""log"": ""shape_20260805_202038.log"", ""line"": 13845}]"

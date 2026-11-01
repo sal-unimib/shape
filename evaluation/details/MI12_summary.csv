@@ -1,0 +1,6 @@
+model,N,retrieval_errors,selection_errors,correct
+mistral,88,10,2,76
+mixtral_8x7,87,11,8,68
+mixtral_8x22,82,12,1,69
+llama,85,9,1,75
+phi4,85,10,4,71

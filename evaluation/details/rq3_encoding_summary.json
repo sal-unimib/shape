@@ -1,0 +1,219 @@
+{
+  "mistral": {
+    "counts": {
+      "param_missing": 51,
+      "revised_missing_path": 51,
+      "single_ref_missing": 51,
+      "temporal_missing": 26,
+      "extra_paths_matched_actions": 15,
+      "param_different": 22,
+      "revised_correct": 11,
+      "single_ref_different": 21,
+      "coded_expected_present": 22,
+      "coded_correct": 10,
+      "revised_different": 15,
+      "param_on_wrong_ad": 14,
+      "single_ref_correct": 5,
+      "text_only_coded_difference": 1,
+      "param_exact": 4
+    },
+    "categories": {
+      "ontology": {
+        "missing_path": 30,
+        "different": 11,
+        "correct": 4
+      },
+      "reference": {
+        "missing_path": 15,
+        "correct": 1
+      },
+      "value_set": {
+        "correct": 6,
+        "missing_path": 2,
+        "different": 1
+      },
+      "string": {
+        "different": 3
+      },
+      "resource": {
+        "missing_path": 4
+      }
+    }
+  },
+  "mixtral_8x7": {
+    "counts": {
+      "param_different": 40,
+      "revised_correct": 11,
+      "single_ref_correct": 6,
+      "text_only_coded_difference": 4,
+      "coded_expected_present": 36,
+      "coded_correct": 10,
+      "temporal_missing": 22,
+      "param_missing": 35,
+      "revised_missing_path": 34,
+      "single_ref_missing": 35,
+      "extra_paths_matched_actions": 12,
+      "single_ref_different": 36,
+      "revised_different": 31,
+      "param_on_wrong_ad": 5,
+      "revised_missing_action": 1,
+      "param_exact": 2,
+      "temporal_different": 4
+    },
+    "categories": {
+      "ontology": {
+        "correct": 5,
+        "different": 26,
+        "missing_path": 13,
+        "missing_action": 1
+      },
+      "reference": {
+        "missing_path": 10,
+        "different": 5,
+        "correct": 1
+      },
+      "value_set": {
+        "correct": 5,
+        "missing_path": 4
+      },
+      "string": {
+        "missing_path": 3
+      },
+      "resource": {
+        "missing_path": 4
+      }
+    }
+  },
+  "mixtral_8x22": {
+    "counts": {
+      "param_different": 50,
+      "revised_correct": 21,
+      "single_ref_correct": 13,
+      "text_only_coded_difference": 9,
+      "coded_expected_present": 42,
+      "coded_correct": 20,
+      "temporal_exact": 3,
+      "param_missing": 23,
+      "revised_missing_action": 5,
+      "single_ref_missing": 23,
+      "temporal_different": 18,
+      "extra_paths_matched_actions": 14,
+      "param_exact": 4,
+      "temporal_missing": 5,
+      "single_ref_different": 41,
+      "revised_different": 33,
+      "param_on_wrong_ad": 10,
+      "revised_missing_path": 18
+    },
+    "categories": {
+      "ontology": {
+        "correct": 12,
+        "different": 22,
+        "missing_action": 3,
+        "missing_path": 8
+      },
+      "reference": {
+        "missing_action": 1,
+        "correct": 1,
+        "different": 8,
+        "missing_path": 6
+      },
+      "value_set": {
+        "correct": 8,
+        "missing_action": 1
+      },
+      "string": {
+        "different": 3
+      },
+      "resource": {
+        "missing_path": 4
+      }
+    }
+  },
+  "llama": {
+    "counts": {
+      "param_different": 49,
+      "revised_correct": 35,
+      "single_ref_correct": 22,
+      "text_only_coded_difference": 10,
+      "coded_expected_present": 43,
+      "coded_correct": 28,
+      "temporal_exact": 18,
+      "revised_different": 26,
+      "single_ref_different": 39,
+      "temporal_different": 5,
+      "extra_paths_matched_actions": 14,
+      "param_exact": 12,
+      "param_on_wrong_ad": 5,
+      "temporal_missing": 3,
+      "param_missing": 16,
+      "revised_missing_action": 4,
+      "single_ref_missing": 16,
+      "revised_missing_path": 12
+    },
+    "categories": {
+      "ontology": {
+        "correct": 19,
+        "different": 15,
+        "missing_action": 4,
+        "missing_path": 7
+      },
+      "reference": {
+        "different": 8,
+        "correct": 7,
+        "missing_path": 1
+      },
+      "value_set": {
+        "correct": 9
+      },
+      "string": {
+        "different": 3
+      },
+      "resource": {
+        "missing_path": 4
+      }
+    }
+  },
+  "phi4": {
+    "counts": {
+      "param_different": 42,
+      "revised_correct": 17,
+      "single_ref_correct": 8,
+      "text_only_coded_difference": 8,
+      "coded_expected_present": 36,
+      "coded_correct": 17,
+      "temporal_missing": 25,
+      "param_missing": 35,
+      "revised_missing_path": 31,
+      "single_ref_missing": 35,
+      "extra_paths_matched_actions": 8,
+      "temporal_different": 1,
+      "single_ref_different": 34,
+      "revised_different": 25,
+      "param_on_wrong_ad": 4,
+      "revised_missing_action": 4
+    },
+    "categories": {
+      "ontology": {
+        "correct": 8,
+        "different": 19,
+        "missing_path": 14,
+        "missing_action": 4
+      },
+      "reference": {
+        "missing_path": 12,
+        "different": 4
+      },
+      "value_set": {
+        "correct": 9
+      },
+      "string": {
+        "missing_path": 1,
+        "different": 2
+      },
+      "resource": {
+        "missing_path": 4
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+model,intermediate_constraints,transferred,log_supported_omissions,affected_pathways,other_omissions,expected_exact,expected_different,expected_missing,expected_missing_causes
+mistral,5,0,4,3,1,0,0,26,"{""no_encoded_temporal_constraint"": 22, ""validation_omission_log_supported"": 3, ""no_incoming_relationship"": 1}"
+mixtral_8x7,7,5,2,1,0,0,4,22,"{""no_encoded_temporal_constraint"": 19, ""missing_action"": 1, ""validation_omission_log_supported"": 2}"
+mixtral_8x22,26,26,0,0,0,3,18,5,"{""no_encoded_temporal_constraint"": 4, ""missing_action"": 1}"
+llama,28,27,0,0,1,18,5,3,"{""missing_action"": 1, ""no_encoded_temporal_constraint"": 1, ""no_incoming_relationship"": 1}"
+phi4,25,1,24,14,0,0,1,25,"{""validation_omission_log_supported"": 24, ""no_encoded_temporal_constraint"": 1}"

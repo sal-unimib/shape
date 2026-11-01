@@ -1,0 +1,13 @@
+expected_id,title,N,retrieval_errors,selection_errors,correct
+1000,Administer medication,35,20,0,15
+1001,Perform exercise,35,20,1,14
+1002,Complete Clinical Questionnaire,55,0,2,53
+1051,Alert Healthcare Practitioner,59,0,2,57
+1052,Perform Clinical Procedure,15,6,4,5
+1053,Collect Biological Specimen,35,1,2,32
+1054,Prescribe Dietary Plan,15,0,1,14
+1055,Provide Patient Education,39,0,0,39
+1056,Perform Diagnostic Imaging Study,18,0,0,18
+1057,Provide Therapeutic Intervention,15,0,1,14
+1058,Request Clinical Observation,51,5,2,44
+1059,Attend Scheduled Specialist Visit,55,0,1,54

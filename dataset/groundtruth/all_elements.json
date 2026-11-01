@@ -766,7 +766,7 @@
             {
                 "id": "A3",
                 "label": "vital signs are monitored",
-                "activity_definition": "ActivityDefinition/1055",
+                "activity_definition": "ActivityDefinition/1058",
                 "temporal_constraint": null,
                 "condition": {
                     "label": "if laboratory results are normal",
